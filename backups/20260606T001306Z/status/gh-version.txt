@@ -1,0 +1,5 @@
+$ gh --version 2>&1 || true
+exit_code=0
+
+gh version 2.86.0 (2026-01-21)
+https://github.com/cli/cli/releases/tag/v2.86.0

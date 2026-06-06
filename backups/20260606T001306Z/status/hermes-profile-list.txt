@@ -1,0 +1,6 @@
+$ hermes profile list 2>&1 || true
+exit_code=0
+
+Profile          Model                        Gateway      Alias        Distribution
+ ───────────────    ───────────────────────────    ───────────    ───────────    ────────────────────
+ ◆default         gpt-5.5                      running      —            —

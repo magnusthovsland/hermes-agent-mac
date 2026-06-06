@@ -1,0 +1,20 @@
+{
+  "snapshot_utc": "20260606T001306Z",
+  "repo": "magnusthovsland/hermes-agent-mac",
+  "source_hermes_home": "/Users/mt-infinity/.hermes",
+  "env_path_recorded_values": false,
+  "env_variable_names_count": 24,
+  "included_sections": [
+    "sanitized config.yaml",
+    "status command outputs",
+    "env variable names only",
+    "selected file inventory"
+  ],
+  "excluded_sensitive_paths": [
+    "~/.hermes/.env values",
+    "~/.hermes/auth.json",
+    "~/.hermes/state.db",
+    "~/.hermes/logs",
+    "~/.hermes/sessions"
+  ]
+}

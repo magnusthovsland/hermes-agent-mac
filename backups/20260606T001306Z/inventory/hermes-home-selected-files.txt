@@ -1,0 +1,654 @@
+file	skills/.bundled_manifest	3470 bytes
+file	skills/.curator_state	337 bytes
+dir	skills/.hub/
+file	skills/.hub/audit.log	0 bytes
+dir	skills/.hub/index-cache/
+file	skills/.hub/lock.json	32 bytes
+dir	skills/.hub/quarantine/
+file	skills/.hub/taps.json	13 bytes
+file	skills/.usage.json	2691 bytes
+file	skills/.usage.json.lock	0 bytes
+dir	skills/apple/
+file	skills/apple/DESCRIPTION.md	137 bytes
+dir	skills/apple/apple-notes/
+file	skills/apple/apple-notes/SKILL.md	2169 bytes
+dir	skills/apple/apple-reminders/
+file	skills/apple/apple-reminders/SKILL.md	3606 bytes
+dir	skills/apple/findmy/
+file	skills/apple/findmy/SKILL.md	3709 bytes
+dir	skills/apple/imessage/
+file	skills/apple/imessage/SKILL.md	2442 bytes
+dir	skills/apple/macos-computer-use/
+file	skills/apple/macos-computer-use/SKILL.md	7309 bytes
+dir	skills/autonomous-ai-agents/
+file	skills/autonomous-ai-agents/DESCRIPTION.md	211 bytes
+dir	skills/autonomous-ai-agents/claude-code/
+file	skills/autonomous-ai-agents/claude-code/SKILL.md	34288 bytes
+dir	skills/autonomous-ai-agents/codex/
+file	skills/autonomous-ai-agents/codex/SKILL.md	4557 bytes
+dir	skills/autonomous-ai-agents/hermes-agent/
+file	skills/autonomous-ai-agents/hermes-agent/SKILL.md	46692 bytes
+dir	skills/autonomous-ai-agents/hermes-agent/references/
+file	skills/autonomous-ai-agents/hermes-agent/references/native-mcp.md	12094 bytes
+file	skills/autonomous-ai-agents/hermes-agent/references/webhooks.md	6591 bytes
+dir	skills/autonomous-ai-agents/opencode/
+file	skills/autonomous-ai-agents/opencode/SKILL.md	7259 bytes
+dir	skills/creative/
+file	skills/creative/DESCRIPTION.md	116 bytes
+dir	skills/creative/architecture-diagram/
+file	skills/creative/architecture-diagram/SKILL.md	5830 bytes
+dir	skills/creative/architecture-diagram/templates/
+file	skills/creative/architecture-diagram/templates/template.html	12483 bytes
+dir	skills/creative/ascii-art/
+file	skills/creative/ascii-art/SKILL.md	10556 bytes
+dir	skills/creative/ascii-video/
+file	skills/creative/ascii-video/README.md	16440 bytes
+file	skills/creative/ascii-video/SKILL.md	14864 bytes
+dir	skills/creative/ascii-video/references/
+file	skills/creative/ascii-video/references/architecture.md	33004 bytes
+file	skills/creative/ascii-video/references/composition.md	34942 bytes
+file	skills/creative/ascii-video/references/effects.md	72928 bytes
+file	skills/creative/ascii-video/references/inputs.md	24575 bytes
+file	skills/creative/ascii-video/references/optimization.md	24265 bytes
+file	skills/creative/ascii-video/references/scenes.md	37487 bytes
+file	skills/creative/ascii-video/references/shaders.md	50435 bytes
+file	skills/creative/ascii-video/references/troubleshooting.md	13246 bytes
+dir	skills/creative/baoyu-infographic/
+file	skills/creative/baoyu-infographic/PORT_NOTES.md	1699 bytes
+file	skills/creative/baoyu-infographic/SKILL.md	10434 bytes
+dir	skills/creative/baoyu-infographic/references/
+file	skills/creative/baoyu-infographic/references/analysis-framework.md	7490 bytes
+file	skills/creative/baoyu-infographic/references/base-prompt.md	1082 bytes
+dir	skills/creative/baoyu-infographic/references/layouts/
+file	skills/creative/baoyu-infographic/references/layouts/bento-grid.md	851 bytes
+file	skills/creative/baoyu-infographic/references/layouts/binary-comparison.md	1278 bytes
+file	skills/creative/baoyu-infographic/references/layouts/bridge.md	907 bytes
+file	skills/creative/baoyu-infographic/references/layouts/circular-flow.md	759 bytes
+file	skills/creative/baoyu-infographic/references/layouts/comic-strip.md	847 bytes
+file	skills/creative/baoyu-infographic/references/layouts/comparison-matrix.md	893 bytes
+file	skills/creative/baoyu-infographic/references/layouts/dashboard.md	776 bytes
+file	skills/creative/baoyu-infographic/references/layouts/dense-modules.md	3673 bytes
+file	skills/creative/baoyu-infographic/references/layouts/funnel.md	821 bytes
+file	skills/creative/baoyu-infographic/references/layouts/hierarchical-layers.md	1180 bytes
+file	skills/creative/baoyu-infographic/references/layouts/hub-spoke.md	865 bytes
+file	skills/creative/baoyu-infographic/references/layouts/iceberg.md	884 bytes
+file	skills/creative/baoyu-infographic/references/layouts/isometric-map.md	833 bytes
+file	skills/creative/baoyu-infographic/references/layouts/jigsaw.md	844 bytes
+file	skills/creative/baoyu-infographic/references/layouts/linear-progression.md	1238 bytes
+file	skills/creative/baoyu-infographic/references/layouts/periodic-table.md	774 bytes
+file	skills/creative/baoyu-infographic/references/layouts/story-mountain.md	815 bytes
+file	skills/creative/baoyu-infographic/references/layouts/structural-breakdown.md	1118 bytes
+file	skills/creative/baoyu-infographic/references/layouts/tree-branching.md	913 bytes
+file	skills/creative/baoyu-infographic/references/layouts/venn-diagram.md	825 bytes
+file	skills/creative/baoyu-infographic/references/layouts/winding-roadmap.md	799 bytes
+file	skills/creative/baoyu-infographic/references/structured-content-template.md	5515 bytes
+dir	skills/creative/baoyu-infographic/references/styles/
+file	skills/creative/baoyu-infographic/references/styles/aged-academia.md	990 bytes
+file	skills/creative/baoyu-infographic/references/styles/bold-graphic.md	920 bytes
+file	skills/creative/baoyu-infographic/references/styles/chalkboard.md	2204 bytes
+file	skills/creative/baoyu-infographic/references/styles/claymation.md	654 bytes
+file	skills/creative/baoyu-infographic/references/styles/corporate-memphis.md	612 bytes
+file	skills/creative/baoyu-infographic/references/styles/craft-handmade.md	1429 bytes
+file	skills/creative/baoyu-infographic/references/styles/cyberpunk-neon.md	625 bytes
+file	skills/creative/baoyu-infographic/references/styles/hand-drawn-edu.md	2648 bytes
+file	skills/creative/baoyu-infographic/references/styles/ikea-manual.md	572 bytes
+file	skills/creative/baoyu-infographic/references/styles/kawaii.md	653 bytes
+file	skills/creative/baoyu-infographic/references/styles/knolling.md	584 bytes
+file	skills/creative/baoyu-infographic/references/styles/lego-brick.md	574 bytes
+file	skills/creative/baoyu-infographic/references/styles/morandi-journal.md	2233 bytes
+file	skills/creative/baoyu-infographic/references/styles/origami.md	607 bytes
+file	skills/creative/baoyu-infographic/references/styles/pixel-art.md	562 bytes
+file	skills/creative/baoyu-infographic/references/styles/pop-laboratory.md	2174 bytes
+file	skills/creative/baoyu-infographic/references/styles/retro-pop-grid.md	2106 bytes
+file	skills/creative/baoyu-infographic/references/styles/storybook-watercolor.md	703 bytes
+file	skills/creative/baoyu-infographic/references/styles/subway-map.md	591 bytes
+file	skills/creative/baoyu-infographic/references/styles/technical-schematic.md	983 bytes
+file	skills/creative/baoyu-infographic/references/styles/ui-wireframe.md	596 bytes
+dir	skills/creative/claude-design/
+file	skills/creative/claude-design/SKILL.md	19859 bytes
+dir	skills/creative/comfyui/
+file	skills/creative/comfyui/SKILL.md	24287 bytes
+dir	skills/creative/comfyui/references/
+file	skills/creative/comfyui/references/official-cli.md	7531 bytes
+file	skills/creative/comfyui/references/rest-api.md	10363 bytes
+file	skills/creative/comfyui/references/template-integrity.md	8821 bytes
+file	skills/creative/comfyui/references/workflow-format.md	8025 bytes
+dir	skills/creative/comfyui/scripts/
+file	skills/creative/comfyui/scripts/_common.py	33742 bytes
+file	skills/creative/comfyui/scripts/auto_fix_deps.py	8279 bytes
+file	skills/creative/comfyui/scripts/check_deps.py	17164 bytes
+file	skills/creative/comfyui/scripts/comfyui_setup.sh	10447 bytes
+file	skills/creative/comfyui/scripts/extract_schema.py	11289 bytes
+file	skills/creative/comfyui/scripts/fetch_logs.py	5690 bytes
+file	skills/creative/comfyui/scripts/hardware_check.py	17833 bytes
+file	skills/creative/comfyui/scripts/health_check.py	8188 bytes
+file	skills/creative/comfyui/scripts/run_batch.py	9080 bytes
+file	skills/creative/comfyui/scripts/run_workflow.py	31591 bytes
+file	skills/creative/comfyui/scripts/ws_monitor.py	10512 bytes
+dir	skills/creative/comfyui/tests/
+file	skills/creative/comfyui/tests/README.md	2124 bytes
+file	skills/creative/comfyui/tests/conftest.py	1480 bytes
+file	skills/creative/comfyui/tests/pytest.ini	132 bytes
+file	skills/creative/comfyui/tests/test_check_deps.py	2362 bytes
+file	skills/creative/comfyui/tests/test_cloud_integration.py	4324 bytes
+file	skills/creative/comfyui/tests/test_common.py	16337 bytes
+file	skills/creative/comfyui/tests/test_extract_schema.py	7972 bytes
+file	skills/creative/comfyui/tests/test_run_workflow.py	8708 bytes
+dir	skills/creative/comfyui/workflows/
+file	skills/creative/comfyui/workflows/README.md	3932 bytes
+file	skills/creative/comfyui/workflows/animatediff_video.json	2071 bytes
+file	skills/creative/comfyui/workflows/flux_dev_txt2img.json	2232 bytes
+file	skills/creative/comfyui/workflows/sd15_txt2img.json	1474 bytes
+file	skills/creative/comfyui/workflows/sdxl_img2img.json	1652 bytes
+file	skills/creative/comfyui/workflows/sdxl_inpaint.json	1873 bytes
+file	skills/creative/comfyui/workflows/sdxl_txt2img.json	1449 bytes
+file	skills/creative/comfyui/workflows/upscale_4x.json	864 bytes
+file	skills/creative/comfyui/workflows/wan_video_t2v.json	2189 bytes
+dir	skills/creative/design-md/
+file	skills/creative/design-md/SKILL.md	7023 bytes
+dir	skills/creative/design-md/templates/
+file	skills/creative/design-md/templates/starter.md	2566 bytes
+dir	skills/creative/excalidraw/
+file	skills/creative/excalidraw/SKILL.md	7300 bytes
+dir	skills/creative/excalidraw/references/
+file	skills/creative/excalidraw/references/colors.md	1777 bytes
+file	skills/creative/excalidraw/references/dark-mode.md	2282 bytes
+file	skills/creative/excalidraw/references/examples.md	14226 bytes
+dir	skills/creative/excalidraw/scripts/
+file	skills/creative/excalidraw/scripts/upload.py	3817 bytes
+dir	skills/creative/humanizer/
+file	skills/creative/humanizer/LICENSE	1066 bytes
+file	skills/creative/humanizer/SKILL.md	30025 bytes
+dir	skills/creative/manim-video/
+file	skills/creative/manim-video/README.md	886 bytes
+file	skills/creative/manim-video/SKILL.md	12023 bytes
+dir	skills/creative/manim-video/references/
+file	skills/creative/manim-video/references/animation-design-thinking.md	7205 bytes
+file	skills/creative/manim-video/references/animations.md	8836 bytes
+file	skills/creative/manim-video/references/camera-and-3d.md	4132 bytes
+file	skills/creative/manim-video/references/decorations.md	5006 bytes
+file	skills/creative/manim-video/references/equations.md	6086 bytes
+file	skills/creative/manim-video/references/graphs-and-data.md	4628 bytes
+file	skills/creative/manim-video/references/mobjects.md	9739 bytes
+file	skills/creative/manim-video/references/paper-explainer.md	9333 bytes
+file	skills/creative/manim-video/references/production-quality.md	5904 bytes
+file	skills/creative/manim-video/references/rendering.md	5375 bytes
+file	skills/creative/manim-video/references/scene-planning.md	2751 bytes
+file	skills/creative/manim-video/references/troubleshooting.md	4319 bytes
+file	skills/creative/manim-video/references/updaters-and-trackers.md	8500 bytes
+file	skills/creative/manim-video/references/visual-design.md	4762 bytes
+dir	skills/creative/manim-video/scripts/
+file	skills/creative/manim-video/scripts/setup.sh	921 bytes
+dir	skills/creative/p5js/
+file	skills/creative/p5js/README.md	3316 bytes
+file	skills/creative/p5js/SKILL.md	27494 bytes
+dir	skills/creative/p5js/references/
+file	skills/creative/p5js/references/animation.md	10456 bytes
+file	skills/creative/p5js/references/color-systems.md	8647 bytes
+file	skills/creative/p5js/references/core-api.md	9841 bytes
+file	skills/creative/p5js/references/export-pipeline.md	15611 bytes
+file	skills/creative/p5js/references/interaction.md	8345 bytes
+file	skills/creative/p5js/references/shapes-and-geometry.md	7213 bytes
+file	skills/creative/p5js/references/troubleshooting.md	13041 bytes
+file	skills/creative/p5js/references/typography.md	6779 bytes
+file	skills/creative/p5js/references/visual-effects.md	23456 bytes
+file	skills/creative/p5js/references/webgl-and-3d.md	8893 bytes
+dir	skills/creative/p5js/scripts/
+file	skills/creative/p5js/scripts/export-frames.js	5398 bytes
+file	skills/creative/p5js/scripts/render.sh	2911 bytes
+file	skills/creative/p5js/scripts/serve.sh	833 bytes
+file	skills/creative/p5js/scripts/setup.sh	2475 bytes
+dir	skills/creative/p5js/templates/
+file	skills/creative/p5js/templates/viewer.html	10858 bytes
+dir	skills/creative/popular-web-designs/
+file	skills/creative/popular-web-designs/SKILL.md	9722 bytes
+dir	skills/creative/popular-web-designs/templates/
+file	skills/creative/popular-web-designs/templates/airbnb.md	14824 bytes
+file	skills/creative/popular-web-designs/templates/airtable.md	4300 bytes
+file	skills/creative/popular-web-designs/templates/apple.md	21122 bytes
+file	skills/creative/popular-web-designs/templates/bmw.md	10585 bytes
+file	skills/creative/popular-web-designs/templates/cal.md	18582 bytes
+file	skills/creative/popular-web-designs/templates/claude.md	21078 bytes
+file	skills/creative/popular-web-designs/templates/clay.md	18105 bytes
+file	skills/creative/popular-web-designs/templates/clickhouse.md	16180 bytes
+file	skills/creative/popular-web-designs/templates/cohere.md	15543 bytes
+file	skills/creative/popular-web-designs/templates/coinbase.md	5781 bytes
+file	skills/creative/popular-web-designs/templates/composio.md	21732 bytes
+file	skills/creative/popular-web-designs/templates/cursor.md	19867 bytes
+file	skills/creative/popular-web-designs/templates/elevenlabs.md	15978 bytes
+file	skills/creative/popular-web-designs/templates/expo.md	19466 bytes
+file	skills/creative/popular-web-designs/templates/figma.md	12403 bytes
+file	skills/creative/popular-web-designs/templates/framer.md	18347 bytes
+file	skills/creative/popular-web-designs/templates/hashicorp.md	16425 bytes
+file	skills/creative/popular-web-designs/templates/ibm.md	20366 bytes
+file	skills/creative/popular-web-designs/templates/intercom.md	7162 bytes
+file	skills/creative/popular-web-designs/templates/kraken.md	5094 bytes
+file	skills/creative/popular-web-designs/templates/linear.app.md	23231 bytes
+file	skills/creative/popular-web-designs/templates/lovable.md	18160 bytes
+file	skills/creative/popular-web-designs/templates/minimax.md	15071 bytes
+file	skills/creative/popular-web-designs/templates/mintlify.md	18203 bytes
+file	skills/creative/popular-web-designs/templates/miro.md	5538 bytes
+file	skills/creative/popular-web-designs/templates/mistral.ai.md	16421 bytes
+file	skills/creative/popular-web-designs/templates/mongodb.md	15808 bytes
+file	skills/creative/popular-web-designs/templates/notion.md	19090 bytes
+file	skills/creative/popular-web-designs/templates/nvidia.md	17834 bytes
+file	skills/creative/popular-web-designs/templates/ollama.md	16307 bytes
+file	skills/creative/popular-web-designs/templates/opencode.ai.md	16307 bytes
+file	skills/creative/popular-web-designs/templates/pinterest.md	12694 bytes
+file	skills/creative/popular-web-designs/templates/posthog.md	19347 bytes
+file	skills/creative/popular-web-designs/templates/raycast.md	19261 bytes
+file	skills/creative/popular-web-designs/templates/replicate.md	14947 bytes
+file	skills/creative/popular-web-designs/templates/resend.md	19201 bytes
+file	skills/creative/popular-web-designs/templates/revolut.md	9363 bytes
+file	skills/creative/popular-web-designs/templates/runwayml.md	15097 bytes
+file	skills/creative/popular-web-designs/templates/sanity.md	22041 bytes
+file	skills/creative/popular-web-designs/templates/sentry.md	15539 bytes
+file	skills/creative/popular-web-designs/templates/spacex.md	12064 bytes
+file	skills/creative/popular-web-designs/templates/spotify.md	13731 bytes
+file	skills/creative/popular-web-designs/templates/stripe.md	21263 bytes
+file	skills/creative/popular-web-designs/templates/supabase.md	15592 bytes
+file	skills/creative/popular-web-designs/templates/superhuman.md	19714 bytes
+file	skills/creative/popular-web-designs/templates/together.ai.md	15073 bytes
+file	skills/creative/popular-web-designs/templates/uber.md	19430 bytes
+file	skills/creative/popular-web-designs/templates/vercel.md	20227 bytes
+file	skills/creative/popular-web-designs/templates/voltagent.md	27091 bytes
+file	skills/creative/popular-web-designs/templates/warp.md	17441 bytes
+file	skills/creative/popular-web-designs/templates/webflow.md	4863 bytes
+file	skills/creative/popular-web-designs/templates/wise.md	9208 bytes
+file	skills/creative/popular-web-designs/templates/x.ai.md	17043 bytes
+file	skills/creative/popular-web-designs/templates/zapier.md	19484 bytes
+dir	skills/creative/pretext/
+file	skills/creative/pretext/SKILL.md	14168 bytes
+dir	skills/creative/pretext/references/
+file	skills/creative/pretext/references/patterns.md	10450 bytes
+dir	skills/creative/pretext/templates/
+file	skills/creative/pretext/templates/donut-orbit.html	53211 bytes
+file	skills/creative/pretext/templates/hello-orb-flow.html	3443 bytes
+dir	skills/creative/sketch/
+file	skills/creative/sketch/SKILL.md	9304 bytes
+dir	skills/creative/songwriting-and-ai-music/
+file	skills/creative/songwriting-and-ai-music/SKILL.md	10206 bytes
+dir	skills/creative/touchdesigner-mcp/
+file	skills/creative/touchdesigner-mcp/SKILL.md	15429 bytes
+dir	skills/creative/touchdesigner-mcp/references/
+file	skills/creative/touchdesigner-mcp/references/3d-scene.md	10305 bytes
+file	skills/creative/touchdesigner-mcp/references/animation.md	7258 bytes
+file	skills/creative/touchdesigner-mcp/references/audio-reactive.md	5128 bytes
+file	skills/creative/touchdesigner-mcp/references/dat-scripting.md	11586 bytes
+file	skills/creative/touchdesigner-mcp/references/external-data.md	9257 bytes
+file	skills/creative/touchdesigner-mcp/references/geometry-comp.md	3572 bytes
+file	skills/creative/touchdesigner-mcp/references/glsl.md	3537 bytes
+file	skills/creative/touchdesigner-mcp/references/layout-compositor.md	3567 bytes
+file	skills/creative/touchdesigner-mcp/references/mcp-tools.md	30497 bytes
+file	skills/creative/touchdesigner-mcp/references/midi-osc.md	7384 bytes
+file	skills/creative/touchdesigner-mcp/references/network-patterns.md	33603 bytes
+file	skills/creative/touchdesigner-mcp/references/operator-tips.md	3536 bytes
+file	skills/creative/touchdesigner-mcp/references/operators.md	14713 bytes
+file	skills/creative/touchdesigner-mcp/references/panel-ui.md	10088 bytes
+file	skills/creative/touchdesigner-mcp/references/particles.md	8765 bytes
+file	skills/creative/touchdesigner-mcp/references/pitfalls.md	31347 bytes
+file	skills/creative/touchdesigner-mcp/references/postfx.md	4656 bytes
+file	skills/creative/touchdesigner-mcp/references/projection-mapping.md	8104 bytes
+file	skills/creative/touchdesigner-mcp/references/python-api.md	12533 bytes
+file	skills/creative/touchdesigner-mcp/references/replicator.md	8232 bytes
+file	skills/creative/touchdesigner-mcp/references/troubleshooting.md	7442 bytes
+dir	skills/creative/touchdesigner-mcp/scripts/
+file	skills/creative/touchdesigner-mcp/scripts/setup.sh	4468 bytes
+dir	skills/data-science/
+file	skills/data-science/DESCRIPTION.md	137 bytes
+dir	skills/data-science/jupyter-live-kernel/
+file	skills/data-science/jupyter-live-kernel/SKILL.md	5285 bytes
+dir	skills/devops/
+dir	skills/devops/gateway-credential-setup/
+file	skills/devops/gateway-credential-setup/SKILL.md	7011 bytes
+dir	skills/devops/gateway-credential-setup/references/
+file	skills/devops/gateway-credential-setup/references/hermes-telegram-allowlist-debugging.md	1704 bytes
+file	skills/devops/gateway-credential-setup/references/hermes-telegram-fresh-bot.md	1513 bytes
+file	skills/devops/gateway-credential-setup/references/hermes-telegram-single-user-hardening.md	2921 bytes
+dir	skills/devops/kanban-orchestrator/
+file	skills/devops/kanban-orchestrator/SKILL.md	15831 bytes
+dir	skills/devops/kanban-worker/
+file	skills/devops/kanban-worker/SKILL.md	10979 bytes
+dir	skills/dogfood/
+file	skills/dogfood/SKILL.md	6270 bytes
+dir	skills/dogfood/references/
+file	skills/dogfood/references/issue-taxonomy.md	3682 bytes
+dir	skills/dogfood/templates/
+file	skills/dogfood/templates/dogfood-report-template.md	1528 bytes
+dir	skills/email/
+file	skills/email/DESCRIPTION.md	101 bytes
+dir	skills/email/himalaya/
+file	skills/email/himalaya/SKILL.md	7164 bytes
+dir	skills/email/himalaya/references/
+file	skills/email/himalaya/references/configuration.md	5906 bytes
+file	skills/email/himalaya/references/message-composition.md	3799 bytes
+dir	skills/github/
+file	skills/github/DESCRIPTION.md	167 bytes
+dir	skills/github/codebase-inspection/
+file	skills/github/codebase-inspection/SKILL.md	3628 bytes
+dir	skills/github/github-auth/
+file	skills/github/github-auth/SKILL.md	7546 bytes
+dir	skills/github/github-auth/scripts/
+file	skills/github/github-auth/scripts/gh-env.sh	2574 bytes
+dir	skills/github/github-code-review/
+file	skills/github/github-code-review/SKILL.md	13565 bytes
+dir	skills/github/github-code-review/references/
+file	skills/github/github-code-review/references/review-output-template.md	2465 bytes
+dir	skills/github/github-issues/
+file	skills/github/github-issues/SKILL.md	9265 bytes
+dir	skills/github/github-issues/templates/
+file	skills/github/github-issues/templates/bug-report.md	469 bytes
+file	skills/github/github-issues/templates/feature-request.md	598 bytes
+dir	skills/github/github-pr-workflow/
+file	skills/github/github-pr-workflow/SKILL.md	9985 bytes
+dir	skills/github/github-pr-workflow/references/
+file	skills/github/github-pr-workflow/references/ci-troubleshooting.md	4879 bytes
+file	skills/github/github-pr-workflow/references/conventional-commits.md	2417 bytes
+dir	skills/github/github-pr-workflow/templates/
+file	skills/github/github-pr-workflow/templates/pr-body-bugfix.md	513 bytes
+file	skills/github/github-pr-workflow/templates/pr-body-feature.md	580 bytes
+dir	skills/github/github-repo-management/
+file	skills/github/github-repo-management/SKILL.md	13683 bytes
+dir	skills/github/github-repo-management/references/
+file	skills/github/github-repo-management/references/github-api-cheatsheet.md	6092 bytes
+dir	skills/media/
+file	skills/media/DESCRIPTION.md	139 bytes
+dir	skills/media/gif-search/
+file	skills/media/gif-search/SKILL.md	2704 bytes
+dir	skills/media/heartmula/
+file	skills/media/heartmula/SKILL.md	6412 bytes
+dir	skills/media/songsee/
+file	skills/media/songsee/SKILL.md	2336 bytes
+dir	skills/media/youtube-content/
+file	skills/media/youtube-content/SKILL.md	3218 bytes
+dir	skills/media/youtube-content/references/
+file	skills/media/youtube-content/references/output-formats.md	1259 bytes
+dir	skills/media/youtube-content/scripts/
+file	skills/media/youtube-content/scripts/fetch_transcript.py	4041 bytes
+dir	skills/mlops/
+file	skills/mlops/DESCRIPTION.md	162 bytes
+dir	skills/mlops/evaluation/
+file	skills/mlops/evaluation/DESCRIPTION.md	126 bytes
+dir	skills/mlops/evaluation/lm-evaluation-harness/
+file	skills/mlops/evaluation/lm-evaluation-harness/SKILL.md	12020 bytes
+dir	skills/mlops/evaluation/lm-evaluation-harness/references/
+file	skills/mlops/evaluation/lm-evaluation-harness/references/api-evaluation.md	11114 bytes
+file	skills/mlops/evaluation/lm-evaluation-harness/references/benchmark-guide.md	10769 bytes
+file	skills/mlops/evaluation/lm-evaluation-harness/references/custom-tasks.md	13125 bytes
+file	skills/mlops/evaluation/lm-evaluation-harness/references/distributed-eval.md	11426 bytes
+dir	skills/mlops/evaluation/weights-and-biases/
+file	skills/mlops/evaluation/weights-and-biases/SKILL.md	12395 bytes
+dir	skills/mlops/evaluation/weights-and-biases/references/
+file	skills/mlops/evaluation/weights-and-biases/references/artifacts.md	13425 bytes
+file	skills/mlops/evaluation/weights-and-biases/references/integrations.md	16219 bytes
+file	skills/mlops/evaluation/weights-and-biases/references/sweeps.md	17675 bytes
+dir	skills/mlops/huggingface-hub/
+file	skills/mlops/huggingface-hub/SKILL.md	3674 bytes
+dir	skills/mlops/inference/
+file	skills/mlops/inference/DESCRIPTION.md	161 bytes
+dir	skills/mlops/inference/llama-cpp/
+file	skills/mlops/inference/llama-cpp/SKILL.md	8880 bytes
+dir	skills/mlops/inference/llama-cpp/references/
+file	skills/mlops/inference/llama-cpp/references/advanced-usage.md	10887 bytes
+file	skills/mlops/inference/llama-cpp/references/hub-discovery.md	5082 bytes
+file	skills/mlops/inference/llama-cpp/references/optimization.md	1659 bytes
+file	skills/mlops/inference/llama-cpp/references/quantization.md	5888 bytes
+file	skills/mlops/inference/llama-cpp/references/server.md	2915 bytes
+file	skills/mlops/inference/llama-cpp/references/troubleshooting.md	8904 bytes
+dir	skills/mlops/inference/obliteratus/
+file	skills/mlops/inference/obliteratus/SKILL.md	15464 bytes
+dir	skills/mlops/inference/obliteratus/references/
+file	skills/mlops/inference/obliteratus/references/analysis-modules.md	6270 bytes
+file	skills/mlops/inference/obliteratus/references/methods-guide.md	6719 bytes
+dir	skills/mlops/inference/obliteratus/templates/
+file	skills/mlops/inference/obliteratus/templates/abliteration-config.yaml	1189 bytes
+file	skills/mlops/inference/obliteratus/templates/analysis-study.yaml	1368 bytes
+file	skills/mlops/inference/obliteratus/templates/batch-abliteration.yaml	1201 bytes
+dir	skills/mlops/inference/vllm/
+file	skills/mlops/inference/vllm/SKILL.md	9071 bytes
+dir	skills/mlops/inference/vllm/references/
+file	skills/mlops/inference/vllm/references/optimization.md	5769 bytes
+file	skills/mlops/inference/vllm/references/quantization.md	6746 bytes
+file	skills/mlops/inference/vllm/references/server-deployment.md	5252 bytes
+file	skills/mlops/inference/vllm/references/troubleshooting.md	9037 bytes
+dir	skills/mlops/models/
+file	skills/mlops/models/DESCRIPTION.md	253 bytes
+dir	skills/mlops/models/audiocraft/
+file	skills/mlops/models/audiocraft/SKILL.md	16189 bytes
+dir	skills/mlops/models/audiocraft/references/
+file	skills/mlops/models/audiocraft/references/advanced-usage.md	16953 bytes
+file	skills/mlops/models/audiocraft/references/troubleshooting.md	11412 bytes
+dir	skills/mlops/models/segment-anything/
+file	skills/mlops/models/segment-anything/SKILL.md	13372 bytes
+dir	skills/mlops/models/segment-anything/references/
+file	skills/mlops/models/segment-anything/references/advanced-usage.md	15803 bytes
+file	skills/mlops/models/segment-anything/references/troubleshooting.md	11914 bytes
+dir	skills/note-taking/
+file	skills/note-taking/DESCRIPTION.md	146 bytes
+dir	skills/note-taking/obsidian/
+file	skills/note-taking/obsidian/SKILL.md	2919 bytes
+dir	skills/productivity/
+file	skills/productivity/DESCRIPTION.md	114 bytes
+dir	skills/productivity/airtable/
+file	skills/productivity/airtable/SKILL.md	11302 bytes
+dir	skills/productivity/google-drive-deliverables/
+file	skills/productivity/google-drive-deliverables/SKILL.md	4191 bytes
+dir	skills/productivity/google-drive-deliverables/references/
+file	skills/productivity/google-drive-deliverables/references/openclaw-google-drive-reuse.md	2945 bytes
+dir	skills/productivity/google-workspace/
+file	skills/productivity/google-workspace/SKILL.md	13411 bytes
+dir	skills/productivity/google-workspace/references/
+file	skills/productivity/google-workspace/references/gmail-search-syntax.md	2150 bytes
+dir	skills/productivity/google-workspace/scripts/
+file	skills/productivity/google-workspace/scripts/_hermes_home.py	1630 bytes
+file	skills/productivity/google-workspace/scripts/google_api.py	43483 bytes
+file	skills/productivity/google-workspace/scripts/gws_bridge.py	3648 bytes
+file	skills/productivity/google-workspace/scripts/setup.py	18743 bytes
+dir	skills/productivity/maps/
+file	skills/productivity/maps/SKILL.md	6726 bytes
+dir	skills/productivity/maps/scripts/
+file	skills/productivity/maps/scripts/maps_client.py	46678 bytes
+dir	skills/productivity/nano-pdf/
+file	skills/productivity/nano-pdf/SKILL.md	1414 bytes
+dir	skills/productivity/notion/
+file	skills/productivity/notion/SKILL.md	14597 bytes
+dir	skills/productivity/notion/references/
+file	skills/productivity/notion/references/block-types.md	3021 bytes
+dir	skills/productivity/ocr-and-documents/
+file	skills/productivity/ocr-and-documents/DESCRIPTION.md	147 bytes
+file	skills/productivity/ocr-and-documents/SKILL.md	5280 bytes
+dir	skills/productivity/ocr-and-documents/scripts/
+file	skills/productivity/ocr-and-documents/scripts/extract_marker.py	3034 bytes
+file	skills/productivity/ocr-and-documents/scripts/extract_pymupdf.py	3132 bytes
+dir	skills/productivity/powerpoint/
+file	skills/productivity/powerpoint/LICENSE.txt	1467 bytes
+file	skills/productivity/powerpoint/SKILL.md	9298 bytes
+file	skills/productivity/powerpoint/editing.md	6885 bytes
+file	skills/productivity/powerpoint/pptxgenjs.md	12819 bytes
+dir	skills/productivity/powerpoint/scripts/
+file	skills/productivity/powerpoint/scripts/__init__.py	0 bytes
+file	skills/productivity/powerpoint/scripts/add_slide.py	6872 bytes
+file	skills/productivity/powerpoint/scripts/clean.py	9583 bytes
+dir	skills/productivity/powerpoint/scripts/office/
+dir	skills/productivity/powerpoint/scripts/office/helpers/
+file	skills/productivity/powerpoint/scripts/office/helpers/__init__.py	0 bytes
+file	skills/productivity/powerpoint/scripts/office/helpers/merge_runs.py	5567 bytes
+file	skills/productivity/powerpoint/scripts/office/helpers/simplify_redlines.py	5754 bytes
+file	skills/productivity/powerpoint/scripts/office/pack.py	4991 bytes
+dir	skills/productivity/powerpoint/scripts/office/schemas/
+dir	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd	74984 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd	6956 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd	51302 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd	624 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd	152039 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd	1231 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd	8862 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd	14795 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd	83612 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd	1269 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd	7328 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd	6382 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd	1248 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd	880 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd	2608 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd	3507 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd	7507 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd	23313 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd	1367 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd	242277 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd	26148 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd	25279 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd	535 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd	5712 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd	4010 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd	171367 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd	4646 bytes
+dir	skills/productivity/powerpoint/scripts/office/schemas/ecma/
+dir	skills/productivity/powerpoint/scripts/office/schemas/ecma/fourth-edition/
+file	skills/productivity/powerpoint/scripts/office/schemas/ecma/fourth-edition/opc-contentTypes.xsd	1963 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ecma/fourth-edition/opc-coreProperties.xsd	2515 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ecma/fourth-edition/opc-digSig.xsd	2856 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/ecma/fourth-edition/opc-relationships.xsd	1344 bytes
+dir	skills/productivity/powerpoint/scripts/office/schemas/mce/
+file	skills/productivity/powerpoint/scripts/office/schemas/mce/mc.xsd	3127 bytes
+dir	skills/productivity/powerpoint/scripts/office/schemas/microsoft/
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-2010.xsd	26549 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-2012.xsd	3745 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-2018.xsd	901 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-cex-2018.xsd	1778 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-cid-2016.xsd	1002 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd	600 bytes
+file	skills/productivity/powerpoint/scripts/office/schemas/microsoft/wml-symex-2015.xsd	745 bytes
+dir	skills/productivity/teams-meeting-pipeline/
+file	skills/productivity/teams-meeting-pipeline/SKILL.md	6867 bytes
+dir	skills/red-teaming/
+dir	skills/red-teaming/godmode/
+file	skills/red-teaming/godmode/SKILL.md	20044 bytes
+dir	skills/red-teaming/godmode/references/
+file	skills/red-teaming/godmode/references/jailbreak-templates.md	7395 bytes
+file	skills/red-teaming/godmode/references/refusal-detection.md	6245 bytes
+dir	skills/red-teaming/godmode/scripts/
+file	skills/red-teaming/godmode/scripts/auto_jailbreak.py	33557 bytes
+file	skills/red-teaming/godmode/scripts/godmode_race.py	25937 bytes
+file	skills/red-teaming/godmode/scripts/load_godmode.py	1576 bytes
+file	skills/red-teaming/godmode/scripts/parseltongue.py	23149 bytes
+dir	skills/red-teaming/godmode/templates/
+file	skills/red-teaming/godmode/templates/prefill-subtle.json	654 bytes
+file	skills/red-teaming/godmode/templates/prefill.json	907 bytes
+dir	skills/research/
+file	skills/research/DESCRIPTION.md	179 bytes
+dir	skills/research/arxiv/
+file	skills/research/arxiv/SKILL.md	10085 bytes
+dir	skills/research/arxiv/scripts/
+file	skills/research/arxiv/scripts/search_arxiv.py	4272 bytes
+dir	skills/research/blogwatcher/
+file	skills/research/blogwatcher/SKILL.md	5111 bytes
+dir	skills/research/llm-wiki/
+file	skills/research/llm-wiki/SKILL.md	20113 bytes
+dir	skills/research/polymarket/
+file	skills/research/polymarket/SKILL.md	2985 bytes
+dir	skills/research/polymarket/references/
+file	skills/research/polymarket/references/api-endpoints.md	4542 bytes
+dir	skills/research/polymarket/scripts/
+file	skills/research/polymarket/scripts/polymarket.py	10214 bytes
+dir	skills/research/research-paper-writing/
+file	skills/research/research-paper-writing/SKILL.md	103375 bytes
+dir	skills/research/research-paper-writing/references/
+file	skills/research/research-paper-writing/references/autoreason-methodology.md	19146 bytes
+file	skills/research/research-paper-writing/references/checklists.md	13622 bytes
+file	skills/research/research-paper-writing/references/citation-workflow.md	15433 bytes
+file	skills/research/research-paper-writing/references/experiment-patterns.md	25742 bytes
+file	skills/research/research-paper-writing/references/human-evaluation.md	18221 bytes
+file	skills/research/research-paper-writing/references/paper-types.md	16214 bytes
+file	skills/research/research-paper-writing/references/reviewer-guidelines.md	13738 bytes
+file	skills/research/research-paper-writing/references/sources.md	9460 bytes
+file	skills/research/research-paper-writing/references/writing-guide.md	16292 bytes
+dir	skills/research/research-paper-writing/templates/
+file	skills/research/research-paper-writing/templates/README.md	6707 bytes
+dir	skills/research/research-paper-writing/templates/aaai2026/
+file	skills/research/research-paper-writing/templates/aaai2026/README.md	17987 bytes
+file	skills/research/research-paper-writing/templates/aaai2026/aaai2026-unified-supp.tex	4548 bytes
+file	skills/research/research-paper-writing/templates/aaai2026/aaai2026-unified-template.tex	63140 bytes
+file	skills/research/research-paper-writing/templates/aaai2026/aaai2026.bib	4766 bytes
+file	skills/research/research-paper-writing/templates/aaai2026/aaai2026.bst	30207 bytes
+file	skills/research/research-paper-writing/templates/aaai2026/aaai2026.sty	11802 bytes
+dir	skills/research/research-paper-writing/templates/acl/
+file	skills/research/research-paper-writing/templates/acl/README.md	2126 bytes
+file	skills/research/research-paper-writing/templates/acl/acl.sty	11615 bytes
+file	skills/research/research-paper-writing/templates/acl/acl_latex.tex	14533 bytes
+file	skills/research/research-paper-writing/templates/acl/acl_lualatex.tex	3050 bytes
+file	skills/research/research-paper-writing/templates/acl/acl_natbib.bst	45186 bytes
+file	skills/research/research-paper-writing/templates/acl/anthology.bib.txt	1169 bytes
+file	skills/research/research-paper-writing/templates/acl/custom.bib	2071 bytes
+file	skills/research/research-paper-writing/templates/acl/formatting.md	17923 bytes
+dir	skills/research/research-paper-writing/templates/colm2025/
+file	skills/research/research-paper-writing/templates/colm2025/README.md	51 bytes
+file	skills/research/research-paper-writing/templates/colm2025/colm2025_conference.bib	496 bytes
+file	skills/research/research-paper-writing/templates/colm2025/colm2025_conference.bst	26973 bytes
+file	skills/research/research-paper-writing/templates/colm2025/colm2025_conference.pdf	122635 bytes
+file	skills/research/research-paper-writing/templates/colm2025/colm2025_conference.sty	7727 bytes
+file	skills/research/research-paper-writing/templates/colm2025/colm2025_conference.tex	12830 bytes
+file	skills/research/research-paper-writing/templates/colm2025/fancyhdr.sty	20521 bytes
+file	skills/research/research-paper-writing/templates/colm2025/math_commands.tex	12284 bytes
+file	skills/research/research-paper-writing/templates/colm2025/natbib.sty	45154 bytes
+dir	skills/research/research-paper-writing/templates/iclr2026/
+file	skills/research/research-paper-writing/templates/iclr2026/fancyhdr.sty	20521 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.bib	629 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.bst	26973 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.pdf	200508 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.sty	9025 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.tex	16899 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/math_commands.tex	12284 bytes
+file	skills/research/research-paper-writing/templates/iclr2026/natbib.sty	45154 bytes
+dir	skills/research/research-paper-writing/templates/icml2026/
+file	skills/research/research-paper-writing/templates/icml2026/algorithm.sty	2223 bytes
+file	skills/research/research-paper-writing/templates/icml2026/algorithmic.sty	7414 bytes
+file	skills/research/research-paper-writing/templates/icml2026/example_paper.bib	2051 bytes
+file	skills/research/research-paper-writing/templates/icml2026/example_paper.pdf	193509 bytes
+file	skills/research/research-paper-writing/templates/icml2026/example_paper.tex	29714 bytes
+file	skills/research/research-paper-writing/templates/icml2026/fancyhdr.sty	31715 bytes
+file	skills/research/research-paper-writing/templates/icml2026/icml2026.bst	27147 bytes
+file	skills/research/research-paper-writing/templates/icml2026/icml2026.sty	27344 bytes
+file	skills/research/research-paper-writing/templates/icml2026/icml_numpapers.pdf	2823 bytes
+dir	skills/research/research-paper-writing/templates/neurips2025/
+file	skills/research/research-paper-writing/templates/neurips2025/Makefile	1054 bytes
+file	skills/research/research-paper-writing/templates/neurips2025/extra_pkgs.tex	2837 bytes
+file	skills/research/research-paper-writing/templates/neurips2025/main.tex	574 bytes
+file	skills/research/research-paper-writing/templates/neurips2025/neurips.sty	11625 bytes
+dir	skills/smart-home/
+file	skills/smart-home/DESCRIPTION.md	123 bytes
+dir	skills/smart-home/openhue/
+file	skills/smart-home/openhue/SKILL.md	2713 bytes
+dir	skills/social-media/
+file	skills/social-media/DESCRIPTION.md	151 bytes
+dir	skills/social-media/xurl/
+file	skills/social-media/xurl/SKILL.md	15518 bytes
+dir	skills/software-development/
+dir	skills/software-development/hermes-agent-skill-authoring/
+file	skills/software-development/hermes-agent-skill-authoring/SKILL.md	7609 bytes
+dir	skills/software-development/node-inspect-debugger/
+file	skills/software-development/node-inspect-debugger/SKILL.md	10929 bytes
+dir	skills/software-development/plan/
+file	skills/software-development/plan/SKILL.md	8974 bytes
+dir	skills/software-development/python-debugpy/
+file	skills/software-development/python-debugpy/SKILL.md	13172 bytes
+dir	skills/software-development/requesting-code-review/
+file	skills/software-development/requesting-code-review/SKILL.md	8465 bytes
+dir	skills/software-development/spike/
+file	skills/software-development/spike/SKILL.md	8730 bytes
+dir	skills/software-development/systematic-debugging/
+file	skills/software-development/systematic-debugging/SKILL.md	10471 bytes
+dir	skills/software-development/test-driven-development/
+file	skills/software-development/test-driven-development/SKILL.md	9564 bytes
+dir	skills/yuanbao/
+file	skills/yuanbao/SKILL.md	3795 bytes
+dir	plugins/hermes-achievements/
+file	plugins/hermes-achievements/scan_checkpoint.json	7128 bytes
+file	plugins/hermes-achievements/scan_snapshot.json	70870 bytes
+file	plugins/hermes-achievements/state.json	379 bytes
+file	cron/.tick.lock	0 bytes
+file	cron/jobs.json	4525 bytes
+dir	cron/output/
+dir	cron/output/4af938c959d8/
+file	cron/output/4af938c959d8/2026-06-06_02-02-15.md	5813 bytes

@@ -1,0 +1,8 @@
+$ hermes mcp list 2>&1 || true
+exit_code=0
+
+No MCP servers configured.
+
+  Add one with:
+    hermes mcp add <name> --url <endpoint>
+    hermes mcp add <name> --command <cmd> --args <args...>

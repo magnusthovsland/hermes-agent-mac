@@ -1,0 +1,15 @@
+# Never commit local secrets/state
+.env
+*.env
+auth.json
+state.db
+*.sqlite
+*.sqlite3
+logs/
+sessions/
+*.log
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.DS_Store
