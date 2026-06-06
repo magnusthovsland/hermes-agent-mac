@@ -1,0 +1,17 @@
+$ hermes memory status 2>&1 || true
+exit_code=0
+
+Memory status
+────────────────────────────────────────
+  Built-in:  always active
+  Provider:  (none — built-in only)
+
+  Installed plugins:
+    • byterover  (requires API key)
+    • hindsight  (API key / local)
+    • holographic  (local)
+    • honcho  (API key / local)
+    • mem0  (API key / local)
+    • openviking  (API key / local)
+    • retaindb  (API key / local)
+    • supermemory  (requires API key)

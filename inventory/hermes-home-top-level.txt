@@ -1,0 +1,48 @@
+excluded	.env
+file	.env.security-backup-20260606-011928	23449 bytes
+file	.hermes_history	3303 bytes
+file	.install_method	4 bytes
+file	.update_check	68 bytes
+file	SOUL.md	537 bytes
+excluded	audio_cache
+excluded	auth.json
+file	auth.lock	0 bytes
+dir	bin/
+excluded	bootstrap-cache
+excluded	cache
+file	channel_directory.json	684 bytes
+file	config.yaml	14586 bytes
+file	config.yaml.bak.20260605_231842	60662 bytes
+file	config.yaml.bak.20260605_233733	60662 bytes
+file	config.yaml.bak.20260605_234601	15151 bytes
+file	config.yaml.security-backup-20260606-011928	15471 bytes
+file	context_length_cache.yaml	73 bytes
+dir	cron/
+file	gateway.lock	163 bytes
+file	gateway.pid	163 bytes
+file	gateway_state.json	424 bytes
+excluded	google_client_secret.json
+file	google_drive_hermes_folder.json	307 bytes
+excluded	google_token.json
+excluded	hermes-agent
+file	hermes-setup	11324592 bytes
+dir	hooks/
+excluded	image_cache
+excluded	kanban.db
+file	kanban.db.init.lock	0 bytes
+excluded	logs
+dir	memories/
+file	models_dev_cache.json	2208099 bytes
+excluded	node
+file	ollama_cloud_models_cache.json	685 bytes
+dir	pairing/
+excluded	pastes
+dir	plugins/
+file	processes.json	2 bytes
+file	provider_models_cache.json	439 bytes
+excluded	sandboxes
+excluded	sessions
+dir	skills/
+excluded	state.db
+excluded	state.db-shm
+excluded	state.db-wal

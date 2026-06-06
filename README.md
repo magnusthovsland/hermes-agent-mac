@@ -1,10 +1,25 @@
-# hermes-agent-mac backup
+# hermes-agent-mac
 
-This repository stores a sanitized operational snapshot of the local Hermes Agent setup on Magnus's macOS machine.
+Sanitized backup of Magnus's local Hermes Agent setup on macOS.
 
-Security policy:
-- Do not commit `.env`, `auth.json`, SQLite session databases, logs, raw gateway dumps, OAuth tokens, bot tokens, API keys, cookies, private keys, or credentials.
-- Backup files are generated through a sanitizer that redacts secret-like keys and token-like strings.
-- The snapshot is intended for recovery/context, not for restoring credentials.
+This repo represents the latest known safe snapshot in the root tree. Historical snapshots are handled by Git commits, not timestamped directories.
 
-Latest snapshot: `backups/20260606T001306Z/`
+Current snapshot UTC: `20260606T002213Z`
+
+Included:
+- sanitized Hermes config
+- installed Hermes skills, sanitized as text
+- Hermes memories/user profile, sanitized as text
+- cron job definitions/status where present, sanitized as text
+- operational status outputs
+- selected non-sensitive inventory
+
+Excluded:
+- direct secrets, credentials, tokens, private keys and passwords
+- raw `.env` values; only variable names are stored
+- `auth.json`, OAuth token files, Google token/client-secret files
+- state databases, sessions, logs, request dumps and runtime cache files
+- generated dependency trees such as `node_modules` and virtualenvs
+
+Restore note:
+Use this as a reference/configuration backup. Credentials must be recreated separately through `hermes setup`, `hermes auth`, platform setup, or a secure password manager.

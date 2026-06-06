@@ -1,15 +1,29 @@
-# Never commit local secrets/state
+# Direct secrets and credentials
 .env
 *.env
 auth.json
-state.db
-*.sqlite
-*.sqlite3
-logs/
-sessions/
-*.log
+*token*.json
+*client_secret*.json
 *.pem
 *.key
 id_rsa*
 id_ed25519*
+
+# Runtime state / local-only data
+state.db*
+kanban.db*
+logs/
+sessions/
+*.log
+*.sqlite
+*.sqlite3
+*.pid
+*.lock
 .DS_Store
+
+# Dependency/cache trees
+node_modules/
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
