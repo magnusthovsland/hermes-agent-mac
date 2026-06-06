@@ -40,11 +40,8 @@ memory:
   user_char_limit: 1375
   nudge_interval: 10
   flush_min_turns: 6
-session_reset:
-  mode: both
-  idle_minutes: 1440
-  at_hour: 4
-group_sessions_per_user: true
+session_reset: '[REDACTED]'
+group_sessions_per_user: '[REDACTED]'
 streaming:
   enabled: false
 skills:

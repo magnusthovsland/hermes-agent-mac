@@ -1,6 +1,7 @@
 $ hermes memory status 2>&1 || true
 exit_code=0
 
+
 Memory status
 ────────────────────────────────────────
   Built-in:  always active
@@ -15,3 +16,5 @@ Memory status
     • openviking  (API key / local)
     • retaindb  (API key / local)
     • supermemory  (requires API key)
+
+

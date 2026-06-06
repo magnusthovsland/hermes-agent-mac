@@ -93,7 +93,7 @@ web:
 browser:
   inactivity_timeout: 120
   command_timeout: 30
-  record_sessions: false
+  record_sessions: '[REDACTED]'
   allow_private_urls: false
   engine: auto
   auto_local_for_private_urls: true
@@ -291,15 +291,8 @@ display:
 dashboard:
   theme: default
   show_token_analytics: '[REDACTED]'
-  oauth:
-    client_id: ''
-    portal_url: ''
-  basic_auth:
-    username: ''
-    password_hash: '[REDACTED]'
-    password: '[REDACTED]'
-    secret: '[REDACTED]'
-    session_ttl_seconds: 0
+  oauth: '[REDACTED]'
+  basic_auth: '[REDACTED]'
   public_url: ''
 privacy:
   redact_pii: false
@@ -415,7 +408,7 @@ discord:
   history_backfill_limit: 50
   reactions: true
   channel_prompts: {}
-  dm_role_auth_guild: ''
+  dm_role_auth_guild: '[REDACTED]'
   server_actions: ''
   allow_any_attachment: false
   max_attachment_bytes: 33554432
@@ -519,12 +512,7 @@ streaming:
   buffer_threshold: 24
   cursor: ' ▉'
   fresh_final_after_seconds: 60.0
-sessions:
-  auto_prune: false
-  retention_days: 90
-  vacuum_after_prune: true
-  min_interval_hours: 24
-  write_json_snapshots: false
+sessions: '[REDACTED]'
 onboarding:
   seen: {}
 updates:
@@ -546,11 +534,8 @@ paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
 _config_version: 27
-session_reset:
-  mode: both
-  idle_minutes: 1440
-  at_hour: 4
-group_sessions_per_user: true
+session_reset: '[REDACTED]'
+group_sessions_per_user: '[REDACTED]'
 platform_toolsets:
   cli:
   - hermes-cli

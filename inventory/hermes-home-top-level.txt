@@ -1,6 +1,6 @@
 excluded	.env
 file	.env.security-backup-20260606-011928	23449 bytes
-file	.hermes_history	3303 bytes
+file	.hermes_history	3533 bytes
 file	.install_method	4 bytes
 file	.update_check	68 bytes
 file	SOUL.md	537 bytes
@@ -41,6 +41,7 @@ dir	plugins/
 file	processes.json	2 bytes
 file	provider_models_cache.json	439 bytes
 excluded	sandboxes
+dir	scripts/
 excluded	sessions
 dir	skills/
 excluded	state.db

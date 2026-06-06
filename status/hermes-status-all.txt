@@ -1,6 +1,7 @@
 $ hermes status --all 2>&1 || true
 exit_code=0
 
+
 ┌─────────────────────────────────────────────────────────┐
 │                 ⚕ Hermes Agent Status                  │
 └─────────────────────────────────────────────────────────┘
@@ -30,7 +31,7 @@ exit_code=0
   Browserbase   ✗ 
   FAL           ✗ 
   ElevenLabs    ✗ 
-  GitHub        ✓ github...kqKm
+  GitHub        ✓ [REDACTED]
   Anthropic     ✗ 
 
 ◆ Auth Providers
@@ -88,3 +89,5 @@ exit_code=0
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
   Run 'hermes setup' to configure
+
+

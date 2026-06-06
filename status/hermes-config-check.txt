@@ -1,6 +1,7 @@
 $ hermes config check 2>&1 || true
 exit_code=0
 
+
 📋 Configuration Status
 
   Config version: 0 → 27 (update available)
@@ -205,3 +206,5 @@ exit_code=0
     ○ MATTERMOST_HOME_CHANNEL
     ○ MATTERMOST_REPLY_MODE
     ○ MATTERMOST_ALLOWED_CHANNELS
+
+

@@ -1,6 +1,7 @@
 $ hermes doctor 2>&1 || true
 exit_code=0
 
+
 ┌─────────────────────────────────────────────────────────┐
 │                 🩺 Hermes Doctor                        │
 └─────────────────────────────────────────────────────────┘
@@ -67,7 +68,9 @@ exit_code=0
   ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
 
 ◆ API Connectivity
-  Running 26 connectivity checks in parallel…                                                                        ⚠ OpenRouter API (not configured)
+  Running 26 connectivity checks in parallel…
+                                                                      
+  ⚠ OpenRouter API (not configured)
 
 ◆ Tool Availability
   ✓ browser
@@ -116,3 +119,5 @@ exit_code=0
   2. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
+
+

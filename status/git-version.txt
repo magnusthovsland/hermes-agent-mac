@@ -2,3 +2,4 @@ $ git --version 2>&1 || true
 exit_code=0
 
 git version 2.39.5 (Apple Git-154)
+

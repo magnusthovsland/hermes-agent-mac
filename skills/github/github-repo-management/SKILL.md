@@ -503,7 +503,7 @@ for g in json.load(sys.stdin):
 
 ## Sanitized Configuration/Status Backups
 
-When backing up local tool configuration or operational status to GitHub, do not commit raw credential/state files. Use the hardened workflow in `references/sanitized-config-backups.md`: generate a timestamped snapshot, redact secret-like keys and token-like strings, record environment variable names only, scan before commit, push with a one-shot auth header instead of storing credentials in the remote URL, and verify the remote ref.
+When backing up local tool configuration, skills, memories, cron, or operational status to GitHub, do not commit raw credential/state files. Use the hardened workflow in `references/sanitized-config-backups.md`: prefer a root-current-state layout with Git history as the snapshot timeline, include sanitized config/skills/memories/cron/status when relevant, record environment variable names only, scan before commit, push with a one-shot auth header instead of storing credentials in the remote URL, and verify the remote ref.
 
 ## Quick Reference Table
 

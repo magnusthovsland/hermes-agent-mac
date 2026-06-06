@@ -1,7 +1,7 @@
 $ hermes skills list 2>&1 || true
 exit_code=0
 
-Installed Skills                                
+                                Installed Skills                                
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
 ┃ Name                    ┃ Category             ┃ Source  ┃ Trust   ┃ Status  ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━┩
@@ -83,3 +83,5 @@ Installed Skills
 │ test-driven-development │ software-development │ builtin │ builtin │ enabled │
 └─────────────────────────┴──────────────────────┴─────────┴─────────┴─────────┘
 0 hub-installed, 74 builtin, 2 local — 76 enabled, 0 disabled
+
+

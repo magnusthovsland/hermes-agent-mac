@@ -27,3 +27,4 @@ Built-in toolsets (cli):
   ✗ disabled  spotify  🎵 Spotify
   ✗ disabled  yuanbao  🤖 Yuanbao
   ✓ enabled  computer_use  🖱️  Computer Use (macOS)
+
