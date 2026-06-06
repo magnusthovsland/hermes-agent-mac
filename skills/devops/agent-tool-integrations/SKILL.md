@@ -27,6 +27,8 @@ Do **not** start by connecting everything. Roll out integration brokers in stage
 3. **Controlled writes**: modify existing operational data only after explicit approval.
 4. **High-risk actions**: deploys, AWS production actions, email/posting, payments, finance, inkasso, and deletion require explicit approval and narrow technical controls.
 
+For Magnus / Infinity Drift, prefer **direct, one-service-at-a-time integrations** over broad aggregators when the connected systems are sensitive. Composio-style brokers are useful for exploration, but if the broker is compromised it can become a single high-blast-radius point across many services. Default to native skills/tokens for Notion, Airtable, GitHub, Google Drive, etc.; only introduce an aggregator when its value clearly exceeds the added concentration risk.
+
 ## Access classes
 
 Classify every connected toolkit/action before use:
@@ -58,21 +60,36 @@ Delay or isolate:
 
 ## Preferred technical path
 
-1. **Proof of concept via CLI bridge**
-   - Install and login with the broker CLI.
-   - Search/connect one toolkit.
-   - Execute harmless read-only calls.
-   - Record exact commands and outputs.
+### Direct service integrations (preferred for Magnus)
 
-2. **Operational skill**
-   - Once useful commands are verified, add a reference file under this skill documenting allowed toolkits, commands, and approval boundaries.
+Use direct service-specific credentials/skills when the service contains Infinity Drift production, product, content, finance, support, or source-code data.
 
-3. **MCP only after the tool surface is understood**
-   - Hermes supports native MCP, but broad MCP servers can expose many tools and increase context/tool-call risk.
-   - Prefer small, scoped MCP servers or explicit tool allowlists when possible.
+Recommended pattern:
 
-4. **Custom Hermes plugin/wrapper for production use**
-   - If the broker becomes central, build a thin wrapper that enforces allowlists, approval prompts, logging, output limits, and destructive-action blocks.
+1. Store credentials in `~/.hermes/.env` with explicit names; never paste secrets into chat if a local file/edit path is available.
+2. Verify auth with harmless read-only API calls that return account/workspace/repo/base metadata, not sensitive business content.
+3. Record only non-secret identifiers, scopes, and visible resources in a reference file.
+4. Treat tokens with write/admin scopes as **operationally read-only** until Magnus explicitly approves each write/destructive/external action.
+5. If multiple accounts exist for the same provider, use separate env vars and explicitly select the token per operation (e.g. default GitHub vs Infinity Drift GitHub).
+
+### Broker / CLI bridge proof of concept
+
+1. Install and login with the broker CLI.
+2. Search/connect one toolkit.
+3. Execute harmless read-only calls.
+4. Record exact commands and outputs.
+
+### Operational skill
+
+Once useful commands are verified, add a reference file under this skill documenting allowed toolkits, commands, and approval boundaries.
+
+### MCP only after the tool surface is understood
+
+Hermes supports native MCP, but broad MCP servers can expose many tools and increase context/tool-call risk. Prefer small, scoped MCP servers or explicit tool allowlists when possible.
+
+### Custom Hermes plugin/wrapper for production use
+
+If a broker becomes central, build a thin wrapper that enforces allowlists, approval prompts, logging, output limits, and destructive-action blocks.
 
 ## Workflow checklist
 
@@ -98,3 +115,4 @@ When evaluating a new broker/toolkit:
 ## References
 
 - `references/composio-evaluation.md` — Composio-specific assessment and staged adoption plan from the Magnus/Infinity Drift context.
+- `references/magnus-direct-service-access.md` — Direct Notion/Airtable/GitHub/Drive setup and verification pattern for Magnus, including access-class boundaries and known non-secret resource identifiers.

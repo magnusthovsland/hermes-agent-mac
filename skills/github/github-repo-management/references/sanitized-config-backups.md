@@ -77,6 +77,46 @@ subprocess.run([
 
 Never print the token or the full command with the header value. Redact command output defensively.
 
+## Recurring Hermes backups
+
+When the user wants ongoing protection for a Hermes setup, prefer a deterministic script-only cron job rather than an LLM-driven job:
+
+1. Write a reusable backup script under `~/.hermes/scripts/`, e.g. `hermes_config_backup.py`.
+2. The script should:
+   - Generate the root-current-state backup.
+   - Run the actionable secret scan before committing.
+   - Commit and push only if the generated tree changed.
+   - Print output only when it pushed a commit or when an error blocks backup; stay quiet when nothing changed.
+3. Schedule it with Hermes cron using `no_agent=True`, e.g. daily at 03:00:
+
+```python
+cronjob(
+    action="create",
+    name="Nattlig Hermes config/skills/memory backup til GitHub",
+    schedule="0 3 * * *",
+    repeat=365,
+    script="hermes_config_backup.py",
+    no_agent=True,
+    prompt="Script-only job. Runs sanitized Hermes setup backup to GitHub.",
+)
+```
+
+Why: `no_agent=True` avoids unnecessary LLM calls, makes the backup deterministic, and uses the script's stdout as the exact notification. Empty stdout means silent success/no change.
+
+## Restore / rollback guidance
+
+For root-current-state backups, Git history is the restore timeline. To recover from a bad config/model/tool/skill change:
+
+1. Identify a known-good commit in the backup repo.
+2. Restore only the needed safe trees, usually `config/`, `skills/`, `memories/`, and/or `cron/`.
+3. Copy restored files back to the matching Hermes paths carefully:
+   - `config/config.sanitized.yaml` is a reference copy of `~/.hermes/config.yaml`; review redactions before replacing live config.
+   - `skills/` can generally be copied back to `~/.hermes/skills/` after review.
+   - `memories/` can be copied back to `~/.hermes/memories/` after review.
+   - `cron/` can be copied back to `~/.hermes/cron/` after review.
+4. Credentials are intentionally not restorable from this repo. Recreate `.env`, `auth.json`, OAuth tokens, bot tokens, and private keys through secure setup flows or a password manager.
+5. Restart the affected Hermes process/session/gateway after restoring config or tool/skill state.
+
 ## Verification checklist
 
 Before final response, report:
@@ -87,3 +127,4 @@ Before final response, report:
 - File categories intentionally excluded.
 - Secret-scan result, including any inspected false positives.
 - Remote ref verification result.
+- For recurring backups: cron job ID, schedule, script path, `no_agent` setting, next run, and notification behavior.

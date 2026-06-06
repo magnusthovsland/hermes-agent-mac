@@ -3,14 +3,14 @@
     "archived_at": null,
     "created_at": "2026-06-06T00:39:30.608772+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-06T00:39:52.465017+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 1,
+    "last_patched_at": "2026-06-06T01:13:50.882259+00:00",
+    "last_used_at": "2026-06-06T01:11:47.107642+00:00",
+    "last_viewed_at": "2026-06-06T01:11:47.106581+00:00",
+    "patch_count": 7,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "airtable": {
     "archived_at": null,
@@ -24,6 +24,19 @@
     "state": "active",
     "use_count": 1,
     "view_count": 1
+  },
+  "airtable-content-localization": {
+    "archived_at": null,
+    "created_at": "2026-06-06T01:38:37.042605+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-06T02:15:11.462298+00:00",
+    "last_used_at": "2026-06-06T02:03:26.294958+00:00",
+    "last_viewed_at": "2026-06-06T02:03:26.293861+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
   },
   "gateway-credential-setup": {
     "archived_at": null,
@@ -68,14 +81,14 @@
     "archived_at": null,
     "created_at": "2026-06-06T00:11:54.445978+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-06T00:24:28.272547+00:00",
-    "last_used_at": "2026-06-06T00:26:01.565965+00:00",
-    "last_viewed_at": "2026-06-06T00:26:01.565274+00:00",
-    "patch_count": 4,
+    "last_patched_at": "2026-06-06T19:37:31.375943+00:00",
+    "last_used_at": "2026-06-06T19:37:23.711201+00:00",
+    "last_viewed_at": "2026-06-06T19:37:23.710188+00:00",
+    "patch_count": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 6,
+    "view_count": 6
   },
   "google-drive-deliverables": {
     "archived_at": null,
@@ -108,13 +121,13 @@
     "created_at": "2026-06-05T21:44:47.855745+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-06T00:37:36.453270+00:00",
-    "last_viewed_at": "2026-06-06T00:37:36.452521+00:00",
+    "last_used_at": "2026-06-06T19:36:07.079083+00:00",
+    "last_viewed_at": "2026-06-06T19:36:07.078404+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 11,
+    "view_count": 11
   },
   "notion": {
     "archived_at": null,

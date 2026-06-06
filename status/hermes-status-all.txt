@@ -78,7 +78,7 @@ exit_code=0
 ◆ Gateway Service
   Status:       ✓ running
   Manager:      launchd
-  PID(s):       53798
+  PID(s):       93304
 
 ◆ Scheduled Jobs
   Jobs:         2 active, 2 total

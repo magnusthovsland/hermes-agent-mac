@@ -503,7 +503,7 @@ for g in json.load(sys.stdin):
 
 ## Sanitized Configuration/Status Backups
 
-When backing up local tool configuration, skills, memories, cron, or operational status to GitHub, do not commit raw credential/state files. Use the hardened workflow in `references/sanitized-config-backups.md`: prefer a root-current-state layout with Git history as the snapshot timeline, include sanitized config/skills/memories/cron/status when relevant, record environment variable names only, scan before commit, push with a one-shot auth header instead of storing credentials in the remote URL, and verify the remote ref.
+When backing up local tool configuration, skills, memories, cron, or operational status to GitHub, do not commit raw credential/state files. Use the hardened workflow in `references/sanitized-config-backups.md`: prefer a root-current-state layout with Git history as the snapshot timeline, include sanitized config/skills/memories/cron/status when relevant, record environment variable names only, scan before commit, push with a one-shot auth header instead of storing credentials in the remote URL, verify the remote ref, and for recurring Hermes backups use a script-only `no_agent=True` cron job that stays quiet when nothing changed.
 
 ## Quick Reference Table
 

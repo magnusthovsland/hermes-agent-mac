@@ -17,10 +17,11 @@ exit_code=0
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    0/365
+    Repeat:    1/365
     Next run:  2026-06-07T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-06-06T03:00:35.907378+02:00  ok
 
 

@@ -6,6 +6,6 @@ Magnus Thovsland is a solutions architect, system designer, and technical decisi
 §
 Magnus prefers precise, structured, technically correct answers with consistent terminology, no marketing fluff, and clear separation of facts, assumptions, and recommendations. He wants weaknesses, operational consequences, scalability, security, and auditability called out proactively.
 §
-Magnus does not want external actions such as sending emails/messages or making outside commitments without explicit approval. Internal research, coding, analysis, documentation, and file work can be done directly when scope is clear.
+Magnus allows read-only work directly when relevant, but write/create/update/delete/comment/push/patch actions in external systems such as GitHub, Airtable, Notion, email, or messaging require explicit approval or instruction for that specific action.
 §
 Magnus wants reports, analyses, Word/Excel/PowerPoint-style documents, and similar deliverables saved in Google Drive under the folder `Dokumenter Hermes` when Google Drive access is available.

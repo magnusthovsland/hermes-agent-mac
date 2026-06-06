@@ -12,7 +12,7 @@ exit_code=0
 ◆ Python Environment
   ✓ Python 3.11.15
   ✓ Virtual environment active
-  ✓ Version files consistent (0.15.1)
+  ✓ Version files consistent (0.16.0)
 
 ◆ Required Packages
   ✓ OpenAI SDK
@@ -28,7 +28,7 @@ exit_code=0
   ✓ ~/.hermes/.env file exists
   ✓ API key or custom endpoint configured
   ✓ ~/.hermes/config.yaml exists
-  ⚠ Config version outdated (v0 → v27) (new settings available)
+  ✓ Config version up to date (v27)
 
 ◆ xAI Model Retirement (May 15, 2026)
   ✓ No retired xAI models in config
@@ -50,9 +50,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ exists
   ✓ ~/.hermes/SOUL.md exists (persona configured)
   ✓ ~/.hermes/memories/ directory exists
-  ✓ MEMORY.md exists (2010 chars)
-  ✓ USER.md exists (1338 chars)
-  ✓ ~/.hermes/state.db exists (6 sessions)
+  ✓ MEMORY.md exists (2181 chars)
+  ✓ USER.md exists (1355 chars)
+  ✓ ~/.hermes/state.db exists (12 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -113,10 +113,9 @@ exit_code=0
   ✓ Built-in memory active (no external provider configured — this is fine)
 
 ────────────────────────────────────────────────────────────
-  Found 2 issue(s) to address:
+  Found 1 issue(s) to address:
 
-  1. Run 'hermes doctor --fix' or 'hermes setup' to migrate config
-  2. Run 'hermes setup' to configure missing API keys for full tool access
+  1. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 

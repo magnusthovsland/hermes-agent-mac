@@ -65,7 +65,7 @@ agent:
 terminal:
   backend: local
   modal_mode: auto
-  cwd: .
+  cwd: /Users/mt-infinity
   timeout: 180
   env_passthrough: []
   shell_init_files: []
@@ -542,6 +542,7 @@ secrets: '[REDACTED]'
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
+_config_version: 27
 session_reset: '[REDACTED]'
 group_sessions_per_user: '[REDACTED]'
 platform_toolsets:
@@ -587,3 +588,5 @@ known_plugin_toolsets:
   cli:
   - spotify
 unauthorized_dm_behavior: '[REDACTED]'
+plugins:
+  enabled: []

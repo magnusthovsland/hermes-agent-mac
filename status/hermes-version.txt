@@ -1,7 +1,7 @@
 $ hermes --version 2>&1 || true
 exit_code=0
 
-Hermes Agent v0.15.1 (2026.5.29)
+Hermes Agent v0.16.0 (2026.6.5) · upstream ef7e5168
 Project: /Users/mt-infinity/.hermes/hermes-agent
 Python: 3.11.15
 OpenAI SDK: 2.24.0
