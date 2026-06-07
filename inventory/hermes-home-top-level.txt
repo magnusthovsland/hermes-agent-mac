@@ -2,7 +2,6 @@ excluded	.env
 file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
-file	.skills_prompt_snapshot.json	45711 bytes
 file	.update_check	68 bytes
 file	SOUL.md	537 bytes
 excluded	audio_cache
@@ -34,7 +33,7 @@ excluded	kanban.db
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	memories/
-file	models_dev_cache.json	2208729 bytes
+file	models_dev_cache.json	2207543 bytes
 excluded	node
 file	ollama_cloud_models_cache.json	685 bytes
 dir	pairing/

@@ -67,7 +67,10 @@ Use direct service-specific credentials/skills when the service contains Infinit
 Recommended pattern:
 
 1. Store credentials in `~/.hermes/.env` with explicit names; never paste secrets into chat if a local file/edit path is available.
+   - For Hermes itself, use `hermes config env-path` to locate the active env file, then set secrets there.
+   - Do **not** use `hermes config set GITHUB_TOKEN ...` or similar for secrets; `hermes config set` writes structured Hermes settings to `config.yaml`, not runtime credentials.
 2. Verify auth with harmless read-only API calls that return account/workspace/repo/base metadata, not sensitive business content.
+   - For GitHub tokens intended for Hermes tools/subagents, verify with `GH_TOKEN`/`GITHUB_TOKEN` in the command environment and a read-only API call such as repo metadata or `gh auth status`, without requiring a persistent `gh auth login` session.
 3. Record only non-secret identifiers, scopes, and visible resources in a reference file.
 4. Treat tokens with write/admin scopes as **operationally read-only** until Magnus explicitly approves each write/destructive/external action.
 5. If multiple accounts exist for the same provider, use separate env vars and explicitly select the token per operation (e.g. default GitHub vs Infinity Drift GitHub).
@@ -116,3 +119,4 @@ When evaluating a new broker/toolkit:
 
 - `references/composio-evaluation.md` — Composio-specific assessment and staged adoption plan from the Magnus/Infinity Drift context.
 - `references/magnus-direct-service-access.md` — Direct Notion/Airtable/GitHub/Drive setup and verification pattern for Magnus, including access-class boundaries and known non-secret resource identifiers.
+- `references/hermes-github-token-setup.md` — Hermes-specific pattern for placing GitHub tokens in the active `.env`, not `config.yaml`, and verifying with read-only GitHub metadata calls.
