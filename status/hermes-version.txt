@@ -5,5 +5,5 @@ Hermes Agent v0.16.0 (2026.6.5) · upstream ef7e5168
 Project: /Users/mt-infinity/.hermes/hermes-agent
 Python: 3.11.15
 OpenAI SDK: 2.24.0
-Up to date
+Update available: 117 commits behind — run 'hermes update'
 
