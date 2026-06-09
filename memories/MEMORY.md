@@ -1,6 +1,6 @@
 User's Telegram identity for Hermes gateway allowlisting: username sungam81, numeric user ID 7575580066. User set up a new Hermes Telegram bot named Edith / Edithsungam_bot and does not want Hermes to reuse OpenClaw Telegram credentials.
 §
-Infinity Drift develops digital products for the traffic-school/training market. Main products: Ovio (end-to-end SaaS operating system for traffic schools) and Teoria (learning platform focused on real theory understanding). GitHub, AWS, Vercel, Vipps/MobilePay, Link Mobility, SendGrid, Datadog, PostHog, OpenSearch, Airtable, Sanity/CMS, and Notion are relevant tools/platforms.
+Infinity Drift develops digital products for the traffic-school/training market. Main products: Ovio and Teoria. Relevant tools/platforms include GitHub, AWS, Vercel, Vipps/MobilePay, Link Mobility, SendGrid, Datadog, PostHog, OpenSearch, Airtable, Sanity/CMS, Notion. Hermes Notion files: `~/.hermes/notion/infinity-drift/`; token path: `~/.hermes/credentials/notion_token`.
 §
 Ovio is Infinity Drift's traffic-school SaaS OS covering schools, pupils/guardians, companies, teachers, vehicles/resources, scheduling/booking, follow-up, payments/finance/reporting, and integrations such as Statens vegvesen, NAF/ENAF, Vipps/MobilePay, Visma, and Kravia.ai.
 §

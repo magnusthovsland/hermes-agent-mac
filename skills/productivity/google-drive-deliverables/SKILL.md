@@ -23,13 +23,18 @@ Use this skill when Magnus asks for reports, analyses, Word/Excel/PowerPoint-sty
 - Folder URL: `https://drive.google.com/drive/folders/1zh27EtcFCWCkpLDX-XIJwovHP9y-dcLI`
 - Local pointer: `~/.hermes/google_drive_hermes_folder.json`
 
+If Magnus says he cannot access `Dokumenter Hermes` or explicitly asks for another folder, use the folder he provides instead of the default. See `references/magnus-drive-review-deliverables.md` for the known `Dokumenter` folder and review-deliverable preferences.
+
 ## Workflow
+
+### Delivering new artifacts
 
 1. Create the artifact locally first.
    - Prefer real files over pasted content for substantive deliverables.
    - Use appropriate formats: `.md`, `.pdf`, `.docx`, `.xlsx`, `.pptx`, `.csv`, `.html`.
+   - For reviewable analyses where Magnus needs to sort/filter/mark decisions row-by-row (migration reviews, import candidates, triage lists, backlog audits), make `.xlsx` the primary user-facing deliverable. Include an editable decision column such as `Importbeslutning`.
 2. Verify the local artifact exists and is non-empty.
-3. Upload it to `Dokumenter Hermes` using the Google Workspace API script.
+3. Upload it to the target Drive folder (`Dokumenter Hermes` by default, or a user-provided folder such as `Dokumenter` when requested) using the Google Workspace API script.
 4. Verify upload metadata, including parent folder ID when possible.
 5. Reply to Magnus with:
    - filename/title
@@ -37,6 +42,18 @@ Use this skill when Magnus asks for reports, analyses, Word/Excel/PowerPoint-sty
    - local path
    - short summary of content
    - any assumptions/limitations
+
+### Receiving source files from Drive folders
+
+When Magnus provides a Google Drive folder link as input, treat it as a retrievable source location even if it is not the default `Dokumenter Hermes` folder:
+
+1. Extract the folder ID from the URL and run `drive get` to verify access.
+2. List children with a raw parent query: `"'<FOLDER_ID>' in parents and trashed=false"`.
+3. Match by filename/modified time; when there are duplicate copies, pick the newest only if it clearly matches the user’s named file.
+4. Download to a task-specific local directory under `~/.hermes/...`.
+5. If the file is a zip/export, verify magic bytes (`PK\x03\x04`), unpack, inventory contents, and report local paths.
+
+See `references/drive-folder-zip-ingest.md` for the exact commands and the Python extraction fallback for nested Notion zip exports with Unicode/Norwegian filenames.
 
 ## Commands
 

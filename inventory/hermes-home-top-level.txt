@@ -1,8 +1,9 @@
 excluded	.env
+file	.env.backup-before-notion-jarvis-token	24061 bytes
 file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
-file	.update_check	71 bytes
+file	.update_check	70 bytes
 file	SOUL.md	537 bytes
 excluded	audio_cache
 excluded	auth.json
@@ -11,12 +12,13 @@ dir	bin/
 excluded	bootstrap-cache
 excluded	cache
 file	channel_directory.json	684 bytes
-file	config.yaml	14646 bytes
+file	config.yaml	14693 bytes
 file	config.yaml.bak.20260605_231842	60662 bytes
 file	config.yaml.bak.20260605_233733	60662 bytes
 file	config.yaml.bak.20260605_234601	15151 bytes
 file	config.yaml.security-backup-20260606-011928	15471 bytes
 file	context_length_cache.yaml	130 bytes
+dir	credentials/
 dir	cron/
 file	desktop-build-stamp.json	160 bytes
 file	gateway.lock	163 bytes
@@ -33,8 +35,9 @@ excluded	kanban.db
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	memories/
-file	models_dev_cache.json	2216116 bytes
+file	models_dev_cache.json	2238490 bytes
 excluded	node
+dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
 dir	pairing/
 excluded	pastes

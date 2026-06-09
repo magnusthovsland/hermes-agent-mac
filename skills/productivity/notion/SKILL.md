@@ -437,6 +437,19 @@ Headings 5/6 collapse to H4. Multiple `>` lines render as separate quote blocks 
 | One-off API exploration | `ntn api ...` | curl |
 | Build a sync / webhook / agent tool hosted by Notion | `ntn workers ...` | WSL2 + `ntn workers ...` |
 
+## Operational handoffs and credential verification
+
+When taking over Notion operations from another agent or environment:
+
+1. Identify the active integration first with `/v1/users/me`; do not assume that `NOTION_API_KEY` points to the integration that has page access.
+2. Verify the token against the actual target page/database before making changes. A valid token can still return Notion 404 when the page/database has not been shared with that integration.
+3. If the intended new integration lacks sharing but an existing operational integration is already shared, prefer using the already-shared integration until the user explicitly asks to switch or grants the new integration in the Notion UI.
+4. Store only credential paths and integration names/IDs in docs/memory. Never paste token values.
+5. For agent handoffs, create an agent-owned workspace with copied/patched scripts and setup JSON, then patch scripts to read that agent's credential path rather than depending on another agent's workspace.
+6. Run read-only verification before write-capable maintenance scripts, then verify idempotence/no-op output after the maintenance run.
+
+For Infinity Drift/Ovio-specific details, see `references/infinity-drift-ovio-handoff.md`.
+
 ## Notes
 
 - Page/database IDs are UUIDs (with or without dashes — both accepted).

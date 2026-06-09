@@ -50,9 +50,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ exists
   ✓ ~/.hermes/SOUL.md exists (persona configured)
   ✓ ~/.hermes/memories/ directory exists
-  ✓ MEMORY.md exists (1906 chars)
+  ✓ MEMORY.md exists (1901 chars)
   ✓ USER.md exists (1173 chars)
-  ✓ ~/.hermes/state.db exists (15 sessions)
+  ✓ ~/.hermes/state.db exists (17 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
