@@ -51,8 +51,8 @@ exit_code=0
   ✓ ~/.hermes/SOUL.md exists (persona configured)
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (1901 chars)
-  ✓ USER.md exists (1173 chars)
-  ✓ ~/.hermes/state.db exists (17 sessions)
+  ✓ USER.md exists (1284 chars)
+  ✓ ~/.hermes/state.db exists (19 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -65,7 +65,7 @@ exit_code=0
   ✓ Node.js
   ✓ agent-browser (Node.js) (browser automation)
   ✓ Playwright Chromium (browser engine)
-  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ⚠ Browser tools (agent-browser) deps (2 critical, 0 high, 0 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix)
 
 ◆ API Connectivity
   Running 26 connectivity checks in parallel…
@@ -113,9 +113,10 @@ exit_code=0
   ✓ Built-in memory active (no external provider configured — this is fine)
 
 ────────────────────────────────────────────────────────────
-  Found 1 issue(s) to address:
+  Found 2 issue(s) to address:
 
-  1. Run 'hermes setup' to configure missing API keys for full tool access
+  1. Browser tools (agent-browser) has 2 npm vulnerabilities
+  2. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 

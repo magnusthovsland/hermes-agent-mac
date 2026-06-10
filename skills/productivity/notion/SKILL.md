@@ -450,11 +450,31 @@ When taking over Notion operations from another agent or environment:
 
 For Infinity Drift/Ovio-specific details, see `references/infinity-drift-ovio-handoff.md`.
 
+For Ovio project/task dashboard setup, especially the boundary between API-created scaffolds and manual Notion linked-database views, see `references/ovio-project-task-views.md`. Load it before changing `Ovio – Oppgaver` / `Ovio – Prosjekter` layouts or explaining Notion board/sidebar alignment issues.
+
+## Project/task dashboards and Notion layout pitfalls
+
+For project management setups with a master tasks database and a master projects database, prefer the pattern in `references/notion-project-task-dashboard-patterns.md`:
+
+- one master `Tasks` data source;
+- one master `Projects` data source;
+- a `Tasks → Project` relation;
+- project pages/templates containing linked views of `Tasks` filtered to the current project.
+
+Do **not** assume a database view tab under `Projects` can show rows from `Tasks`: native database views are scoped to the database they belong to. Cross-database dashboards require linked database views inside pages.
+
+When a user reports that a Notion board “looks bad” or “is not left aligned,” inspect the actual visual spacing before giving generic Full width advice. A common failure mode is a large dead zone between the sidebar and the first kanban column because an inline/linked database is inside a centered normal page container. Distinguish:
+
+- full-page database: database layout starts close to the workspace/sidebar;
+- normal page + inline/linked database: centered page container unless **Full width** is enabled.
+
+For kanban/task dashboards, use full-page databases for the master task database and turn on **Full width** on project pages/templates that embed linked task views.
+
 ## Notes
 
 - Page/database IDs are UUIDs (with or without dashes — both accepted).
 - Rate limit: ~3 requests/second average. The CLI doesn't bypass this.
-- The API cannot set database **view** filters — that's UI-only.
+- The API cannot set database **view** filters or database view/template layout — that's UI-only in normal API workflows.
 - Use `"is_inline": true` when creating data sources to embed them in a page.
 - Always pass `-s` to curl to suppress progress bars (cleaner agent output).
 - Pipe JSON through `jq` when reading: `... | jq '.results[0].properties'`.
