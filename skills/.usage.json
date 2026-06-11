@@ -121,25 +121,51 @@
     "created_at": "2026-06-05T21:44:47.855745+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-06T19:46:04.813135+00:00",
-    "last_viewed_at": "2026-06-06T19:46:04.812397+00:00",
+    "last_used_at": "2026-06-10T03:58:50.592791+00:00",
+    "last_viewed_at": "2026-06-10T03:58:50.591677+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 12,
-    "view_count": 12
+    "use_count": 13,
+    "view_count": 13
+  },
+  "maps": {
+    "archived_at": null,
+    "created_at": "2026-06-10T09:18:43.946683+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-10T09:18:43.948706+00:00",
+    "last_viewed_at": "2026-06-10T09:18:43.946708+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "notion": {
     "archived_at": null,
     "created_at": "2026-06-06T00:45:10.235803+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-09T08:56:43.339537+00:00",
-    "last_used_at": "2026-06-09T07:39:39.872993+00:00",
-    "last_viewed_at": "2026-06-09T07:39:39.871713+00:00",
+    "last_used_at": "2026-06-10T19:56:55.830738+00:00",
+    "last_viewed_at": "2026-06-10T19:56:55.829769+00:00",
     "patch_count": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
+  },
+  "productivity/notion": {
+    "archived_at": null,
+    "created_at": "2026-06-10T19:57:00.421972+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-10T19:57:00.424614+00:00",
+    "last_viewed_at": "2026-06-10T19:57:00.423357+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
   }
 }
