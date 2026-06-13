@@ -286,6 +286,25 @@ $GAPI docs create --title "Draft" --body "First paragraph..."
 $GAPI docs append DOC_ID --text "Additional content to append"
 ```
 
+## Drive Deliverables Workflow
+
+Use this subsection when the user asks for reports, analyses, Office/PDF artifacts, Markdown exports, CSVs, spreadsheets, review workbooks, or other generated deliverables that should be placed in Google Drive.
+
+Default delivery pattern:
+1. Create the artifact locally first in a real file (`.md`, `.pdf`, `.docx`, `.xlsx`, `.pptx`, `.csv`, `.html`, etc.).
+2. For reviewable analyses where the user needs to sort/filter/mark rows, prefer `.xlsx` as the primary deliverable.
+3. Upload to Drive with `$GAPI drive upload`, setting `--parent FOLDER_ID` when the user supplied or has a known destination folder.
+4. Read back the uploaded file metadata and report the verified `webViewLink`.
+5. If ingesting source files from a Drive folder, list/search first, download locally, process, then upload derived artifacts separately; do not overwrite originals unless explicitly requested.
+
+Example:
+```bash
+$GAPI drive upload /path/to/report.xlsx --name "Report.xlsx" --parent "$FOLDER_ID"
+$GAPI drive get "$FILE_ID"
+```
+
+Approval boundaries: uploading a new artifact to an agreed folder is usually safe after the user asks for it; sharing with new people, deleting/trashing files, changing permissions, or overwriting existing Drive content requires explicit confirmation and read-back verification.
+
 ## Output Format
 
 All commands return JSON. Parse with `jq` or read directly. Key fields:

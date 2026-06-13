@@ -234,37 +234,6 @@ fi
 
 ---
 
-## Pitfall: Do Not `source` Hermes `.env` Just to Read GitHub Tokens
-
-When a workflow needs `GITHUB_TOKEN` / `GH_TOKEN` from `~/.hermes/.env`, prefer parsing the file as key-value text instead of running `source ~/.hermes/.env`.
-
-Why: Hermes `.env` files may contain values with spaces, app paths, comments, or shell-incompatible lines. Sourcing the whole file can fail before the token is loaded, or execute unintended shell syntax.
-
-Use a narrow parser that extracts only the GitHub token variable and never prints the value:
-
-```bash
-TOKEN=[REDACTED]
-from pathlib import Path
-p = Path.home() / '.hermes' / '.env'
-for line in p.read_text(errors='ignore').splitlines():
-    s = line.strip()
-    if not s or s.startswith('#') or '=' not in s:
-        continue
-    k, v = s.split('=', 1)
-    if k.strip() in ('GH_TOKEN', 'GITHUB_TOKEN'):
-        v = v.strip().strip('"').strip("'")
-        if v:
-            print(v)
-            break
-PY
-)
-export GH_TOKEN="$TOKEN"
-```
-
-For GitHub CLI commands, exporting `GH_TOKEN` is enough for `gh` API access without a persistent `gh auth login` session.
-
----
-
 ## Troubleshooting
 
 | Problem | Solution |

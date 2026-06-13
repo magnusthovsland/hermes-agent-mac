@@ -201,6 +201,36 @@ while :; do
 done
 ```
 
+## Content Localization / Backfill Workflow
+
+Use this subsection when asked to fill, translate, localize, or backfill language-specific Airtable fields such as `Question` → `Question (EN)`.
+
+Safety rules:
+1. Verify exact base ID, table ID, and field names from Airtable schema before writing.
+2. Confirm environment/base (QA vs prod) and never silently broaden the target record set.
+3. Only update explicitly allowed target-language fields; never mutate source-language fields.
+4. Do not overwrite non-empty localized fields unless the user explicitly asks for replacement.
+5. Create a local job directory with backups, candidates, patch payloads, responses, read-back exports, and an audit log.
+6. Run a fresh preflight read immediately before PATCHing so stale candidates do not overwrite newer human edits.
+7. Patch in controlled batches and read back every changed record.
+
+Recommended localization sequence:
+```bash
+# 1. Inspect schema
+curl -s "https://api.airtable.com/v0/meta/bases/$BASE_ID/tables" \
+  -H "Authorization: Bearer $AIRTABLE_API_KEY" | python3 -m json.tool
+
+# 2. Count candidates with read-only filters
+FORMULA="AND(NOT({Question}=''), {Question (EN)}='')"
+ENC=$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$FORMULA")
+curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?filterByFormula=$ENC&pageSize=100" \
+  -H "Authorization: Bearer $AIRTABLE_API_KEY" > backup.json
+
+# 3. Build candidate payloads locally, validate JSON, then PATCH no more than 10 records/request.
+```
+
+Translation quality notes: preserve domain terms, answer keys, HTML/Markdown syntax, placeholders, and record ordering. If fields include tags/status/approval flags, do not infer or translate them unless explicitly in scope.
+
 ## Typical Hermes Workflow
 
 1. **Confirm auth.** `curl -s -o /dev/null -w "%{http_code}\n" https://api.airtable.com/v0/meta/bases -H "Authorization: Bearer $AIRTABLE_API_KEY"` — expect `200`.

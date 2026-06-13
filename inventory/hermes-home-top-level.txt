@@ -3,7 +3,6 @@ file	.env.backup-before-notion-jarvis-token	24061 bytes
 file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
-file	.skills_prompt_snapshot.json	45591 bytes
 file	.update_check	70 bytes
 file	SOUL.md	537 bytes
 excluded	audio_cache
@@ -22,9 +21,9 @@ file	context_length_cache.yaml	130 bytes
 dir	credentials/
 dir	cron/
 file	desktop-build-stamp.json	160 bytes
-file	gateway.lock	163 bytes
-file	gateway.pid	163 bytes
-file	gateway_state.json	424 bytes
+file	gateway.lock	162 bytes
+file	gateway.pid	162 bytes
+file	gateway_state.json	423 bytes
 excluded	google_client_secret.json
 file	google_drive_hermes_folder.json	307 bytes
 excluded	google_token.json
@@ -36,7 +35,7 @@ excluded	kanban.db
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	memories/
-file	models_dev_cache.json	2285256 bytes
+file	models_dev_cache.json	2320357 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

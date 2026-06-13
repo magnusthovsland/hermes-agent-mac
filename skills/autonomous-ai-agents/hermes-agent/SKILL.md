@@ -806,6 +806,41 @@ and logs — avoids shell-escaping backslashes in bash.
 
 ---
 
+## Hermes Operations Playbooks
+
+### Gateway credential setup
+When configuring Telegram/Discord/Slack/other gateway bots, distinguish three states before claiming success:
+1. A commented template line exists in `.env` or docs.
+2. An active environment variable is set in the gateway runtime.
+3. The active token belongs to the intended bot/platform identity.
+
+Do not treat redacted search hits, template lines, or legacy OpenClaw credentials as proof. For a fresh Hermes setup, prefer fresh platform credentials unless the user explicitly asks to reuse old ones. Report secrets as SET/not set only, restart the gateway after changes, then verify with platform status/logs and a real message route.
+
+### External tool integrations and brokers
+Use staged rollout for Composio/MCP/CLI bridges/API aggregators:
+1. Read-first low-risk services.
+2. Internal artifact creation in an AI inbox/folder.
+3. Controlled writes with explicit approval.
+4. High-risk actions (deploys, production cloud, email/posting, finance, deletion) require narrow scopes and explicit approval.
+
+Prefer direct one-service-at-a-time integrations for sensitive systems. Use broad brokers only after the tool surface, auth model, logging, and approval boundaries are understood.
+
+### Kanban orchestrator and worker playbooks
+The system prompt injects the core Kanban lifecycle, but load this section mentally when routing through the board.
+
+Orchestrator rules:
+- Discover actual profiles with `hermes profile list` before assigning cards; there is no universal specialist roster.
+- Decompose and route work instead of doing it yourself.
+- Link dependent cards, include workspace/tenant assumptions, then complete your own orchestration card.
+
+Worker rules:
+- Orient inside `$HERMES_KANBAN_WORKSPACE` and respect workspace kind (`scratch`, `dir:<path>`, or `worktree`).
+- Use heartbeats for meaningful progress, block with actionable questions, and complete with paths/URLs/test output.
+- Respect tenant isolation when `$HERMES_TENANT` is set.
+
+### Skill authoring and curation
+For user-local skills, use `skill_manage`. For in-repo skills under a Hermes source checkout, write `skills/<category>/<name>/SKILL.md` directly and validate frontmatter. Keep skills class-level: broad trigger, reusable workflow, exact commands, pitfalls, and verification. Put session-specific details in `references/`, starter files in `templates/`, and re-runnable helpers in `scripts/` rather than creating micro-skills.
+
 ## Troubleshooting
 
 ### Voice not working
