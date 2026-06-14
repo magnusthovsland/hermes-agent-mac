@@ -35,7 +35,7 @@ excluded	kanban.db
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	memories/
-file	models_dev_cache.json	2320357 bytes
+file	models_dev_cache.json	2343591 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
