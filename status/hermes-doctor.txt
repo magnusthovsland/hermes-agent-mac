@@ -9,10 +9,16 @@ exit_code=0
 ◆ Security Advisories
   ✓ No active security advisories
 
+◆ MCP Server Security
+  ✓ No suspicious MCP stdio commands
+
 ◆ Python Environment
   ✓ Python 3.11.15
   ✓ Virtual environment active
   ✓ Version files consistent (0.16.0)
+
+◆ SSL / CA Certificates
+  ✓ SSL CA certificate bundle is valid
 
 ◆ Required Packages
   ✓ OpenAI SDK
@@ -28,7 +34,7 @@ exit_code=0
   ✓ ~/.hermes/.env file exists
   ✓ API key or custom endpoint configured
   ✓ ~/.hermes/config.yaml exists
-  ✓ Config version up to date (v27)
+  ⚠ Config version outdated (v27 → v29) (new settings available)
 
 ◆ xAI Model Retirement (May 15, 2026)
   ✓ No retired xAI models in config
@@ -52,7 +58,7 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (1901 chars)
   ✓ USER.md exists (1284 chars)
-  ✓ ~/.hermes/state.db exists (27 sessions)
+  ✓ ~/.hermes/state.db exists (30 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -65,7 +71,11 @@ exit_code=0
   ✓ Node.js
   ✓ agent-browser (Node.js) (browser automation)
   ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (2 critical, 2 high, 1 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix)
+  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ⚠ web workspace deps (0 critical, 2 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
+  ⚠ ui-tui workspace deps (0 critical, 2 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
 
 ◆ API Connectivity
   Running 26 connectivity checks in parallel…
@@ -89,6 +99,7 @@ exit_code=0
   ✓ tts
   ✓ vision
   ✓ video
+  ✓ web
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
   ⚠ browser-cdp (system dependency not met)
   ⚠ computer_use (system dependency not met)
@@ -99,7 +110,6 @@ exit_code=0
   ⚠ homeassistant (system dependency not met)
   ⚠ moa (missing OPENROUTER_API_KEY)
   ⚠ video_gen (system dependency not met)
-  ⚠ web (missing EXA_API_KEY, PARALLEL_API_KEY, TAVILY_API_KEY, FIRECRAWL_API_KEY, FIRECRAWL_API_URL, FIRECRAWL_GATEWAY_URL, TOOL_GATEWAY_DOMAIN, TOOL_GATEWAY_SCHEME, TOOL_GATEWAY_USER_TOKEN)
   ⚠ x_search (missing XAI_API_KEY)
   ⚠ hermes-yuanbao (system dependency not met)
   ⚠ spotify (system dependency not met)
@@ -113,10 +123,12 @@ exit_code=0
   ✓ Built-in memory active (no external provider configured — this is fine)
 
 ────────────────────────────────────────────────────────────
-  Found 2 issue(s) to address:
+  Found 4 issue(s) to address:
 
-  1. Browser tools (agent-browser) has 5 npm vulnerabilities
-  2. Run 'hermes setup' to configure missing API keys for full tool access
+  1. Run 'hermes doctor --fix' or 'hermes setup' to migrate config
+  2. web workspace has 2 npm vulnerabilities
+  3. ui-tui workspace has 2 npm vulnerabilities
+  4. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 

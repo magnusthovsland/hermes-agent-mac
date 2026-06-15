@@ -273,7 +273,7 @@ display:
   ephemeral_system_ttl: 0
   platforms:
     telegram:
-      streaming: true
+      streaming: false
     discord:
       streaming: false
   runtime_footer:
@@ -436,6 +436,7 @@ telegram:
   unauthorized_dm_behavior: '[REDACTED]'
   group_allowed_chats: []
   group_allow_from: []
+  gateway_restart_notification: false
 mattermost:
   require_mention: true
   free_response_channels: ''
@@ -455,6 +456,7 @@ command_allowlist:
 - execute_code
 - recursive delete
 - stop/restart hermes gateway (kills running agents)
+- hermes update (restarts gateway, kills running agents)
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false
@@ -513,9 +515,18 @@ gateway:
   media_delivery_allow_dirs: []
   trust_recent_files: true
   trust_recent_files_seconds: 600
+  platforms:
+    telegram:
+      extra:
+        rich_messages: false
+        disable_link_previews: true
+      gateway_restart_notification: false
+  streaming:
+    enabled: false
+    transport: false
 streaming:
   enabled: false
-  transport: auto
+  transport: false
   edit_interval: 0.8
   buffer_threshold: 24
   cursor: ' ▉'
