@@ -1,9 +1,9 @@
 $ hermes --version 2>&1 || true
 exit_code=0
 
-Hermes Agent v0.16.0 (2026.6.5) · upstream 36ae9584
+Hermes Agent v0.16.0 (2026.6.5) · upstream fcf6cb3d
 Project: /Users/mt-infinity/.hermes/hermes-agent
 Python: 3.11.15
 OpenAI SDK: 2.24.0
-Update available: 258 commits behind — run 'hermes update'
+Update available: 339 commits behind — run 'hermes update'
 

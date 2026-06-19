@@ -58,7 +58,7 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (1901 chars)
   ✓ USER.md exists (1284 chars)
-  ✓ ~/.hermes/state.db exists (33 sessions)
+  ✓ ~/.hermes/state.db exists (34 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -74,7 +74,7 @@ exit_code=0
   ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
   ⚠ web workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ⚠ ui-tui workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ ui-tui workspace deps (0 critical, 2 high, 1 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
 
 ◆ API Connectivity
@@ -127,7 +127,7 @@ exit_code=0
 
   1. Run 'hermes doctor --fix' or 'hermes setup' to migrate config
   2. web workspace has 2 npm vulnerabilities
-  3. ui-tui workspace has 2 npm vulnerabilities
+  3. ui-tui workspace has 3 npm vulnerabilities
   4. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
