@@ -816,6 +816,9 @@ When configuring Telegram/Discord/Slack/other gateway bots, distinguish three st
 
 Do not treat redacted search hits, template lines, or legacy OpenClaw credentials as proof. For a fresh Hermes setup, prefer fresh platform credentials unless the user explicitly asks to reuse old ones. Report secrets as SET/not set only, restart the gateway after changes, then verify with platform status/logs and a real message route.
 
+### Messaging gateway delivery verification
+After Hermes gateway or renderer changes, verify delivery across the actual platform adapter, not just local formatting. Use a real target when available, inspect gateway logs for send errors, and test platform-specific rich-text/media behavior (Telegram web compatibility is a common pitfall). The former standalone `messaging-gateway-delivery` package is preserved at `references/packages/messaging-gateway-delivery/` with its Telegram rich-message compatibility reference.
+
 ### External tool integrations and brokers
 Use staged rollout for Composio/MCP/CLI bridges/API aggregators:
 1. Read-first low-risk services.

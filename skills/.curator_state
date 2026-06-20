@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260612-215949",
-  "last_run_at": "2026-06-12T21:59:49.238354+00:00",
-  "last_run_duration_seconds": 491.130098,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nHuman summary:\n- Created new class-level umbrella skills:\n  - `apple-ecosystem-automation`\n  - `autonomous-coding-agent-clis`\n  - `github-workflows`\n  - `mlops-model-operations`\n  - `resea…\narchived 33 skill(s):\n  • agent-tool-integrations → hermes-agent\n  • airtable-content-localization → airtable\n  • gateway-credential-setup → hermes-agent\n  • google-drive-deliverables → google-workspace\n  • hermes-agent-skill-authoring → hermes-agent\n  • kanban-orchestrator → hermes-agent\n  • kanban-worker → hermes-agent\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • arxiv — pruned (stale)\n  … and 23 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin airtable",
+  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260619-224016",
+  "last_run_at": "2026-06-19T22:40:16.803929+00:00",
+  "last_run_duration_seconds": 379.487757,
+  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nSummary:\n- Created 4 new class-level umbrella skills:\n  - `creative-visual-artifacts`\n  - `software-development-workflows`\n  - `media-content-workflows`\n  - `document-productivity-workflow…\narchived 27 skill(s):\n  • messaging-gateway-delivery → hermes-agent\n  • architecture-diagram — pruned (stale)\n  • ascii-art — pruned (stale)\n  • baoyu-infographic — pruned (stale)\n  • claude-design — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • design-md — pruned (stale)\n  • excalidraw — pruned (stale)\n  • gif-search — pruned (stale)\n  • heartmula — pruned (stale)\n  … and 17 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
   "last_run_summary_shown_at": "2026-06-12T21:59:49.238354+00:00",
   "paused": false,
-  "run_count": 1
+  "run_count": 2
 }
