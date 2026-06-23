@@ -23,6 +23,7 @@ Use this skill for class-level software work: understanding a codebase, proving 
 - **Pre-commit or PR readiness** → request/recreate a code review: diff, tests, lint, security scan, docs impact, and auto-fix safe issues.
 - **Messy recent changes** → simplify code with parallel review perspectives if appropriate.
 - **Runtime-specific failure** → use Python `pdb`/`debugpy` or Node `--inspect`/Chrome DevTools Protocol.
+- **CMS/API access or content attribution question** → perform a read-only access/audit workflow: identify credential purpose without exposing secrets, query recent content, inspect transaction history, and map author IDs to users/robots.
 
 ## Operating rules
 
@@ -53,6 +54,10 @@ Use a four-phase loop: reproduce, localize, explain, fix/verify. Record hypothes
 ### Code review and simplification
 
 For pre-commit review, inspect diff and run quality gates. For simplification, ask what code can be deleted, what abstractions can collapse, and whether behavior remains covered by tests.
+
+### CMS/API content access audits
+
+When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls.
 
 ### Python debugging
 
