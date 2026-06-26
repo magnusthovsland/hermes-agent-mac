@@ -59,6 +59,10 @@ For pre-commit review, inspect diff and run quality gates. For simplification, a
 
 When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls.
 
+### External ERP/API integration research
+
+When researching a business-system API integration, distinguish **the business action** from **the bookkeeping mirror** before recommending mutations. For financial flows, explicitly separate “system should initiate money movement” from “money already moved elsewhere; system should only record it,” because using a payout API after an external PSP refund can create duplicate payments. For Visma Business NXT customer refunds, see `references/visma-business-nxt-customer-refunds.md` for the durable GraphQL patterns and pitfalls.
+
 ### Python debugging
 
 Use `pdb` for local interactive stepping and `debugpy` when a long-running process or test needs DAP-style attach. See `references/packages/python-debugpy/` for command recipes.
