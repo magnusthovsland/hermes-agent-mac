@@ -452,6 +452,8 @@ For Infinity Drift/Ovio-specific details, see `references/infinity-drift-ovio-ha
 
 For Ovio project/task dashboard setup, especially the boundary between API-created scaffolds and manual Notion linked-database views, see `references/ovio-project-task-views.md`. Load it before changing `Ovio – Oppgaver` / `Ovio – Prosjekter` layouts or explaining Notion board/sidebar alignment issues.
 
+For the Ovio task schema convention that tasks should have an `Integrasjon` relation pointing to `Ovio – Integrasjoner`, see `references/ovio-ta[REDACTED].md`. Load it before changing task properties or mapping tasks to operational integrations.
+
 ## Project/task dashboards and Notion layout pitfalls
 
 For project management setups with a master tasks database and a master projects database, prefer the pattern in `references/notion-project-task-dashboard-patterns.md`:

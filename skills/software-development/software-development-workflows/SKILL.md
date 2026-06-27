@@ -23,6 +23,7 @@ Use this skill for class-level software work: understanding a codebase, proving 
 - **Pre-commit or PR readiness** → request/recreate a code review: diff, tests, lint, security scan, docs impact, and auto-fix safe issues.
 - **Messy recent changes** → simplify code with parallel review perspectives if appropriate.
 - **Runtime-specific failure** → use Python `pdb`/`debugpy` or Node `--inspect`/Chrome DevTools Protocol.
+- **Web app quality assessment** → run a dogfood/exploratory QA pass: plan scope, interact through the browser, collect screenshots/console evidence, categorize issues, and produce a structured bug report.
 - **CMS/API access or content attribution question** → perform a read-only access/audit workflow: identify credential purpose without exposing secrets, query recent content, inspect transaction history, and map author IDs to users/robots.
 
 ## Operating rules
@@ -55,6 +56,10 @@ Use a four-phase loop: reproduce, localize, explain, fix/verify. Record hypothes
 
 For pre-commit review, inspect diff and run quality gates. For simplification, ask what code can be deleted, what abstractions can collapse, and whether behavior remains covered by tests.
 
+### Web application dogfooding / exploratory QA
+
+For browser-facing apps, use a structured dogfood pass: define scope, explore primary flows, capture screenshots/console/network evidence, categorize defects by user impact, and produce an actionable report. The preserved `dogfood` package includes an issue taxonomy and report template.
+
 ### CMS/API content access audits
 
 When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls.
@@ -73,4 +78,4 @@ Use `node --inspect` or `--inspect-brk`, connect to the Chrome DevTools Protocol
 
 ## Preserved source packages
 
-Full prior skill packages are preserved under `references/packages/`: `codebase-inspection`, `node-inspect-debugger`, `python-debugpy`, `requesting-code-review`, `simplify-code`, `spike`, `systematic-debugging`, and `test-driven-development`.
+Full prior skill packages are preserved under `references/packages/`: `codebase-inspection`, `dogfood`, `node-inspect-debugger`, `python-debugpy`, `requesting-code-review`, `simplify-code`, `spike`, `systematic-debugging`, and `test-driven-development`.

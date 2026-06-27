@@ -50,9 +50,25 @@ For landing pages, dashboards, decks, or comparison mockups, produce single-file
 
 Use p5.js for canvas/WebGL/generative animation and Pretext for DOM-free text layout, kinetic typography, and text-as-geometry experiments. Keep demos single-file unless export tooling is requested. Preserved packages live at `references/packages/p5js/` and `references/packages/pretext/`.
 
-### ASCII art
+### ASCII art and ASCII video
 
-Use pyfiglet/cowsay/boxes for text banners and image-to-ASCII for raster sources. Favor monospaced-safe output and include width assumptions.
+Use pyfiglet/cowsay/boxes for text banners and image-to-ASCII for raster sources. Favor monospaced-safe output and include width assumptions. For animated ASCII output, use the preserved `ascii-video` package: it covers video/audio/image/generative inputs, colored ASCII MP4/GIF rendering, audio-reactive visualizers, scene composition, shader/effect recipes, and optimization/troubleshooting notes.
+
+### ComfyUI generation workflows
+
+Use ComfyUI when the user needs node-graph image/video/audio generation, inpainting, upscaling, workflow parameter injection, local/cloud execution, or model/node lifecycle management. Prefer `comfy-cli` for setup/lifecycle and direct REST/WebSocket calls for workflow runs. Keep workflow JSON in API format and verify server health before queueing jobs.
+
+### Manim explainer videos
+
+Use Manim CE when the deliverable is educational animation: math/concept explainers, algorithms, equation derivations, architecture animations, or 3Blue1Brown-style videos. Plan the narrative/aha moment before writing code, render actual video output, and use preserved references for scene planning, visual design, equations, graphs, 3D/camera, and troubleshooting.
+
+### TouchDesigner real-time visuals
+
+Use TouchDesigner via the twozero MCP when the user needs a live network, projection mapping, interactive installation, audio-reactive visuals, particles, panels, GLSL, or external data visuals. Do not guess operator parameter names; inspect op/par info and errors with MCP tools before setting parameters.
+
+### Humanized creative text
+
+Use the humanizer material when the visual artifact includes copy that must sound natural, non-corporate, or non-LLM-written. Strip AI-isms, vary rhythm, add concrete human voice, and calibrate from user-provided samples when available.
 
 ## Pitfalls
 
@@ -63,4 +79,4 @@ Use pyfiglet/cowsay/boxes for text banners and image-to-ASCII for raster sources
 
 ## Preserved source packages
 
-The following previously separate skills were consolidated here as package snapshots under `references/packages/`: `architecture-diagram`, `ascii-art`, `baoyu-infographic`, `claude-design`, `design-md`, `excalidraw`, `p5js`, `popular-web-designs`, `pretext`, and `sketch`.
+The following previously separate skills were consolidated here as package snapshots under `references/packages/`: `architecture-diagram`, `ascii-art`, `ascii-video`, `baoyu-infographic`, `claude-design`, `comfyui`, `design-md`, `excalidraw`, `humanizer`, `manim-video`, `p5js`, `popular-web-designs`, `pretext`, `sketch`, and `touchdesigner-mcp`.

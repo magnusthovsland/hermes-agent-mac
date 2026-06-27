@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260619-224016",
-  "last_run_at": "2026-06-19T22:40:16.803929+00:00",
-  "last_run_duration_seconds": 379.487757,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nSummary:\n- Created 4 new class-level umbrella skills:\n  - `creative-visual-artifacts`\n  - `software-development-workflows`\n  - `media-content-workflows`\n  - `document-productivity-workflow…\narchived 27 skill(s):\n  • messaging-gateway-delivery → hermes-agent\n  • architecture-diagram — pruned (stale)\n  • ascii-art — pruned (stale)\n  • baoyu-infographic — pruned (stale)\n  • claude-design — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • design-md — pruned (stale)\n  • excalidraw — pruned (stale)\n  • gif-search — pruned (stale)\n  • heartmula — pruned (stale)\n  … and 17 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
+  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260626-225824",
+  "last_run_at": "2026-06-26T22:58:24.471573+00:00",
+  "last_run_duration_seconds": 304.327069,
+  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nHuman summary:\n\n- Created new umbrella skill **`productivity-service-integrations`** for service/API productivity workflows:\n  - absorbed Airtable, Google Workspace, Maps, Notion, Obsidian…\narchived 15 skill(s):\n  • airtable — pruned (stale)\n  • ascii-video — pruned (stale)\n  • comfyui — pruned (stale)\n  • dogfood — pruned (stale)\n  • google-workspace — pruned (stale)\n  • himalaya — pruned (stale)\n  • humanizer — pruned (stale)\n  • manim-video — pruned (stale)\n  • maps — pruned (stale)\n  • notion — pruned (stale)\n  … and 5 more\nfull report: hermes curator status",
   "last_run_summary_shown_at": "2026-06-12T21:59:49.238354+00:00",
   "paused": false,
-  "run_count": 2
+  "run_count": 3
 }
