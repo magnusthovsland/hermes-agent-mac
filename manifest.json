@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "20260627T010038Z",
+  "snapshot_utc": "20260628T010008Z",
   "layout": "root-current-state; Git history is the snapshot history",
   "source_hermes_home": "/Users/mt-infinity/.hermes",
   "included": {
@@ -13,7 +13,7 @@
     ],
     "skills_files_copied": 845,
     "memories_files_copied": 2,
-    "cron_files_copied": 45,
+    "cron_files_copied": 47,
     "status_files": [
       "gh-version.txt",
       "git-version.txt",

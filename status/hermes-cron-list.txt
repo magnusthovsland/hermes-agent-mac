@@ -9,19 +9,19 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    23/365
-    Next run:  2026-06-28T02:00:00+02:00
+    Repeat:    24/365
+    Next run:  2026-06-29T02:00:00+02:00
     Deliver:   origin
-    Last run:  2026-06-27T02:06:51.375570+02:00  error: RuntimeError: [Errno 32] Broken pipe
+    Last run:  2026-06-28T02:01:50.853450+02:00  ok
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    21/365
-    Next run:  2026-06-28T03:00:00+02:00
+    Repeat:    22/365
+    Next run:  2026-06-29T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-06-26T03:00:16.612920+02:00  ok
+    Last run:  2026-06-27T03:00:49.579350+02:00  ok
 
 
