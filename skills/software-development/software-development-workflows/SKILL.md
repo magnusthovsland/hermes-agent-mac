@@ -36,6 +36,10 @@ Use this skill for class-level software work: understanding a codebase, proving 
 
 ## Labeled playbooks
 
+### React Router/Sanity SEO metadata regression audits
+
+For Sanity-backed React Router sites where `<title>`, meta description, or Open Graph tags disappear from live source, do a layered read-only audit before blaming CMS content: verify schema fields, verify production documents still contain `seoTitle`/`seoDescription`, verify frontend GROQ queries fetch those fields, then inspect route `meta()` rendering. React Router v8 removed the old `data` argument for `meta()`; migrate `({ data })` to `({ loaderData })` and `matches[*].data` to `matches[*].loaderData`. Full checklist: `references/react-router-sanity-seo-metadata-audit.md`.
+
 ### Codebase inspection
 
 Use `pygount` or language-native tools to quantify files, languages, generated/vendor ratios, and hotspots. The preserved package `references/packages/codebase-inspection/` contains the original commands and report style.
@@ -60,9 +64,17 @@ For pre-commit review, inspect diff and run quality gates. For simplification, a
 
 For browser-facing apps, use a structured dogfood pass: define scope, explore primary flows, capture screenshots/console/network evidence, categorize defects by user impact, and produce an actionable report. The preserved `dogfood` package includes an issue taxonomy and report template.
 
+### Frontend framework upgrade regressions
+
+When a frontend regression appears after a framework/dependency upgrade, verify both the live output and the underlying data before blaming the CMS. For React Router v8 specifically, route `meta()` functions must use `loaderData` instead of the deprecated v7 `data` argument; stale `({ data })` usage can silently remove server-rendered `<title>`, meta description, Open Graph, and Twitter tags even when CMS SEO fields still exist. See `references/react-router-v8-route-meta.md` for the reproduction and fix pattern.
+
 ### CMS/API content access audits
 
 When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls.
+
+### Sanity navigation/footer link modeling
+
+When a Sanity-managed footer/header link needs to point at a frontend route that is not a Sanity document, inspect the schema and frontend renderer before recommending workarounds. Do not create fake Sanity pages solely to satisfy an internal reference. Prefer existing `linkExternal` as an immediate workaround for same-domain non-Sanity routes, and recommend/implement a `linkRelative` type for the long-term model when appropriate. See `references/sanity-footer-link-modeling.md` for the decision order and editor guidance.
 
 ### External ERP/API integration research
 

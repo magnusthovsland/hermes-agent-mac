@@ -70,6 +70,18 @@ Phases:
 7. Self-review and revision: reviewer simulation, checklist, appendix/supplement.
 8. Submission: formatting, anonymization, PDF checks, source package.
 
+## Google Ads / PPC landing-page experience audits
+Use this workflow when investigating Google Ads Quality Score, “Landing page experience: below average”, or PPC landing-page relevance/performance problems. See `references/google-ads-landing-page-experience.md` for a concrete Teoria.no-style diagnostic pattern and API field checklist.
+
+1. Start from the actual keyword/ad group and final URL, not from the brand website you remember. If the user corrects the domain/product, pivot immediately.
+2. If Google Ads account/API access exists, use it before making strong claims: pull campaign performance, keyword Quality Score components, expanded final URLs, ad final URLs, search terms, negatives, and conversion-goal configuration.
+3. Test the exact final URL, mobile final URL, tracking-template-expanded URL, and obvious keyword URL variants with AdsBot/Googlebot user agents.
+4. Check whether keyword-like paths incorrectly return `200` with a generic homepage (soft-404/fallback). Prefer relevant 301 redirects or true 404s, but do not overstate this if Google Ads expanded final URLs are already correct.
+5. Compare message match above the fold: keyword → ad copy → `<title>`/meta description → H1 → intro → CTA. Exact commercial phrases often matter more than broad semantic relevance.
+6. Run technical checks: HTTP status, robots/noindex, sitemap presence, canonical, mobile render, Lighthouse/mobile performance, FCP/LCP/CLS/TBT, and third-party JS weight.
+7. Prioritize fixes in this order: correct final URLs/redirects if actually wrong, stronger above-the-fold message match, mobile performance/third-party script deferral, then conversion-goal cleanup.
+8. Report separately: evidence from Google Ads API, evidence from live fetches, likely Google Ads interpretation, and recommended campaign/config changes.
+
 ## Evidence Rules
 - Prefer primary sources (papers, docs, official APIs) over summaries.
 - Include URLs/IDs/dates for every claim likely to age.

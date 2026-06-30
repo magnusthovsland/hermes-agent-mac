@@ -9,3 +9,5 @@ Ovio production backend runs in AWS ECS/Fargate eu-north-1, cluster `wright`, se
 Teoria is Infinity Drift's theory-learning platform using Airtable + Sanity/CMS/Vercel, with simple wording, plausible alternatives, and consistent question structure. For NO→EN use British/international English for Norway theory-test learners; preserve Norwegian law/actors; terms include give way, driving licence, road user, pedestrian crossing, overtaking; convert promille to % BAC.
 §
 Hermes Google Drive default folder for Magnus deliverables is `Dokumenter Hermes`, folder ID `1zh27EtcFCWCkpLDX-XIJwovHP9y-dcLI`; local pointer stored at `~/.hermes/google_drive_hermes_folder.json`. Current reused OpenClaw Google token has Drive scopes only, not Docs/Sheets native edit scopes.
+§
+For Wright-Web release workflow, Magnus may ask for fixes to be pushed directly to QA for testing while creating a separate PR against prod/main for developer review and production promotion.
