@@ -9,19 +9,19 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    27/365
-    Next run:  2026-07-02T02:00:00+02:00
+    Repeat:    28/365
+    Next run:  2026-07-03T02:00:00+02:00
     Deliver:   origin
-    Last run:  2026-07-01T02:04:36.877612+02:00  ok
+    Last run:  2026-07-02T02:02:08.422817+02:00  ok
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    25/365
-    Next run:  2026-07-02T03:00:00+02:00
+    Repeat:    26/365
+    Next run:  2026-07-03T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-06-30T03:00:29.796249+02:00  ok
+    Last run:  2026-07-01T03:01:04.707310+02:00  ok
 
 
