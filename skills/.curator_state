@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260626-225824",
-  "last_run_at": "2026-06-26T22:58:24.471573+00:00",
-  "last_run_duration_seconds": 304.327069,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nHuman summary:\n\n- Created new umbrella skill **`productivity-service-integrations`** for service/API productivity workflows:\n  - absorbed Airtable, Google Workspace, Maps, Notion, Obsidian…\narchived 15 skill(s):\n  • airtable — pruned (stale)\n  • ascii-video — pruned (stale)\n  • comfyui — pruned (stale)\n  • dogfood — pruned (stale)\n  • google-workspace — pruned (stale)\n  • himalaya — pruned (stale)\n  • humanizer — pruned (stale)\n  • manim-video — pruned (stale)\n  • maps — pruned (stale)\n  • notion — pruned (stale)\n  … and 5 more\nfull report: hermes curator status",
+  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20260703-231623",
+  "last_run_at": "2026-07-03T23:16:23.610461+00:00",
+  "last_run_duration_seconds": 168.147735,
+  "last_run_summary": "auto: no changes; llm: Processed the full candidate set of 3 skills.\n\nSummary:\n- Kept `hermes-agent` active: it is already a class-level Hermes operations/configuration umbrella with rich subsections and linked references.\n- Created `data-science-workflows` as a …\narchived 2 skill(s):\n  • jupyter-live-kernel — pruned (stale)\n  • openhue — pruned (stale)\nfull report: hermes curator status",
   "last_run_summary_shown_at": "2026-06-12T21:59:49.238354+00:00",
   "paused": false,
-  "run_count": 3
+  "run_count": 4
 }

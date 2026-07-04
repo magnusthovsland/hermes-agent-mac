@@ -70,7 +70,7 @@ When a frontend regression appears after a framework/dependency upgrade, verify 
 
 ### CMS/API content access audits
 
-When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls.
+When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls. For Teoria-specific Sanity fact-box/published-vs-draft audits, use `references/teoria-sanity-factbox-audit.md`; it captures the Infinity Drift project ID, frontend data flow, localization-validation pitfall, and “40 % stryker” correction.
 
 ### Sanity navigation/footer link modeling
 

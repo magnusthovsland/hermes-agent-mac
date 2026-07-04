@@ -38,18 +38,31 @@
     "use_count": 4,
     "view_count": 4
   },
+  "data-science-workflows": {
+    "archived_at": null,
+    "created_at": "2026-07-03T23:18:00.190203+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-03T23:18:00.191601+00:00",
+    "last_viewed_at": "2026-07-03T23:18:00.190224+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "document-productivity-workflows": {
     "archived_at": null,
     "created_at": "2026-06-19T22:44:17.243068+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-26T22:59:26.225864+00:00",
-    "last_viewed_at": "2026-06-26T22:59:26.223600+00:00",
+    "last_used_at": "2026-07-03T18:46:03.942479+00:00",
+    "last_viewed_at": "2026-07-03T18:46:03.941286+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   },
   "evaluating-llms-harness": {
     "archived_at": null,
@@ -95,26 +108,13 @@
     "created_at": "2026-06-05T21:44:47.855745+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-19T22:42:59.261896+00:00",
-    "last_used_at": "2026-06-26T22:58:34.773587+00:00",
-    "last_viewed_at": "2026-06-26T22:58:34.771918+00:00",
+    "last_used_at": "2026-07-03T23:16:27.787043+00:00",
+    "last_viewed_at": "2026-07-03T23:16:27.785607+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 18,
-    "view_count": 18
-  },
-  "jupyter-live-kernel": {
-    "archived_at": null,
-    "created_at": "2026-06-12T21:59:49.589552+00:00",
-    "created_by": null,
-    "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 0,
-    "pinned": false,
-    "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 19,
+    "view_count": 19
   },
   "media-content-workflows": {
     "archived_at": null,
@@ -128,19 +128,6 @@
     "state": "active",
     "use_count": 2,
     "view_count": 2
-  },
-  "openhue": {
-    "archived_at": null,
-    "created_at": "2026-06-12T21:59:49.600477+00:00",
-    "created_by": null,
-    "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 0,
-    "pinned": false,
-    "state": "active",
-    "use_count": 0,
-    "view_count": 0
   },
   "plan": {
     "archived_at": null,
@@ -185,14 +172,14 @@
     "archived_at": null,
     "created_at": "2026-06-25T11:44:17.916280+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-29T18:55:40.277599+00:00",
-    "last_used_at": "2026-06-29T18:55:22.633998+00:00",
-    "last_viewed_at": "2026-06-29T18:55:22.632520+00:00",
-    "patch_count": 4,
+    "last_patched_at": "2026-07-03T23:35:28.356834+00:00",
+    "last_used_at": "2026-07-03T18:46:06.501034+00:00",
+    "last_viewed_at": "2026-07-03T18:46:06.499929+00:00",
+    "patch_count": 10,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 6,
+    "view_count": 6
   },
   "segment-anything-model": {
     "archived_at": null,
@@ -220,17 +207,30 @@
     "use_count": 0,
     "view_count": 0
   },
+  "smart-home-automation": {
+    "archived_at": null,
+    "created_at": "2026-07-03T23:18:00.189144+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-03T23:18:00.190775+00:00",
+    "last_viewed_at": "2026-07-03T23:18:00.189173+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "software-development-workflows": {
     "archived_at": null,
     "created_at": "2026-06-19T22:44:17.240348+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-29T10:12:35.148131+00:00",
-    "last_used_at": "2026-06-30T09:18:34.146065+00:00",
-    "last_viewed_at": "2026-06-30T09:18:34.144969+00:00",
-    "patch_count": 14,
+    "last_patched_at": "2026-07-03T23:36:04.266995+00:00",
+    "last_used_at": "2026-07-03T23:24:29.342464+00:00",
+    "last_viewed_at": "2026-07-03T23:24:29.341381+00:00",
+    "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 8,
-    "view_count": 8
+    "use_count": 10,
+    "view_count": 10
   }
 }

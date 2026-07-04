@@ -70,7 +70,10 @@ Phases:
 7. Self-review and revision: reviewer simulation, checklist, appendix/supplement.
 8. Submission: formatting, anonymization, PDF checks, source package.
 
-## Google Ads / PPC landing-page experience audits
+## Google Ads / PPC audits
+Use these workflows when investigating Google Ads performance, Quality Score, PPC landing-page relevance/performance, or reconciling third-party SEO/PPC reports against actual ad-account data.
+
+### Landing-page experience / Quality Score
 Use this workflow when investigating Google Ads Quality Score, “Landing page experience: below average”, or PPC landing-page relevance/performance problems. See `references/google-ads-landing-page-experience.md` for a concrete Teoria.no-style diagnostic pattern and API field checklist.
 
 1. Start from the actual keyword/ad group and final URL, not from the brand website you remember. If the user corrects the domain/product, pivot immediately.
@@ -81,6 +84,22 @@ Use this workflow when investigating Google Ads Quality Score, “Landing page e
 6. Run technical checks: HTTP status, robots/noindex, sitemap presence, canonical, mobile render, Lighthouse/mobile performance, FCP/LCP/CLS/TBT, and third-party JS weight.
 7. Prioritize fixes in this order: correct final URLs/redirects if actually wrong, stronger above-the-fold message match, mobile performance/third-party script deferral, then conversion-goal cleanup.
 8. Report separately: evidence from Google Ads API, evidence from live fetches, likely Google Ads interpretation, and recommended campaign/config changes.
+
+### Ahrefs vs actual Google Ads spend/clicks
+When a user asks whether an Ahrefs `Paid traffic` drop means Google Ads has been turned down, reconcile Ahrefs against Google Ads primary data before drawing conclusions. See `references/google-ads-ahrefs-reconciliation.md` for the period-comparison workflow and GAQL query skeletons.
+
+1. Parse the Ahrefs export and locate step changes in `Paid traffic`, but treat it as an external estimate, not spend/click truth.
+2. Pull Google Ads campaign daily metrics for the same date range: cost, clicks, impressions, conversions, campaign status/channel.
+3. Compare period averages and percentage changes for Ahrefs paid traffic vs Google Ads cost/day, clicks/day, and impressions/day.
+4. Pull current campaign budgets/statuses to answer whether ads are actually still running.
+5. If checking historical changes, use `change_event` only within its retention window and state that limitation.
+6. Report the mismatch plainly: e.g. “Ahrefs fell 94%, while Google Ads cost/day fell 6% and clicks/day 3%, so this is not explained by ad spend being turned down.”
+
+### Teoria Google Ads active management
+When managing Teoria Google Ads rather than just auditing, use `references/google-ads-teoria-management.md`. Key pitfalls: distinguish purchase conversions from free-access activations, change biddable customer/campaign goals rather than immutable imported conversion fields, use “40 % stryker” not “44 %”, and treat free trial as CTA rather than the campaign’s main positioning.
+
+### Teoria Google Ads active management
+When the user delegates ongoing Teoria Google Ads management or asks for a strict account reset, use `references/google-ads-teoria-management.md`. It captures Teoria-specific preferences and pitfalls: use “40% stryker” (not 44%), optimize toward purchase rather than free activation, update conversion goals when conversion-action fields are immutable, create-and-pause RSA replacements when ad text cannot be edited in place, and account for Teoria weekday performance patterns in daily reports.
 
 ## Evidence Rules
 - Prefer primary sources (papers, docs, official APIs) over summaries.
