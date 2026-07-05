@@ -80,6 +80,10 @@ When a Sanity-managed footer/header link needs to point at a frontend route that
 
 When researching a business-system API integration, distinguish **the business action** from **the bookkeeping mirror** before recommending mutations. For financial flows, explicitly separate “system should initiate money movement” from “money already moved elsewhere; system should only record it,” because using a payout API after an external PSP refund can create duplicate payments. For Visma Business NXT customer refunds, see `references/visma-business-nxt-customer-refunds.md` for the durable GraphQL patterns and pitfalls.
 
+### OpenClaw / agent gateway runtime debugging
+
+When an agent gateway is reachable but chat replies fail, debug in layers: process/HTTP health, channel transport, then model runtime/auth with a tiny `openclaw agent` healthcheck. Do not declare success from `channels status` alone. After `doctor --fix` or updates, watch for legacy `openai-codex/*` → `openai/*` migration problems where routes are repaired but per-agent OpenAI OAuth profiles are missing from `openclaw-agent.sqlite`. Use `references/openclaw-gateway-runtime-auth-troubleshooting.md` for the exact triage, repair, backup, and verification sequence.
+
 ### Python debugging
 
 Use `pdb` for local interactive stepping and `debugpy` when a long-running process or test needs DAP-style attach. See `references/packages/python-debugpy/` for command recipes.
