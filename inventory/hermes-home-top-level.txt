@@ -3,7 +3,7 @@ file	.env.backup-before-notion-jarvis-token	24061 bytes
 file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
-file	.update_check	72 bytes
+file	.update_check	71 bytes
 file	SOUL.md	537 bytes
 excluded	audio_cache
 excluded	auth.json
@@ -36,7 +36,7 @@ file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
-file	models_dev_cache.json	2957913 bytes
+file	models_dev_cache.json	2962213 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

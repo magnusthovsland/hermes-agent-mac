@@ -9,27 +9,27 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    32/365
-    Next run:  2026-07-07T02:00:00+02:00
+    Repeat:    33/365
+    Next run:  2026-07-08T02:00:00+02:00
     Deliver:   origin
-    Last run:  2026-07-06T02:07:03.510341+02:00  ok
+    Last run:  2026-07-07T02:03:50.167992+02:00  ok
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    30/365
-    Next run:  2026-07-07T03:00:00+02:00
+    Repeat:    31/365
+    Next run:  2026-07-08T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-07-05T03:00:23.686394+02:00  ok
+    Last run:  2026-07-06T03:00:56.985856+02:00  ok
 
   326c51f94e4a [active]
     Name:      Teoria Google Ads daily July management report
     Schedule:  30 8 * * *
-    Repeat:    2/29
-    Next run:  2026-07-06T08:30:00+02:00
+    Repeat:    3/29
+    Next run:  2026-07-07T08:30:00+02:00
     Deliver:   origin
-    Last run:  2026-07-05T08:35:14.277648+02:00  ok
+    Last run:  2026-07-06T08:34:03.934459+02:00  ok
 
 
