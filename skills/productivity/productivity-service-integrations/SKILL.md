@@ -19,7 +19,8 @@ The class-level pattern is the same across these systems: identify the service a
 ## Triage: choose the service path
 
 - **Airtable records/bases** → REST API via `curl` using a PAT; check base access and field names before writes.
-- **Google Workspace** → prefer the `gws` CLI when installed, otherwise use the preserved Python bridge for Gmail, Calendar, Drive, Docs, and Sheets.
+- **Google Workspace** → prefer the `gws` CLI when installed, otherwise use the preserved Python bridge for Gmail, Calendar, Drive, Docs, and Sheets. If the user intentionally placed an integration secret in Drive, follow `references/google-drive-secret-hand-off.md`: export/download, mask secrets, validate with a narrow read-only API call, and save local credentials with `chmod 600`.
+- **PostHog / marketing analytics destinations** → use `references/posthog-analytics-google-ads.md` for read-only PostHog credential hand-off, HogQL diagnostics, Hog functions/destination inspection, and Google Ads Conversions mapping/log review.
 - **Notion** → prefer the official `ntn` CLI on macOS/Linux; fall back to HTTP + `curl` everywhere. Always ensure the target page/database is shared with the integration.
 - **Obsidian** → filesystem-first note operations against a resolved vault path; never pass unresolved `$OBSIDIAN_VAULT_PATH` to file tools.
 - **Maps/location intelligence** → use free OpenStreetMap/Nominatim, Overpass, OSRM, and TimeAPI flows for geocoding, POIs, routes, and timezone questions.
@@ -43,6 +44,18 @@ Use Airtable for base/table/record CRUD, filters, formula queries, upserts, atta
 ### Google Workspace
 
 Use Google Workspace for Gmail search/send, Calendar events, Drive files, Docs, and Sheets. First-time setup is OAuth-based and may require the user to visit an auth URL. The preserved package includes `scripts/setup.py`, `scripts/google_api.py`, and Gmail search syntax reference.
+
+When Google Drive is being used as a deliberate secure hand-off location for third-party credentials, use the Drive secret hand-off reference instead of ad-hoc shelling: `references/google-drive-secret-hand-off.md`. Key points: never echo full secrets, distinguish Google OAuth scope from target-service access, validate the retrieved credential against the target service, and persist local secrets only under `~/.hermes/credentials/` with restrictive file permissions.
+
+### PostHog / marketing analytics destinations
+
+Use PostHog for product/marketing analytics, HogQL event diagnostics, persons/cohorts/definitions, and Data pipeline → Destinations checks such as Google Ads Conversions. Follow `references/posthog-analytics-google-ads.md` for exact endpoint patterns and queries.
+
+Critical rules:
+- Keep PostHog personal API keys secret; report only masked key hints/scopes and save local credentials with `chmod 600`.
+- For Google Ads Conversions, inspect Hog functions (`/api/environments/:id/hog_functions/`) rather than guessing from dashboards.
+- Validate destination mappings against actual events with HogQL counts, including event filters, property filters, resolved `gclid`/`gbraid`/`wbraid`, conversion value, currency, and order ID.
+- Backend events with `$process_person_profile = false` may not inherit `person.properties.gclid`; verify whether click IDs are present directly on the conversion event before concluding Google Ads is undercounting.
 
 ### Notion
 

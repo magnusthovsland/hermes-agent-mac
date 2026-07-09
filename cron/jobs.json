@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-07-09T02:00:00+02:00",
-      "last_run_at": "2026-07-08T02:06:10.455610+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-07-10T02:00:00+02:00",
+      "last_run_at": "2026-07-09T02:05:14.392661+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -67,15 +67,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 32
+        "completed": 33
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-07-09T03:00:00+02:00",
-      "last_run_at": "2026-07-07T03:00:35.276635+02:00",
+      "next_run_at": "2026-07-10T03:00:00+02:00",
+      "last_run_at": "2026-07-08T03:00:12.676760+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -105,15 +105,15 @@
       "schedule_display": "30 8 * * *",
       "repeat": {
         "times": 29,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-03T23:57:00.165573+02:00",
-      "next_run_at": "2026-07-08T08:30:00+02:00",
-      "last_run_at": "2026-07-07T08:34:51.346208+02:00",
+      "next_run_at": "2026-07-09T08:30:00+02:00",
+      "last_run_at": "2026-07-08T08:33:51.371471+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -130,5 +130,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-07-08T03:00:00.235440+02:00"
+  "updated_at": "2026-07-09T03:00:38.063301+02:00"
 }
