@@ -12,7 +12,6 @@ Built-in toolsets (cli):
   ✓ enabled  image_gen  🎨 Image Generation
   ✗ disabled  video_gen  🎬 Video Generation
   ✗ disabled  x_search  🐦 X (Twitter) Search
-  ✗ disabled  moa  🧠 Mixture of Agents
   ✓ enabled  tts  🔊 Text-to-Speech
   ✓ enabled  skills  📚 Skills
   ✓ enabled  todo  📋 Task Planning
@@ -22,9 +21,8 @@ Built-in toolsets (cli):
   ✓ enabled  clarify  ❓ Clarifying Questions
   ✓ enabled  delegation  👥 Task Delegation
   ✓ enabled  cronjob  ⏰ Cron Jobs
-  ✓ enabled  messaging  📨 Cross-Platform Messaging
   ✗ disabled  homeassistant  🏠 Home Assistant
   ✗ disabled  spotify  🎵 Spotify
   ✗ disabled  yuanbao  🤖 Yuanbao
-  ✓ enabled  computer_use  🖱️  Computer Use (macOS)
+  ✓ enabled  computer_use  🖱️  Computer Use (macOS/Windows/Linux)
 

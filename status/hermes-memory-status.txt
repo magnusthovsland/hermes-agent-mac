@@ -8,7 +8,7 @@ Memory status
   Provider:  (none — built-in only)
 
   Installed plugins:
-    • byterover  (requires API key)
+    • byterover  (API key / local)
     • hindsight  (API key / local)
     • holographic  (local)
     • honcho  (API key / local)

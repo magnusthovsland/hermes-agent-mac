@@ -10,29 +10,29 @@ exit_code=0
   Project:      /Users/mt-infinity/.hermes/hermes-agent
   Python:       3.11.15
   .env file:    ✓ exists
-  Model:        gpt-5.5
+  Model:        gpt-5.6-sol
   Provider:     OpenAI Codex
 
 ◆ API Keys
-  OpenRouter    ✗ 
-  OpenAI        ✗ 
-  Google / Gemini  ✗ 
-  DeepSeek      ✗ 
-  xAI / Grok    ✗ 
-  NVIDIA NIM    ✗ 
-  Z.AI / GLM    ✗ 
-  Kimi          ✗ 
-  StepFun Step Plan  ✗ 
-  MiniMax       ✗ 
-  MiniMax-CN    ✗ 
-  Firecrawl     ✗ 
-  Tavily        ✗ 
-  Browser Use   ✗ 
-  Browserbase   ✗ 
-  FAL           ✗ 
-  ElevenLabs    ✗ 
-  GitHub        ✓ [REDACTED]
-  Anthropic     ✗ 
+  OpenRouter    ✗ (not set)
+  OpenAI        ✗ (not set)
+  Google / Gemini  ✗ (not set)
+  DeepSeek      ✗ (not set)
+  xAI / Grok    ✗ (not set)
+  NVIDIA NIM    ✗ (not set)
+  Z.AI / GLM    ✗ (not set)
+  Kimi          ✗ (not set)
+  StepFun Step Plan  ✗ (not set)
+  MiniMax       ✗ (not set)
+  MiniMax-CN    ✗ (not set)
+  Firecrawl     ✗ (not set)
+  Tavily        ✗ (not set)
+  Browser Use   ✗ (not set)
+  Browserbase   ✗ (not set)
+  FAL           ✗ (not set)
+  ElevenLabs    ✗ (not set)
+  GitHub        ✓ gith...kqKm
+  Anthropic     ✗ (not set)
 
 ◆ Auth Providers
   Nous Portal   ✗ not logged in (run: hermes portal)
@@ -78,7 +78,7 @@ exit_code=0
 ◆ Gateway Service
   Status:       ✓ running
   Manager:      launchd
-  PID(s):       58625
+  PID(s):       97157
 
 ◆ Scheduled Jobs
   Jobs:         3 active, 3 total
