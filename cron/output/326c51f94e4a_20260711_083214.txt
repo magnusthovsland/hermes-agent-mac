@@ -1,0 +1,55 @@
+Cronjob Response: Teoria Google Ads daily July management report
+(job_id: 326c51f94e4a)
+-------------
+
+## Daglig Google Ads-rapport – Teoria Ads  
+**Lørdag 11. juli 2026 kl. 08:30** · Fokus: Klasse B/personbil  
+*Ingen kontoendringer er utført.*
+
+### 1) Status siden i går
+
+**Personbil – nøkkeltall**
+
+| Periode | Kostnad | Klikk | Purchase | CPA Purchase | Free access | Sign up |
+|---|---:|---:|---:|---:|---:|---:|
+| I går, 10. juli | 183,84 kr | 70 | 0 | – | 0 | 0 |
+| Siste 3 dager | 813,00 kr | 276 | 1 | 813 kr | 4 | 8 |
+| Siste 7 dager | 2 067,96 kr | 592 | 1 | 2 068 kr | 7 | 12 |
+| Juli MTD t.o.m. 10/7 | 2 987,29 kr | 1 023 | 1 | 2 987 kr | 11 | 16 |
+
+- Fredag ga som forventet lavere volum enn torsdag: kostnaden falt fra **339,86 kr til 183,84 kr**.
+- Samtidig kom det **ingen registrerte konverteringer fredag**, mot torsdagens **1 Purchase, 2 Free access og 5 Sign up**.
+- Lørdag hittil er svært ufullstendig: **6,23 kr / 2 klikk / 0 konverteringer**. Dette bør ikke brukes som beslutningsgrunnlag ennå.
+
+### 2) Avvik og alarmer
+
+- **Hovedalarm:** Bare **1 Purchase på 2 987 kr** i personbil hittil i juli. Purchase-CPA er dermed svært høy.
+- **Free access-kvaliteten er svak/ubekreftet:** 11 aktiveringer og 16 registreringer har hittil bare gitt 1 Purchase. Det tilsvarer omtrent **9 % Purchase per Free access** før eventuell konverteringsforsinkelse.
+- Hele Purchase-resultatet kom torsdag 9. juli. De øvrige ni avsluttede julidagene har gitt **0 kjøp**.
+- Mest kostbare aktive søkeord uten noen registrert konvertering:
+  - **«teoriprøve bil» – phrase:** 81,47 kr, 33 klikk, 0 Free access/Sign up/Purchase.
+- Kostbare søketermer uten konvertering inkluderer:
+  - **«førerkort teoriprøve»**: minst 213,63 kr på tvers av annonsegrupper, 96 klikk, 0 konverteringer.
+  - **«trafikktesten no teoriprøve»**: 62,42 kr, 11 klikk, 0 konverteringer.
+  - **«teoriprøve»**: 88,88 kr, 13 klikk, 0 konverteringer.
+- To nå pausede annonsegrupper har allerede brukt **790,77 kr MTD** og bare gitt 4 sekundære konverteringer, ingen Purchase. Det er positivt at disse ikke lenger trekker videre budsjett.
+- Konverteringsoppsettet bruker nå de aktive importhandlingene **Purchase (Import)**, **Free access activated (Import)** og **Sign up (Import)**. Free access er kategorisert som en primær «subscribe paid»-handling; dette kan gjøre budstrategien mer opptatt av gratisaktivering enn faktiske kjøp.
+
+### 3) Anbefalte endringer i dag
+
+1. **Legg «trafikktesten» til som negativt søkeord**, helst phrase/exact etter kontroll av at Teoria ikke bevisst ønsker konkurrenttrafikk. Dette er dagens tydeligste negative kandidat.
+2. **Ikke negativér generiske kjernetermer** som «teoriprøve» og «førerkort teoriprøve» ennå. De er relevante, men bør få lavere bud/strammere matching dersom de fortsetter uten Free access eller Purchase.
+3. **Vurder å pause eller redusere budet på phrase-søkeordet «teoriprøve bil»** dersom det fortsatt står uten sekundære konverteringer etter helgen. 33 klikk er nok til at det bør stå på observasjonslisten, men ikke nødvendigvis nok for en hard pause i dag.
+4. **Hold budsjettet kontrollert lørdag.** Ikke flytt mer budsjett inn i personbil på bakgrunn av dagens tidlige data. Bevar heller kapasitet til søndag–tirsdag, som historisk er sterkere.
+5. **Kontroller budstrategiens konverteringsmål:** Purchase bør være hovedsignalet. Free access og Sign up bør rapporteres separat og ikke dominere automatisk budgivning dersom sluttmålet er betalt kjøp.
+6. Ingen anbefaling om å reaktivere de pausede annonsegruppene nå.
+
+### 4) Overvåkes i morgen
+
+- Om fredagens konverteringer kommer inn med forsinkelse.
+- Full lørdagskostnad og om den svake helgetendensen fortsetter.
+- Om søndagens forventede styrke faktisk gir Purchase, ikke bare Free access/Sign up.
+- Videre spend på «førerkort teoriprøve», «teoriprøve» og «teoriprøve bil».
+- Purchase-rate fra Free access: Hvis søndag–mandag gir flere gratisaktiveringer uten kjøp, bør budsjett og konverteringsmål strammes inn raskt.
+
+To stop or manage this job, send me a new message (e.g. "stop reminder Teoria Google Ads daily July management report").
