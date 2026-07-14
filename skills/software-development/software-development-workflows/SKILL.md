@@ -68,6 +68,10 @@ For browser-facing apps, use a structured dogfood pass: define scope, explore pr
 
 When a frontend regression appears after a framework/dependency upgrade, verify both the live output and the underlying data before blaming the CMS. For React Router v8 specifically, route `meta()` functions must use `loaderData` instead of the deprecated v7 `data` argument; stale `({ data })` usage can silently remove server-rendered `<title>`, meta description, Open Graph, and Twitter tags even when CMS SEO fields still exist. See `references/react-router-v8-route-meta.md` for the reproduction and fix pattern.
 
+### White-label CSS theme regressions
+
+When several tenant sites lose brand colors but layout/content still render, trace the tenant theme class, scoped CSS custom properties, and server-rendered theme data before blaming the stylesheet. Blank strings bypass nullish fallbacks and can silently invalidate every token-backed color declaration. See `references/white-label-css-theme-regression.md` for the live-DOM, streamed-loader-data, deployment-correlation, reversible proof, and hardening workflow.
+
 ### CMS/API content access audits
 
 When asked whether an agent has CMS access or who made recent content changes, keep the workflow read-only by default: find credential metadata, query current content, inspect transaction history for attribution, and map author IDs to humans/robots. See `references/sanity-content-lake-audit.md` for the Sanity Content Lake/History API pattern and reporting pitfalls. For Teoria-specific Sanity fact-box/published-vs-draft audits, use `references/teoria-sanity-factbox-audit.md`; it captures the Infinity Drift project ID, frontend data flow, localization-validation pitfall, and “40 % stryker” correction.
