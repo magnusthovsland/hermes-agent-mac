@@ -64,6 +64,10 @@ For pre-commit review, inspect diff and run quality gates. For simplification, a
 
 For browser-facing apps, use a structured dogfood pass: define scope, explore primary flows, capture screenshots/console/network evidence, categorize defects by user impact, and produce an actionable report. The preserved `dogfood` package includes an issue taxonomy and report template.
 
+### React Router landing-page Lighthouse audits
+
+For read-only Lighthouse investigations on React Router/Vite/Vercel marketing pages, measure production at least twice, identify the actual LCP node before accepting the hypothesis, inspect emitted head order and headers, separate app code from proxied analytics, and compare production against source without assuming they match. **Never label a local Lighthouse CLI run as PageSpeed Insights:** report hosted PSI, local CLI, and field/RUM results separately, capture the CLI environment, and use hosted PSI as the governing lab baseline when the business question concerns Google's hosted result. Lead the report with a compact in-chat conclusion before the detailed evidence. See `references/react-router-lighthouse-landing-page-audit.md` for the React Router audit workflow and `references/web-performance-lab-audits.md` for PSI-vs-CLI measurement discipline, production/source discrepancies, Astro/islands migration evaluation, and score-prediction rules.
+
 ### Frontend framework upgrade regressions
 
 When a frontend regression appears after a framework/dependency upgrade, verify both the live output and the underlying data before blaming the CMS. For React Router v8 specifically, route `meta()` functions must use `loaderData` instead of the deprecated v7 `data` argument; stale `({ data })` usage can silently remove server-rendered `<title>`, meta description, Open Graph, and Twitter tags even when CMS SEO fields still exist. See `references/react-router-v8-route-meta.md` for the reproduction and fix pattern.

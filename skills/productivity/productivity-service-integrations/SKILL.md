@@ -49,7 +49,7 @@ When Google Drive is being used as a deliberate secure hand-off location for thi
 
 ### PostHog / marketing analytics destinations
 
-Use PostHog for product/marketing analytics, HogQL event diagnostics, persons/cohorts/definitions, and Data pipeline → Destinations checks such as Google Ads Conversions. Follow `references/posthog-analytics-google-ads.md` for exact endpoint patterns and queries.
+Use PostHog for product/marketing analytics, HogQL event diagnostics, persons/cohorts/definitions, Data pipeline → Destinations checks such as Google Ads Conversions, and organization/project administration. Follow `references/posthog-analytics-google-ads.md` for exact destination/query patterns. For moving a project between organizations, use `references/posthog-project-organization-moves.md`; same-region moves are self-service, while cross-region moves require PostHog engineering and Scale/Enterprise.
 
 Critical rules:
 - Keep PostHog personal API keys secret; report only masked key hints/scopes and save local credentials with `chmod 600`.
