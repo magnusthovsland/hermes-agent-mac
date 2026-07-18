@@ -1,0 +1,59 @@
+Cronjob Response: Teoria Google Ads daily July management report
+(job_id: 326c51f94e4a)
+-------------
+
+**Daglig Google Ads-rapport – Teoria Ads**  
+**Datagrunnlag:** Google Ads API, komplette dager t.o.m. torsdag 16. juli. Fokus: Klasse B / «Search - Personbil - Feb 2026». API-kallet var vellykket. **Ingen kontoendringer er utført.**
+
+### Nøkkeltall
+
+| Periode | Kostnad | Kjøp | CPA kjøp | Free access | Sign up |
+|---|---:|---:|---:|---:|---:|
+| 16. juli | 304 kr | 0 | – | 0 | 0 |
+| 14.–16. juli | 936 kr | 0 | – | 0 | 1 |
+| 10.–16. juli | 2 134 kr | 0 | – | 5 | 5 |
+| 1.–16. juli | 4 937 kr | 1 | **4 937 kr** | 16 | 21 |
+
+### 1) Status siden i går
+
+- Torsdag brukte kampanjen **304 kr**, opp **5,6 %** fra onsdag.
+- Klikk økte fra 101 til 115 (**+13,9 %**), mens CPC falt fra 2,85 til **2,64 kr**.
+- Til tross for 115 klikk ble det registrert **0 kjøp, 0 Free access og 0 Sign up**, samme konverteringssvikt som onsdag.
+- Siste registrerte kjøp var 9. juli. Kampanjen har dermed brukt **2 134 kr de siste syv komplette dagene uten kjøp**.
+
+### 2) Avvik og alarmer
+
+- **Kritisk kjøpsavvik:** Bare ett kjøp på 4 937 kr MTD. CPA purchase er dermed svært høy, og det har gått syv komplette dager uten nytt kjøp.
+- **Funnel har stoppet de siste to dagene:** 216 klikk og 592 kr onsdag–torsdag ga ingen registrerte konverteringer. Importforsinkelse bør utelukkes, men dette kan også være et landingsside-/checkoutproblem.
+- Free access-kvaliteten er rimelig over lengre vindu: **16 Free access av 21 Sign ups MTD (76 %)** og 5 av 5 siste syv dager. De siste tre dagene er forholdet derimot **0 av 1**.
+- Kampanjen bruker **Target spend / maksimer klikk**, ikke kjøpsoptimalisering. Det forklarer høy klikkmengde uten at systemet prioriterer kjøpere.
+- Budsjettet er 300 kr/dag og syvdagerssnittet er 305 kr/dag. Samtidig tapes bare ca. **13,4 % impression share på budsjett**, mot **54,9 % på rangering**. Et høyere budsjett er derfor ikke riktig tiltak nå.
+- Ukedagseffekt MTD støtter forventningen:
+  - Fredager: **478 kr, 0 konverteringer**
+  - Lørdager: **299 kr, 1 Free access, 0 kjøp**
+  - Søndager: **893 kr, 3 Free access og 4 Sign ups**
+  - Torsdag står for månedens eneste kjøp, men gårsdagen var svak.
+
+### 3) Anbefalte endringer i dag
+
+1. **Reduser fredags-/lørdagseksponeringen med 25 %:** sett dagsbudsjettet fra 300 til **225 kr i dag og lørdag**, og tilbake til 300 kr søndag. Ikke flytt budsjett til de pausede gratis-/MC-kampanjene; spar kapasiteten til søndag–mandag.
+2. **Pause søkeordet «teori prøve bil» (phrase):**  
+   - MTD: 489 kr, 165 klikk, 0 kjøp og bare 2 øvrige handlinger.  
+   - Siste syv dager: 366 kr, 127 klikk og **0 konverteringshandlinger**.
+3. **Behold «teoriprøven bil» foreløpig:** Det har svak siste uke, men er søkeordet bak månedens eneste kjøpsområde og bør ikke pauses før mer data foreligger.
+4. Legg inn negative søkeord for tydelige konkurrent-/feilsøk:
+   - **«trafikktesten»** – 66,86 kr MTD uten konvertering
+   - **«teorimester»** – 12,18 kr uten konvertering
+   - Eksakt negativ **[if teoriprøve]** – 10,24 kr uten konvertering  
+   Ikke negativér «førerkort teoriprøve» selv om det har brukt 426 kr uten konvertering; det er svært relevant trafikk og peker heller mot tilbud-/landingssideproblem.
+5. **Kontroller Purchase-import, betaling og landingsside umiddelbart.** To dager med 216 klikk og null Sign up/Free access er uvanlig. Ikke bytt til maksimer konverteringer ennå; ett kjøp MTD gir for lite kjøpssignal til stabil smart bidding.
+
+### 4) Overvåkes i morgen
+
+- Om konverteringer for 15.–16. juli kommer inn forsinket.
+- Om fredag igjen ender med null konverteringer, særlig etter 100+ klikk.
+- Spend og funnelrate for «teoriprøve bil» exact og «teoriprøven bil» phrase.
+- Om negative konkurrentord reduserer irrelevant trafikk.
+- Forbered gjenoppretting av **300 kr søndag**, og vurder ekstra søndags-/mandagskapasitet bare dersom Free access og Sign up tar seg opp igjen.
+
+To stop or manage this job, send me a new message (e.g. "stop reminder Teoria Google Ads daily July management report").

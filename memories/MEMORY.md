@@ -2,7 +2,7 @@ User's Telegram identity for Hermes gateway allowlisting: username sungam81, num
 §
 Infinity Drift develops digital products for the traffic-school/training market. Main products: Ovio and Teoria. Relevant tools/platforms include GitHub, AWS, Vercel, Vipps/MobilePay, Link Mobility, SendGrid, Datadog, PostHog, OpenSearch, Airtable, Sanity/CMS, Notion. Hermes Notion files: `~/.hermes/notion/infinity-drift/`; token path: `~/.hermes/credentials/notion_token`.
 §
-Ovio is Infinity Drift's traffic-school SaaS OS covering schools, pupils/guardians, companies, teachers, vehicles/resources, scheduling/booking, follow-up, payments/finance/reporting, and integrations such as Statens vegvesen, NAF/ENAF, Vipps/MobilePay, Visma, and Kravia.ai.
+Ovio is Infinity Drift's traffic-school SaaS OS for schools, users, teachers, vehicles, scheduling, payments/finance/reporting, and Vegvesen/NAF/Vipps/Visma/Kravia integrations. For cancellation deadlines, Magnus prefers industry term «virkedag», explicitly defined as Monday–Friday (Saturday excluded), not a new term.
 §
 Ovio production backend runs in AWS ECS/Fargate eu-north-1, cluster `wright`, service `wis-main-api`. For backend hang/downtime, first operational action is ECS Force new deployment, not RDS restart. Important integrations: Statens vegvesen, NAF/ENAF, Vipps/MobilePay, Visma.net, Visma Business GraphQL, and Kravia.ai.
 §

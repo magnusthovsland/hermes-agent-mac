@@ -101,6 +101,10 @@ When managing Teoria Google Ads rather than just auditing, use `references/googl
 ### Teoria Google Ads active management
 When the user delegates ongoing Teoria Google Ads management or asks for a strict account reset, use `references/google-ads-teoria-management.md`. It captures Teoria-specific preferences and pitfalls: use “40% stryker” (not 44%), optimize toward purchase rather than free activation, update conversion goals when conversion-action fields are immutable, create-and-pause RSA replacements when ad text cannot be edited in place, and account for Teoria weekday performance patterns in daily reports.
 
+## Consumer-contract operational deadlines
+
+When a booking product must express cancellation or notice deadlines in an established but context-dependent industry term such as `virkedag`, preserve the industry's vocabulary and define it explicitly for the contract rather than inventing a replacement term. Separate contractual deadlines from mandatory statutory deadlines, show the customer the exact calculated cutoff, and assess the calendar definition separately from the reasonableness of any fee. See `references/consumer-contract-operational-deadlines.md` for source links, calculation semantics, contract wording, data modeling, and edge cases.
+
 ## Evidence Rules
 - Prefer primary sources (papers, docs, official APIs) over summaries.
 - Include URLs/IDs/dates for every claim likely to age.

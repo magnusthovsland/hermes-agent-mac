@@ -23,9 +23,9 @@ file	context_length_cache.yaml	190 bytes
 dir	credentials/
 dir	cron/
 file	desktop-build-stamp.json	160 bytes
-file	gateway.lock	171 bytes
-file	gateway.pid	171 bytes
-file	gateway_state.json	432 bytes
+file	gateway.lock	170 bytes
+file	gateway.pid	170 bytes
+file	gateway_state.json	431 bytes
 excluded	google_client_secret.json
 file	google_drive_hermes_folder.json	307 bytes
 excluded	google_token.json
@@ -40,7 +40,7 @@ file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
-file	models_dev_cache.json	3194626 bytes
+file	models_dev_cache.json	3196354 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

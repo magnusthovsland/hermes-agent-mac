@@ -2,6 +2,6 @@ $ sw_vers 2>&1 || true
 exit_code=0
 
 ProductName:		macOS
-ProductVersion:		26.5.1
-BuildVersion:		25F80
+ProductVersion:		26.5.2
+BuildVersion:		25F84
 
