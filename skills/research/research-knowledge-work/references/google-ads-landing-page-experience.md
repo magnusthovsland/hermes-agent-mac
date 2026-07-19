@@ -98,3 +98,15 @@ Use a concise structure:
 3. **Ads account checks**: final URL, mobile final URL, tracking template, final URL suffix, sitelinks, keyword QS components, search terms, conversion goals.
 4. **Landing-page changes**: copy/message match, redirects, technical speed.
 5. **Expected timeline**: Google Ads may need days to a few weeks to recrawl/re-score.
+
+## Refresh cadence and metric confusion
+
+Do not answer “how often does Google update the landing-page number?” until the metric is identified:
+
+- A Lighthouse/PageSpeed **lab score (0–100)** is recomputed on each run and can change immediately.
+- PageSpeed **CrUX field metrics** summarize a rolling 28-day real-user window, so a deployment’s impact appears gradually.
+- Google Ads **Landing page experience** is a keyword-level `Above average` / `Average` / `Below average` Quality Score component, not a Lighthouse score.
+
+Google’s official Quality Score documentation says component status compares advertisers for the same exact search over the previous 90 days, but it does not promise a fixed daily refresh cadence. State that no guaranteed interval is published. Give “days to a few weeks” only as a practical expectation, clearly labelled as such, and expect longer delays when eligible exact-match traffic is sparse.
+
+Never infer that an immediate Lighthouse improvement will cause an immediate Google Ads status change. When evaluating a recent deployment, preserve the deployment date and monitor both current and historical Quality Score component columns alongside impressions.

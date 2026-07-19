@@ -130,3 +130,44 @@ For before/after tables, keep the same measurement class and disclose functional
 - uses a different deployment/CDN route.
 
 A 99 local Lighthouse result can be valid for the observed initial-load architecture and still be an invalid production forecast if analytics or conversion behavior is absent.
+
+## Auditing analytics regressions after broken scripts are restored
+
+When a previously inert analytics integration is fixed, compare like with like and let the user’s repeated **hosted PSI** before/after baseline govern. Never use faster local Lighthouse CLI runs to dismiss a stable hosted regression.
+
+1. Verify runtime functionality first: expected global is loaded, requests fire, extensions initialize, and consent ordering is correct.
+2. Confirm functional parity. A high hosted PSI baseline with inert analytics is not a valid full-production target, but it is a useful `analytics absent` control.
+3. Separate tiny ordering changes from newly activated payload. Moving Consent Mode default ahead of `gtag config` adds negligible work; repairing an inert PostHog bootstrap can activate the SDK, recorder, surveys, dead-click capture, exceptions, web-vitals, flags, remote config, and API calls.
+4. Use at least 3–5 repeated **hosted PSI** runs per variant and report median/range. Local CLI remains diagnostic for element attribution and payload analysis, not a substitute baseline.
+5. Identify the LCP node and compare FCP, LCP, TBT, CLS, and Speed Index. A stable hosted pattern such as `FCP ≈ 1.2 s`, `TBT ≈ 10–20 ms`, `CLS = 0`, but `LCP ≈ 4.4 s` is still a real LCP/render-completion regression. Async analytics can compete for bandwidth, initialize observers, or alter repaint timing without producing high TBT.
+6. Quantify analytics separately: request count, compressed/decompressed bytes, extension modules, third-party main-thread time, boot-up time, and unused JavaScript.
+7. Run matched preview variants: full analytics, analytics absent, lightweight analytics, and deferred analytics. Keep consent ordering identical. A blocked-domain test is an imperfect but useful control because failures/retries can alter scheduling.
+8. Calibrate causality to the whole evidence set. If hosted PSI was repeatedly ~98 with inert analytics, repeatedly ~83 after full analytics became active, and an analytics-absent control returns ~97–98, treat analytics activation as the primary suspect. Do not blame the consent-order correction without isolated evidence.
+
+For PostHog-style integrations, inspect whether the base SDK immediately pulls session recording, surveys, dead-click capture, web-vitals, exception capture, feature flags, and remote config. Prefer preserving explicit pageview/CTA/purchase events while disabling or deferring unused extensions. Also distinguish memory-only persistence from no collection: a tool may send network events before consent even when it does not yet write durable cookies/local storage. Treat that as an explicit privacy/product decision, not merely a performance toggle.
+
+Finally, distinguish hosted PSI from Google Ads Landing Page Experience: PSI is strong technical evidence, but Google does not document a one-to-one visible-score-to-LPE formula.
+
+## Text LCP and Astro/islands payload checks
+
+The LCP element may be a large paragraph rather than an image. Record its exact node/selector and examine font loading, render-blocking CSS, layout, transitions, and third-party timing before recommending image optimization.
+
+For Astro production audits, additionally quantify:
+
+- decoded and transferred HTML size;
+- repeated content across SSR markup, serialized island props, and JSON-LD;
+- each island’s hydration directive and generated markup size;
+- React/Mantine renderer and component bundle sizes;
+- whether native `<details>/<summary>` or a small vanilla-JS island can replace a hydrated FAQ/header;
+- font cache headers (prefer versioned immutable assets for static fonts);
+- hashed asset cache headers and render-blocking CSS.
+
+A useful architecture can still ship oversized HTML and framework bundles: “only two islands” is not enough without measuring those islands.
+
+## Three different Google performance timelines
+
+Always clarify which “Google landing-page number” the user means:
+
+1. **Lighthouse/PSI lab score:** recomputed on every run and can vary immediately; use repeated runs and a median.
+2. **CrUX/PageSpeed field data:** rolling 28-day real-user window, so deployment effects enter gradually.
+3. **Google Ads Landing page experience:** keyword-level Above/Average/Below diagnostic, not a 0–100 Lighthouse score. Google does not publish a guaranteed refresh interval; avoid promising a daily update.

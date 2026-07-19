@@ -79,6 +79,30 @@ For spend/clicks, use a separate query without `segments.conversion_action_name`
   - “Prøv gratis i 30 min”
 - RSA headlines/descriptions are immutable through normal update in Google Ads API; to fix copy like `44 %` → `40 %`, create a corrected RSA and pause the old one.
 
+## Pre-launch maintenance spend and pause decisions
+
+When deciding whether to keep spending before a later professional marketing launch, do not justify budget with traffic alone. Pull current month, last 7/14 days, and campaign/keyword lifetime data, then calculate:
+
+- spend, clicks, CPC;
+- **Purchase** count, purchase CVR, purchase CPA, and trustworthy purchase value/ROAS;
+- free activations and signups separately;
+- projected monthly spend at the current daily rate;
+- spend/no-purchase keywords and ad groups;
+- whether anyone will actively use the data during the holding period.
+
+Decision rules:
+
+1. If purchase is the only biddable goal but conversion volume is near zero, more non-converting clicks do not create useful Smart Bidding learning. Do not recommend NOK 8k–12k/month merely to “keep Google warm.”
+2. A pause does not delete campaign history, penalize SEO, or create an account punishment. The real costs are lost traffic/fresh search-term data and possible recalibration when campaigns restart. State these narrowly; do not overstate a mythical reset.
+3. If professionals will restructure campaigns later, a new learning period is likely anyway. Poor current traffic may be less valuable than preserved budget.
+4. Offer two explicit strategies:
+   - **Pause fully** when tracking/funnel is uncertain or nobody can monitor and act.
+   - **Maintenance budget** around NOK 1.5k–3k/month, limited to high-intent Klasse B exact/phrase terms, when fresh Landing Page Experience/search-term evidence is genuinely useful.
+5. Before recommending maintenance spend, identify obvious waste such as high-spend terms with zero purchases. Free activations are supporting funnel signals, not revenue justification.
+6. Keep recommendations read-only unless the user explicitly approves budget, pause, keyword, or campaign changes.
+
+Report actual primary-account evidence rather than generic PPC advice. A useful summary shape is: `MTD spend → clicks → purchases → purchase CPA → reported value/ROAS → last-7-day purchases → projected monthly spend`.
+
 ## Daily monitoring report shape
 
 Report in Norwegian:
