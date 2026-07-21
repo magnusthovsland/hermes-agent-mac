@@ -22,10 +22,14 @@ Use when managing/auditing Teoria Google Ads, especially during a strict perform
    - `SUBSCRIBE_PAID~WEBSITE` / free access and `SIGNUP~WEBSITE` should not be biddable unless there is an explicit lead-gen strategy.
    - `conversion_action.include_in_conversions_metric` may be immutable for imported click conversions; use customer/campaign conversion goals instead.
 4. If performance is poor, cut waste before adding new creative:
+   - segment spend, clicks, purchases, and secondary conversions by `segments.ad_network_type` before evaluating keywords; Search Partners can dominate cheap traffic while producing no purchases
+   - disable Search Partners when they consume material budget without purchase conversions, while preserving Google Search delivery
    - pause broad/free campaigns that produce free users but no tracked purchase
-   - pause weak ad groups with high spend/no purchases
+   - pause weak ad groups and phrase keywords with high spend/no purchases
    - keep only high-intent Klasse B terms while rebuilding
-5. Use “Prøv gratis i 30 min” as CTA, not the main positioning. Core positioning should be understanding/value, e.g. “Først forstått. Så bestått.”
+   - compare enabled RSAs by purchase results and retain at least one eligible/approved ad per active ad group
+5. After mutations, read back campaign network settings, budget, keyword/ad statuses, and policy approval. Newly created keywords may remain `UNDER_REVIEW`; report that separately from enabled/eligible items.
+6. Use “Prøv gratis i 30 min” as CTA, not the main positioning. Core positioning should be understanding/value, e.g. “Først forstått. Så bestått.”
 
 ## GAQL snippets
 

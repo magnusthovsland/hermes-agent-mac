@@ -5,7 +5,7 @@ file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
 file	.restart_last_processed.json	83 bytes
-file	.update_check	69 bytes
+file	.update_check	70 bytes
 file	SOUL.md	513 bytes
 excluded	audio_cache
 excluded	auth.json
@@ -40,7 +40,7 @@ file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
-file	models_dev_cache.json	3199052 bytes
+file	models_dev_cache.json	3199565 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
