@@ -84,6 +84,10 @@ When asked whether an agent has CMS access or who made recent content changes, k
 
 When a Sanity-managed footer/header link needs to point at a frontend route that is not a Sanity document, inspect the schema and frontend renderer before recommending workarounds. Do not create fake Sanity pages solely to satisfy an internal reference. Prefer existing `linkExternal` as an immediate workaround for same-domain non-Sanity routes, and recommend/implement a `linkRelative` type for the long-term model when appropriate. See `references/sanity-footer-link-modeling.md` for the decision order and editor guidance.
 
+### Multi-tenant analytics and purchase attribution
+
+When a tenant-owned marketing site hands a user into a separate SaaS app for registration/payment, first distinguish GA4 reporting, GA4 source attribution, direct Google Ads conversion upload, and generic data-layer delivery. Do not automatically prescribe cross-domain GA4 for every tenant. A purchase event alone does not preserve organic/paid source; carry tenant-scoped GA4 identity/session context through a signed attribution handoff and emit an idempotent backend-confirmed purchase through a browser or Measurement Protocol adapter. Browser `gtag` requires a tenant Measurement ID but no API secret; server-side Measurement Protocol requires both. See `references/multi-tenant-purchase-attribution.md`.
+
 ### External ERP/API integration research
 
 When researching a business-system API integration, distinguish **the business action** from **the bookkeeping mirror** before recommending mutations. For financial flows, explicitly separate “system should initiate money movement” from “money already moved elsewhere; system should only record it,” because using a payout API after an external PSP refund can create duplicate payments. For Visma Business NXT customer refunds, see `references/visma-business-nxt-customer-refunds.md` for the durable GraphQL patterns and pitfalls.

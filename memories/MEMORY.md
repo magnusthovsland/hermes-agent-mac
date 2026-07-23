@@ -2,9 +2,9 @@ User's Telegram identity for Hermes gateway allowlisting: username sungam81, num
 §
 Infinity Drift develops digital products for the traffic-school/training market. Main products: Ovio and Teoria. Relevant tools/platforms include GitHub, AWS, Vercel, Vipps/MobilePay, Link Mobility, SendGrid, Datadog, PostHog, OpenSearch, Airtable, Sanity/CMS, Notion. Hermes Notion files: `~/.hermes/notion/infinity-drift/`; token path: `~/.hermes/credentials/notion_token`.
 §
-Ovio is Infinity Drift's traffic-school SaaS OS for schools, users, teachers, vehicles, scheduling, payments/finance/reporting, and Vegvesen/NAF/Vipps/Visma/Kravia integrations. For cancellation deadlines, Magnus prefers industry term «virkedag», explicitly defined as Monday–Friday (Saturday excluded), not a new term.
+Ovio is Infinity Drift's traffic-school SaaS. Analytics requirement: each tenant owns its GA4 purchase tracking; preserve ad attribution from the school's domain into Ovio and avoid Wright-hardcoded tags. Magnus uses «virkedag» for cancellation deadlines, defined Monday–Friday (Saturday excluded).
 §
-Ovio production backend runs in AWS ECS/Fargate eu-north-1, cluster `wright`, service `wis-main-api`. For backend hang/downtime, first operational action is ECS Force new deployment, not RDS restart. Important integrations: Statens vegvesen, NAF/ENAF, Vipps/MobilePay, Visma.net, Visma Business GraphQL, and Kravia.ai.
+Ovio production backend: AWS ECS/Fargate eu-north-1, cluster `wright`, service `wis-main-api`. For hangs/downtime, first action is ECS Force new deployment, not RDS restart.
 §
 Teoria is Infinity Drift's theory-learning platform using Airtable + Sanity/CMS/Vercel. Teoria PostHog: EU project `29869` (`Teoria - Prod`), credential at `~/.hermes/credentials/posthog_teoria.json` (chmod 600; never expose keys). Style: simple wording, plausible alternatives, consistent structure; NO→EN uses British/international English, preserves Norwegian actors, converts promille to % BAC. Teoria ads should say “40% stryker”, not 44%.
 §

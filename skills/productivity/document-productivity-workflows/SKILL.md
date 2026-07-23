@@ -27,7 +27,8 @@ Use this skill for document-centric work: extracting text from PDFs/scans, editi
 2. Verify real artifacts: file exists, page/slide count is plausible, extracted text is non-empty, or modified PDF/deck opens structurally.
 3. For scanned documents, report OCR uncertainty and any pages that failed.
 4. For decks, prefer programmatic generation/editing over manual XML surgery unless the task requires low-level OOXML changes.
-5. Include final paths and the exact command/script used.
+5. Include final paths and the exact command/script used unless the user explicitly asks for only the downloadable artifact.
+6. **Direct-download developer handoffs:** when the user asks for a direct, downloadable solution and says to omit other relevant information, create one self-contained artifact containing only the prescriptive implementation (requirements, code, and acceptance criteria). Deliver the file without repeating the analysis, alternatives, caveats, or a long chat summary.
 
 ## Labeled playbooks
 
