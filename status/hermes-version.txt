@@ -1,7 +1,7 @@
 $ hermes --version 2>&1 || true
 exit_code=0
 
-Hermes Agent v0.18.2 (2026.7.7.2) · upstream d83e8585 · local caf557be (+1 carried commit)
+Hermes Agent v0.18.2 (2026.7.7.2) · upstream 43333acd · local caf557be (+1 carried commit)
 Install directory: /Users/mt-infinity/.hermes/hermes-agent
 Install method: git
 Python: 3.11.15
