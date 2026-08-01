@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "20260731T010017Z",
+  "snapshot_utc": "20260801T010100Z",
   "layout": "root-current-state; Git history is the snapshot history",
   "source_hermes_home": "/Users/mt-infinity/.hermes",
   "included": {
@@ -13,7 +13,7 @@
     ],
     "skills_files_copied": 872,
     "memories_files_copied": 2,
-    "cron_files_copied": 133,
+    "cron_files_copied": 134,
     "status_files": [
       "gh-version.txt",
       "git-version.txt",
@@ -33,10 +33,6 @@
   "skipped": {
     "skills": [
       [
-        ".curator_backups/2026-06-26T22-58-24Z/skills.tar.gz",
-        "too_large:2679682"
-      ],
-      [
         ".curator_backups/2026-07-03T23-16-23Z/skills.tar.gz",
         "too_large:3105021"
       ],
@@ -50,6 +46,10 @@
       ],
       [
         ".curator_backups/2026-07-25T00-35-30Z/skills.tar.gz",
+        "too_large:3142965"
+      ],
+      [
+        ".curator_backups/2026-08-01T00-52-39Z/skills.tar.gz",
         "too_large:3142965"
       ],
       [
