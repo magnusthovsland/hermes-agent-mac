@@ -81,7 +81,7 @@ exit_code=0
   PID(s):       1335
 
 ◆ Scheduled Jobs
-  Jobs:         3 active, 3 total
+  Jobs:         2 active, 2 total
 
 ◆ Sessions
   Active:       1 session(s)

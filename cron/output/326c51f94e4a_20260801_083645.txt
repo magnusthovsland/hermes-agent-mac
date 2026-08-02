@@ -1,0 +1,64 @@
+Cronjob Response: Teoria Google Ads daily July management report
+(job_id: 326c51f94e4a)
+-------------
+
+## Daglig Google Ads-rapport – Teoria Ads  
+**Analyse per 1. august kl. 08:30 | Klasse B, juli 2026**  
+**API-status: ✅ Google Ads API fungerer.** Ingen kontoendringer er utført.
+
+### 1) Status siden i går
+
+**Fredag 31. juli mot torsdag 30. juli:**
+
+- Kostnad: **99,67 kr** (**−21,7 %**)
+- Klikk: **22** (**+4,8 %**)
+- CPC: **4,53 kr** (**−25,2 %**)
+- **Purchase: 0**
+- **Free access activated: 0**
+- **Sign up: 0** (mot 1 torsdag)
+
+Dette er en svak konverteringsdag, men samsvarer med mønsteret om svake fredager.
+
+| Periode | Kostnad | Klikk | Purchase | Free access | Sign up | CPA purchase |
+|---|---:|---:|---:|---:|---:|---:|
+| 31. juli | 99,67 kr | 22 | 0 | 0 | 0 | – |
+| Siste 3 dager | 355,73 kr | 67 | 0 | 1 | 2 | – |
+| Siste 7 dager | 1 079,54 kr | 155 | 0 | 4 | 5 | – |
+| Juli totalt | 7 045,79 kr | 2 093 | 1 | 25 | 31 | **7 045,79 kr** |
+
+Siste syv dager hadde **37,8 % høyere kostnad**, **32,3 % færre klikk** og omtrent dobbelt så høy CPC som foregående syv dager. Kostnad per free access steg fra **195,87 til 269,89 kr**.
+
+### 2) Avvik og alarmer
+
+- **Kritisk kjøpsresultat:** Bare **1 Purchase** i hele juli. Free-access → Purchase er kun **4 %**. Dette bør også kontrolleres mot backend for mulig importforsinkelse eller manglende kjøpsattribusjon.
+- Free access-rate er bare **1,19 % av klikkene**. Sign up-rate er **1,48 %**. At Sign up er høyere enn Free access, blant annet 1 signup uten free access 30. juli, bør overvåkes som mulig hendelses-/importavvik.
+- Det aktive eksakte søkeordet **[teoriprøve bil]** har brukt **2 246,49 kr** i juli uten kjøp; 8 free access. Siste syv dager: **390,52 kr**, 1 free access og ingen kjøp.
+- Aktive phrase-søkeord **«teoriprøven bil»** er relativt best, men fortsatt svakt: **2 340,08 kr**, 8 free access og månedens eneste kjøp.
+- Bare annonsegruppen **Teoriprøve Bil** er aktiv. Den står for hele siste ukes kostnad og har ingen kjøp.
+- Ukedagseffekten avviker delvis fra forventningen:  
+  - Fredag: 0 kjøp, bare 1 free access i juli; **933 kr per free access**.  
+  - Søndag: 0 kjøp; **413 kr per free access**.  
+  - Mandag: bedre free access-kvalitet, **183 kr per free access**.  
+  - Tirsdag: svak, **615 kr per free access**.  
+  - Onsdag var best på free access, **135 kr per free access**.
+
+### 3) Anbefalte endringer i dag
+
+1. **Pause [teoriprøve bil] midlertidig i 48–72 timer**, eller reduser eksponeringen kraftig. Søkeordet har brukt 2 246 kr uten Purchase og er svakere enn phrase-varianten den siste uken.
+2. Legg til presise negative søkeord, ikke brede varianter:
+   - **[biltilsynet teoriprøve]** – 11,53 kr siste syv dager, ingen handlinger.
+   - **[teoriprøven pris]** – 23,66 kr i juli, ingen handlinger.
+   - **[teoriprøve pris]** – 9,91 kr i juli, ingen handlinger.
+3. **Ikke øk dagsbudsjettet på 131 kr før Purchase-importen er kontrollert.** Kampanjen mistet mye visningsandel på budsjett søndag–onsdag, men uten dokumentert kjøpsavkastning bør dette ikke skaleres.
+4. Behold all aktiv budsjettallokering på Klasse B fremfor å reaktivere Gratis-, MC- eller mopedkampanjer. De øvrige kampanjene er allerede pauset og viste ingen kjøp i juli.
+5. Kontroller at **Purchase (Import)** importeres komplett og raskt. Den er primær, mens Free access og Sign up er sekundære; dagens optimalisering får derfor svært lite kjøpssignal.
+
+### 4) Overvåkes i morgen
+
+- Om fredagens Purchase/Free access etterregistreres på grunn av importforsinkelse.
+- Søndagens spend mot dagsbudsjett og om den høye tapte visningsandelen faktisk følges av bedre free access eller kjøp.
+- CPC og free-access-rate for phrase-søkeordet **«teoriprøven bil»** dersom eksakt søkeord pauses.
+- Nye søk knyttet til offentlig prøveadministrasjon, pris, bestilling og Biltilsynet/Vegvesenet.
+- Purchase-importen spesielt: fortsatt null kjøp gjennom søndag bør utløse sterkere nedskalering eller midlertidig kampanjepause.
+
+To stop or manage this job, send me a new message (e.g. "stop reminder Teoria Google Ads daily July management report").
