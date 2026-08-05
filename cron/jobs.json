@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 61
+        "completed": 62
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-08-05T02:00:00+02:00",
-      "last_run_at": "2026-08-04T02:05:03.817931+02:00",
+      "next_run_at": "2026-08-06T02:00:00+02:00",
+      "last_run_at": "2026-08-05T02:05:34.918845+02:00",
       "last_status": "error",
-      "last_error": "RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -68,15 +68,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 59
+        "completed": 60
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-08-05T03:00:00+02:00",
-      "last_run_at": "2026-08-03T03:00:46.532634+02:00",
+      "next_run_at": "2026-08-06T03:00:00+02:00",
+      "last_run_at": "2026-08-04T03:00:32.602628+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -86,7 +86,56 @@
       "workdir": null,
       "profile": null,
       "fire_claim": null
+    },
+    {
+      "id": "ef3c9e1bce07",
+      "name": "Verifiser Hermes etter oppdatering",
+      "prompt": "Verifiser Hermes etter oppdatering og gateway-restart. Kj\u00f8r: `hermes --version`, `hermes update --check`, `hermes config check`, `hermes gateway status` og en kort `hermes doctor`-vurdering. Rapporter kort p\u00e5 norsk om versjon, om installasjonen er oppdatert, config-versjon, gateway-status og eventuelle reelle blokkere. Ikke gj\u00f8r nye endringer og ikke opprett nye cronjobber.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.6-sol",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-04T11:56:03.145679+02:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-04T11:55:03.145770+02:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-04T11:56:50.077573+02:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7575580066",
+        "chat_name": "Magnus Thovsland",
+        "thread_id": null,
+        "user_id": "7575580066"
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-04T03:00:21.045121+02:00"
+  "updated_at": "2026-08-05T03:00:56.050342+02:00"
 }

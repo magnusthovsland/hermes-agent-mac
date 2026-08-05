@@ -5,16 +5,16 @@ file	.env.security-backup-20260606-011928	23449 bytes
 file	.hermes_history	3915 bytes
 file	.install_method	4 bytes
 file	.restart_last_processed.json	83 bytes
-file	.update_check	69 bytes
 file	SOUL.md	513 bytes
 excluded	audio_cache
 excluded	auth.json
 file	auth.lock	0 bytes
+dir	backups/
 dir	bin/
 excluded	bootstrap-cache
 excluded	cache
 file	channel_directory.json	222 bytes
-file	config.yaml	16028 bytes
+file	config.yaml	16052 bytes
 file	config.yaml.bak.20260605_231842	60662 bytes
 file	config.yaml.bak.20260605_233733	60662 bytes
 file	config.yaml.bak.20260605_234601	15151 bytes
@@ -23,9 +23,10 @@ file	context_length_cache.yaml	190 bytes
 dir	credentials/
 dir	cron/
 file	desktop-build-stamp.json	160 bytes
-file	gateway.lock	170 bytes
-file	gateway.pid	170 bytes
-file	gateway_state.json	431 bytes
+file	gateway-starts.log	18 bytes
+file	gateway.lock	216 bytes
+file	gateway.pid	216 bytes
+file	gateway_state.json	432 bytes
 excluded	google_client_secret.json
 file	google_drive_hermes_folder.json	307 bytes
 excluded	google_token.json
@@ -35,17 +36,20 @@ dir	hooks/
 excluded	image_cache
 dir	kanban/
 excluded	kanban.db
+file	kanban.db-shm	32768 bytes
+file	kanban.db-wal	0 bytes
 file	kanban.db.dispatch.lock	0 bytes
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
-file	models_dev_cache.json	3477379 bytes
+file	models_dev_cache.json	3504088 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
 dir	pairing/
 excluded	pastes
+dir	pending_messages/
 dir	platforms/
 dir	plugins/
 file	processes.json	2 bytes

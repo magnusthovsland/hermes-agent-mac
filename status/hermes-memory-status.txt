@@ -4,7 +4,10 @@ exit_code=0
 
 Memory status
 ────────────────────────────────────────
-  Built-in:  always active
+  Built-in (MEMORY.md / USER.md):
+    Memory injection:   enabled ✓
+    User profile:       enabled ✓
+    Memory tool:        enabled ✓
   Provider:  (none — built-in only)
 
   Installed plugins:

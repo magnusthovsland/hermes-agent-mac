@@ -121,13 +121,13 @@
     "created_at": "2026-06-05T21:44:47.855745+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-19T22:42:59.261896+00:00",
-    "last_used_at": "2026-07-10T11:13:16.371035+00:00",
-    "last_viewed_at": "2026-07-10T11:13:16.370002+00:00",
+    "last_used_at": "2026-08-04T09:46:06.209302+00:00",
+    "last_viewed_at": "2026-08-04T09:46:06.208096+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 22,
-    "view_count": 22
+    "use_count": 23,
+    "view_count": 23
   },
   "hermes-gateway-operations": {
     "archived_at": null,
@@ -185,14 +185,14 @@
     "archived_at": null,
     "created_at": "2026-06-26T23:02:44.455551+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-16T16:28:08.515442+00:00",
-    "last_used_at": "2026-07-16T16:28:00.450333+00:00",
-    "last_viewed_at": "2026-07-16T16:28:00.448880+00:00",
-    "patch_count": 10,
+    "last_patched_at": "2026-08-04T10:15:14.982673+00:00",
+    "last_used_at": "2026-08-04T09:58:19.120672+00:00",
+    "last_viewed_at": "2026-08-04T09:58:19.119628+00:00",
+    "patch_count": 12,
     "pinned": false,
     "state": "active",
-    "use_count": 7,
-    "view_count": 7
+    "use_count": 9,
+    "view_count": 9
   },
   "productivity/notion": {
     "archived_at": null,
@@ -264,12 +264,12 @@
     "created_at": "2026-06-19T22:44:17.240348+00:00",
     "created_by": null,
     "last_patched_at": "2026-07-22T10:41:44.071459+00:00",
-    "last_used_at": "2026-07-22T10:42:02.452306+00:00",
-    "last_viewed_at": "2026-07-22T10:42:02.451347+00:00",
+    "last_used_at": "2026-08-04T09:55:58.151183+00:00",
+    "last_viewed_at": "2026-08-04T09:55:58.150307+00:00",
     "patch_count": 32,
     "pinned": false,
     "state": "active",
-    "use_count": 34,
-    "view_count": 34
+    "use_count": 36,
+    "view_count": 36
   }
 }

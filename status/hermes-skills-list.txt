@@ -5,9 +5,9 @@ exit_code=0
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
 ┃ Name                    ┃ Category             ┃ Source  ┃ Trust   ┃ Status  ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━┩
-│ computer-use            │                      │ builtin │ builtin │ enabled │
 │ apple-ecosystem-automa… │ apple                │ local   │ local   │ enabled │
 │ autonomous-coding-agen… │ autonomous-ai-agents │ local   │ local   │ enabled │
+│ computer-use            │ autonomous-ai-agents │ builtin │ builtin │ enabled │
 │ hermes-agent            │ autonomous-ai-agents │ builtin │ builtin │ enabled │
 │ hermes-gateway-operati… │ autonomous-ai-agents │ local   │ local   │ enabled │
 │ creative-visual-artifa… │ creative             │ local   │ local   │ enabled │
@@ -17,14 +17,19 @@ exit_code=0
 │ mlops-model-operations  │ mlops                │ local   │ local   │ enabled │
 │ communication-platform… │ productivity         │ local   │ local   │ enabled │
 │ document-productivity-… │ productivity         │ local   │ local   │ enabled │
-│ petdex                  │ productivity         │ builtin │ builtin │ enabled │
+│ docx                    │ productivity         │ builtin │ builtin │ enabled │
+│ pdf                     │ productivity         │ builtin │ builtin │ enabled │
+│ petdex                  │ productivity         │ local   │ local   │ enabled │
 │ productivity-service-i… │ productivity         │ local   │ local   │ enabled │
+│ xlsx                    │ productivity         │ builtin │ builtin │ enabled │
 │ godmode                 │ red-teaming          │ local   │ local   │ enabled │
+│ grounded-citations      │ research             │ builtin │ builtin │ enabled │
 │ research-knowledge-work │ research             │ local   │ local   │ enabled │
 │ smart-home-automation   │ smart-home           │ local   │ local   │ enabled │
+│ inspecting-hermes-desk… │ software-development │ builtin │ builtin │ enabled │
 │ plan                    │ software-development │ builtin │ builtin │ enabled │
 │ software-development-w… │ software-development │ local   │ local   │ enabled │
 └─────────────────────────┴──────────────────────┴─────────┴─────────┴─────────┘
-0 hub-installed, 4 builtin, 15 local — 19 enabled, 0 disabled
+0 hub-installed, 8 builtin, 16 local — 24 enabled, 0 disabled
 
 

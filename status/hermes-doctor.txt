@@ -14,8 +14,10 @@ exit_code=0
 
 ◆ Python Environment
   ✓ Python 3.11.15
+  ✓ SQLite 3.53.1
+    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
   ✓ Virtual environment active
-  ✓ Version files consistent (0.18.2)
+  ✓ Version files consistent (0.20.0)
 
 ◆ SSL / CA Certificates
   ✓ SSL CA certificate bundle is valid
@@ -34,7 +36,8 @@ exit_code=0
   ✓ ~/.hermes/.env file exists
   ✓ API key or custom endpoint configured
   ✓ ~/.hermes/config.yaml exists
-  ⚠ Config version outdated (v29 → v33) (new settings available)
+  ✓ Config version up to date (v33)
+  ✓ No deprecated config keys or env vars
 
 ◆ xAI Model Retirement (May 15, 2026)
   ✓ No retired xAI models in config
@@ -55,9 +58,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ exists
   ✓ ~/.hermes/SOUL.md exists (persona configured)
   ✓ ~/.hermes/memories/ directory exists
-  ✓ MEMORY.md exists (2030 chars)
+  ✓ MEMORY.md exists (2058 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (122 sessions)
+  ✓ ~/.hermes/state.db exists (124 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -70,14 +73,14 @@ exit_code=0
   ✓ Node.js
   ✓ agent-browser (Node.js) (browser automation)
   ✓ Playwright Chromium (browser engine)
-  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
-  ⚠ web workspace deps (0 critical, 6 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ Browser tools (agent-browser) deps (0 critical, 2 high, 0 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
+  ⚠ web workspace deps (0 critical, 3 high, 0 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ⚠ ui-tui workspace deps (0 critical, 4 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ ui-tui workspace deps (0 critical, 1 high, 0 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
 
 ◆ API Connectivity
-  Running 26 connectivity checks in parallel…
+  Running 30 connectivity checks in parallel…
                                                                       
   ⚠ OpenRouter API (not configured)
 
@@ -88,7 +91,6 @@ exit_code=0
   ✓ cronjob
   ✓ delegation
   ✓ file
-  ✓ image_gen
   ✓ memory
   ✓ project
   ✓ session_search
@@ -99,6 +101,7 @@ exit_code=0
   ✓ video
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
+  ⚠ bfl (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
   ⚠ computer_use (system dependency not met)
   ⚠ discord (missing DISCORD_BOT_TOKEN)
@@ -107,6 +110,7 @@ exit_code=0
   ⚠ feishu_drive (system dependency not met)
   ⚠ hermes-yuanbao (system dependency not met)
   ⚠ homeassistant (system dependency not met)
+  ⚠ image_gen (system dependency not met)
   ⚠ spotify (system dependency not met)
   ⚠ video_gen (system dependency not met)
   ⚠ web (missing EXA_API_KEY, PARALLEL_API_KEY, TAVILY_API_KEY, FIRECRAWL_API_KEY, FIRECRAWL_API_URL, FIRECRAWL_GATEWAY_URL, TOOL_GATEWAY_DOMAIN, TOOL_GATEWAY_SCHEME, TOOL_GATEWAY_USER_TOKEN)
@@ -123,9 +127,9 @@ exit_code=0
 ────────────────────────────────────────────────────────────
   Found 4 issue(s) to address:
 
-  1. Run 'hermes doctor --fix' or 'hermes setup' to migrate config
-  2. web workspace has 6 npm vulnerabilities
-  3. ui-tui workspace has 4 npm vulnerabilities
+  1. Browser tools (agent-browser) has 2 npm vulnerabilities
+  2. web workspace has 3 npm vulnerabilities
+  3. ui-tui workspace has 1 npm vulnerability
   4. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.

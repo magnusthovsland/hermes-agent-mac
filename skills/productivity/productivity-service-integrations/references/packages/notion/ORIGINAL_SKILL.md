@@ -66,7 +66,7 @@ Windows users: skip step 2 entirely until native `ntn` ships — Path B works fi
 
 ## API Basics
 
-`Notion-Version: 2025-09-03` is required on all HTTP requests. `ntn` handles this for you. In this version, what users call "databases" are called **data sources** in the API.
+`Notion-Version: 2025-09-03` or later is required for the split database/data-source model and Views API. `ntn` handles the version header for you. A **database** is the container and owns views; a **data source** is a schema inside that database and owns properties/pages. Keep both IDs: use `database_id` for database/view operations and `data_source_id` for schema retrieval and queries.
 
 ## Path A — `ntn` CLI (preferred, macOS / Linux)
 
@@ -248,22 +248,59 @@ curl -s -X POST "https://api.notion.com/v1/data_sources/{data_source_id}/query" 
   }'
 ```
 
-### Create a database
+### Create a database and its initial data source
+
+For API version `2025-09-03` or later, create the database container with `POST /v1/databases`; put the initial schema under `initial_data_source`. `POST /v1/data_sources` adds another data source to an **existing database** and requires `parent.database_id`; it does not create a database below a page.
+
 ```bash
-curl -s -X POST "https://api.notion.com/v1/data_sources" \
-  -H "Authorization: Bearer $NOTION_API_KEY" \
+curl -s -X POST "https://api.notion.com/v1/databases" \
+  -H "Authorization: Bearer ***" \
   -H "Notion-Version: 2025-09-03" \
   -H "Content-Type: application/json" \
   -d '{
-    "parent": {"page_id": "xxx"},
+    "parent": {"type": "page_id", "page_id": "xxx"},
     "title": [{"text": {"content": "My Database"}}],
-    "properties": {
-      "Name": {"title": {}},
-      "Status": {"select": {"options": [{"name": "Todo"}, {"name": "Done"}]}},
-      "Date": {"date": {}}
+    "initial_data_source": {
+      "properties": {
+        "Name": {"title": {}},
+        "Status": {"select": {"options": [{"name": "Todo"}, {"name": "Done"}]}},
+        "Date": {"date": {}}
+      }
+    },
+    "is_inline": false
+  }'
+```
+
+The response includes both the database `id` and `data_sources[0].id`.
+
+### Create a board view grouped by a select property
+
+Views are first-class resources in API version `2025-09-03` or later. Retrieve the data source first to get the encoded property ID, then create the board on the database:
+
+```bash
+curl -s -X POST "https://api.notion.com/v1/views" \
+  -H "Authorization: Bearer ***" \
+  -H "Notion-Version: 2025-09-03" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "database_id": "DATABASE_ID",
+    "data_source_id": "DATA_SOURCE_ID",
+    "name": "Board",
+    "type": "board",
+    "configuration": {
+      "type": "board",
+      "group_by": {
+        "type": "select",
+        "property_id": "STATUS_PROPERTY_ID",
+        "sort": {"type": "manual"},
+        "hide_empty_groups": false
+      },
+      "card_layout": "compact"
     }
   }'
 ```
+
+Useful endpoints: `GET /v1/views?database_id=...`, `GET /v1/views/{view_id}`, `PATCH /v1/views/{view_id}`, and `DELETE /v1/views/{view_id}`. New databases automatically get a table view; create and verify the replacement view before deleting that initial table.
 
 ### Update page properties
 ```bash
