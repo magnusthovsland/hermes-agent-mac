@@ -60,7 +60,7 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2058 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (126 sessions)
+  ✓ ~/.hermes/state.db exists (127 sessions)
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -74,9 +74,9 @@ exit_code=0
   ✓ agent-browser (Node.js) (browser automation)
   ✓ Playwright Chromium (browser engine)
   ⚠ Browser tools (agent-browser) deps (0 critical, 2 high, 0 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 3 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ web workspace deps (0 critical, 4 high, 0 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ⚠ ui-tui workspace deps (0 critical, 1 high, 0 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ ui-tui workspace deps (0 critical, 2 high, 0 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
 
 ◆ API Connectivity
@@ -128,8 +128,8 @@ exit_code=0
   Found 4 issue(s) to address:
 
   1. Browser tools (agent-browser) has 2 npm vulnerabilities
-  2. web workspace has 3 npm vulnerabilities
-  3. ui-tui workspace has 1 npm vulnerability
+  2. web workspace has 4 npm vulnerabilities
+  3. ui-tui workspace has 2 npm vulnerabilities
   4. Run 'hermes setup' to configure missing API keys for full tool access
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
