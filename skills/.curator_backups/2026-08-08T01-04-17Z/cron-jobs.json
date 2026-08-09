@@ -20,15 +20,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 29
+        "completed": 65
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-07-04T02:00:00+02:00",
-      "last_run_at": "2026-07-03T02:07:15.099986+02:00",
+      "next_run_at": "2026-08-09T02:00:00+02:00",
+      "last_run_at": "2026-08-08T02:05:26.485993+02:00",
       "last_status": "error",
       "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
@@ -45,7 +45,8 @@
         "web"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "5cf752e90c20",
@@ -67,15 +68,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 28
+        "completed": 64
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-07-04T03:00:00+02:00",
-      "last_run_at": "2026-07-03T03:00:12.008490+02:00",
+      "next_run_at": "2026-08-09T03:00:00+02:00",
+      "last_run_at": "2026-08-08T03:00:59.428928+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -83,38 +84,41 @@
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
-      "id": "326c51f94e4a",
-      "name": "Teoria Google Ads daily July management report",
-      "prompt": "Du er ansvarlig markedsf\u00f8rer for Teoria Google Ads i juli 2026. Hver morgen skal du gj\u00f8re en konkret daglig analyse av Google Ads-kontoen `Teoria Ads` (customer_id 2642145925) via Google Ads API med credentials fra `~/clawd/credentials/google_ads_token.json` og developer token fra `~/clawd/credentials/google_ads_developer_token`. Fokuser prim\u00e6rt p\u00e5 Klasse B/personbil i juli. Viktig kontekst: s\u00f8ndag, mandag og tirsdag er ofte sterke dager; fredag og l\u00f8rdag er ofte svake. Ikke gj\u00f8r kontoendringer uten \u00e5 rapportere tydelig hva som b\u00f8r endres, med mindre tidligere eksplisitte instrukser i jobbkontekst sier at endringer skal utf\u00f8res. Hent siste 1, 3, 7 og month-to-date dager for kampanjer/ad groups/keywords/search terms/conversion actions. Skille mellom Purchase, Free access activated og Sign up. Vurder spend, kj\u00f8p, CPA purchase, free access-kvalitet, search terms som b\u00f8r negatives, s\u00f8keord som b\u00f8r pauses, budsjettallokering og ukedagseffekt. Lever en kort norsk rapport med: 1) status siden i g\u00e5r, 2) avvik/alarmer, 3) anbefalte endringer i dag, 4) hva som skal overv\u00e5kes i morgen. Marker tydelig hvis Google Ads API feiler.",
+      "id": "ef3c9e1bce07",
+      "name": "Verifiser Hermes etter oppdatering",
+      "prompt": "Verifiser Hermes etter oppdatering og gateway-restart. Kj\u00f8r: `hermes --version`, `hermes update --check`, `hermes config check`, `hermes gateway status` og en kort `hermes doctor`-vurdering. Rapporter kort p\u00e5 norsk om versjon, om installasjonen er oppdatert, config-versjon, gateway-status og eventuelle reelle blokkere. Ikke gj\u00f8r nye endringer og ikke opprett nye cronjobber.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.6-sol",
       "base_url": null,
       "script": null,
       "no_agent": false,
       "context_from": null,
       "schedule": {
-        "kind": "cron",
-        "expr": "30 8 * * *",
-        "display": "30 8 * * *"
+        "kind": "once",
+        "run_at": "2026-08-04T11:56:03.145679+02:00",
+        "display": "once in 1m"
       },
-      "schedule_display": "30 8 * * *",
+      "schedule_display": "once in 1m",
       "repeat": {
-        "times": 29,
-        "completed": 0
+        "times": 1,
+        "completed": 1
       },
-      "enabled": true,
-      "state": "scheduled",
+      "enabled": false,
+      "state": "completed",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-07-03T23:57:00.165573+02:00",
-      "next_run_at": "2026-07-04T08:30:00+02:00",
-      "last_run_at": null,
-      "last_status": null,
+      "created_at": "2026-08-04T11:55:03.145770+02:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-04T11:56:50.077573+02:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -122,13 +126,16 @@
         "platform": "telegram",
         "chat_id": "7575580066",
         "chat_name": "Magnus Thovsland",
-        "thread_id": null
+        "thread_id": null,
+        "user_id": "7575580066"
       },
       "enabled_toolsets": [
         "terminal"
       ],
-      "workdir": null
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-03T23:57:00.167055+02:00"
+  "updated_at": "2026-08-08T03:00:59.429618+02:00"
 }
