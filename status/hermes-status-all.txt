@@ -83,11 +83,11 @@ exit_code=0
   PID(s):       68032
 
 ◆ Scheduled Jobs
-  Jobs:         2 active, 3 total
+  Jobs:         2 active, 2 total
 
 ◆ Sessions
   Active:       1 session(s)
-  Last activity:      12h ago
+  Last activity:      17h ago
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics

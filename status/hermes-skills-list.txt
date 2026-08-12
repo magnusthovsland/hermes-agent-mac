@@ -26,10 +26,11 @@ exit_code=0
 │ grounded-citations      │ research             │ builtin │ builtin │ enabled │
 │ research-knowledge-work │ research             │ local   │ local   │ enabled │
 │ smart-home-automation   │ smart-home           │ local   │ local   │ enabled │
+│ frontend-web-delivery   │ software-development │ local   │ local   │ enabled │
 │ inspecting-hermes-desk… │ software-development │ builtin │ builtin │ enabled │
 │ plan                    │ software-development │ builtin │ builtin │ enabled │
 │ software-development-w… │ software-development │ local   │ local   │ enabled │
 └─────────────────────────┴──────────────────────┴─────────┴─────────┴─────────┘
-0 hub-installed, 8 builtin, 16 local — 24 enabled, 0 disabled
+0 hub-installed, 8 builtin, 17 local — 25 enabled, 0 disabled
 
 

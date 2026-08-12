@@ -1,6 +1,6 @@
 User's Telegram identity for Hermes gateway allowlisting: username sungam81, numeric user ID 7575580066. User set up a new Hermes Telegram bot named Edith / Edithsungam_bot and does not want Hermes to reuse OpenClaw Telegram credentials.
 §
-Ovio is Infinity Drift's traffic-school SaaS. Analytics requirement: each tenant owns its GA4 purchase tracking; preserve ad attribution from the school's domain into Ovio and avoid Wright-hardcoded tags. Magnus uses «virkedag» for cancellation deadlines, defined Monday–Friday (Saturday excluded).
+Ovio is Infinity Drift's traffic-school SaaS. Ovio contact: hei@ovio.no; Infinity Drift footer phone: +47 402 96 066. Ovio keeps data in EEA. The school is legal seller/payment recipient; omit internal KID routing publicly. Completed-training records are school-controlled (5-year retention). Each tenant owns GA4 purchase tracking; preserve cross-domain attribution; no Wright-hardcoded tags. «Virkedag» = Mon–Fri.
 §
 Ovio production backend: AWS ECS/Fargate eu-north-1, cluster `wright`, service `wis-main-api`. For hangs/downtime, first action is ECS Force new deployment, not RDS restart.
 §
