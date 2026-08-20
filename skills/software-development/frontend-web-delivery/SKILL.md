@@ -28,9 +28,12 @@ Use this class-level workflow for extending and publishing public-facing fronten
 4. **Implement correct direct-route delivery**
    - Distinguish hydrated DOM metadata from metadata present in raw HTML.
    - Avoid wildcard rewrites that turn unknown paths into soft 404s unless that behavior is intentional.
-5. **Verify locally**
+5. **Verify locally and diagnose real mobile delivery**
    - Run type checking, the production build, diff checks, and direct-route HTTP checks.
    - Inspect desktop and mobile rendering, heading hierarchy, overflow, internal links, title, description, canonical, and Open Graph values.
+   - For intermittent mobile slowness, separate origin latency, redirect/TLS cost, asset delivery, JavaScript startup, and post-load rendering cost.
+   - Inspect raw HTML for an empty client-only application shell, and verify that content-hashed JS/CSS use long-lived immutable caching rather than forced revalidation.
+   - Treat Lighthouse as synthetic evidence, not as a refutation of real-device reports; correlate exact timestamps, carrier/Wi-Fi, device, and browser through real-user monitoring.
 6. **Publish safely**
    - Use the repository identity expected by the Git/deployment integration before creating commits.
    - Push only after required approval, monitor CI, trigger the correct project-specific deployment mechanism, and verify the actual live build.
@@ -52,3 +55,4 @@ Use this class-level workflow for extending and publishing public-facing fronten
 ## Detailed references
 
 - `references/vite-static-subroutes-vercel-and-long-toc.md` — finite Vite subroutes with raw-HTML metadata, real 404s, reusable product modules, long sticky legal-document TOCs, and deploy-hook verification.
+- `references/intermittent-mobile-performance.md` — diagnose real-device slowness that synthetic tests miss: client-only blank shells, hashed-asset cache headers, redirects, carrier paths, rendering cost, and RUM evidence.
