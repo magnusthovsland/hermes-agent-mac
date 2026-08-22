@@ -10,4 +10,4 @@ Hermes Google Drive default folder for Magnus deliverables is `Dokumenter Hermes
 §
 For Wright-Web release workflow, Magnus may ask for fixes to be pushed directly to QA for testing while creating a separate PR against prod/main for developer review and production promotion.
 §
-Infinity Drift develops traffic-school products Ovio and Teoria using GitHub, AWS, Vercel, PostHog, Airtable, Sanity and Notion. Notion files: `~/.hermes/notion/infinity-drift/`; token: `~/.hermes/credentials/notion_token`. Notion area `Produkt og utvikling → Nettsider` is for website maintenance; its task board should stay simple and standalone, without Ovio/other database relations or integrations.
+Infinity Drift develops Ovio and Teoria. Company website is infinitydrift.no; use it—not a product site—as “company website” in corporate signup forms.
