@@ -15,7 +15,7 @@ dir	bin/
 excluded	bootstrap-cache
 excluded	cache
 file	channel_directory.json	222 bytes
-file	config.yaml	16233 bytes
+file	config.yaml	16257 bytes
 file	config.yaml.bak.20260605_231842	60662 bytes
 file	config.yaml.bak.20260605_233733	60662 bytes
 file	config.yaml.bak.20260605_234601	15151 bytes
@@ -44,7 +44,7 @@ file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
-file	models_dev_cache.json	4300422 bytes
+file	models_dev_cache.json	4302794 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

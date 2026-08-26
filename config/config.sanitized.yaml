@@ -464,6 +464,7 @@ command_allowlist:
 - script execution via -e/-c flag
 - execute_code
 - kill hermes/gateway process (self-termination)
+- delete in root path
 - stop/restart hermes gateway (kills running agents)
 - script execution via heredoc
 - hermes update (restarts gateway, kills running agents)
