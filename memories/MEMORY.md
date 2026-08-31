@@ -11,3 +11,5 @@ Hermes Google Drive default folder for Magnus deliverables is `Dokumenter Hermes
 For Wright-Web release workflow, Magnus may ask for fixes to be pushed directly to QA for testing while creating a separate PR against prod/main for developer review and production promotion.
 §
 Infinity Drift develops Ovio and Teoria. Company website is infinitydrift.no; use it—not a product site—as “company website” in corporate signup forms.
+§
+data.vegr.no («Magnus Hub») er Magnus’ private personlige datahub: GitHub `magnusthovsland/vegr`, lokal kildekode `/Users/mt-infinity/magnus-hub`, Node/Express + SQLite på port 3500 bak Cloudflare Access/Tunnel.

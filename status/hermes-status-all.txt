@@ -87,6 +87,7 @@ exit_code=0
 
 ◆ Sessions
   Active:       1 session(s)
+  Last activity:       7h ago
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
