@@ -13,6 +13,7 @@ exit_code=0
 │ creative-visual-artifa… │ creative             │ local   │ local   │ enabled │
 │ data-science-workflows  │ data-science         │ local   │ local   │ enabled │
 │ github-workflows        │ github               │ local   │ local   │ enabled │
+│ advertising-platform-o… │ marketing            │ local   │ local   │ enabled │
 │ media-content-workflows │ media                │ local   │ local   │ enabled │
 │ mlops-model-operations  │ mlops                │ local   │ local   │ enabled │
 │ communication-platform… │ productivity         │ local   │ local   │ enabled │
@@ -31,6 +32,6 @@ exit_code=0
 │ plan                    │ software-development │ builtin │ builtin │ enabled │
 │ software-development-w… │ software-development │ local   │ local   │ enabled │
 └─────────────────────────┴──────────────────────┴─────────┴─────────┴─────────┘
-0 hub-installed, 8 builtin, 17 local — 25 enabled, 0 disabled
+0 hub-installed, 8 builtin, 18 local — 26 enabled, 0 disabled
 
 

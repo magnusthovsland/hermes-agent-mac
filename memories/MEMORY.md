@@ -13,3 +13,5 @@ For Wright-Web release workflow, Magnus may ask for fixes to be pushed directly 
 Infinity Drift develops Ovio and Teoria. Company website is infinitydrift.no; use it—not a product site—as “company website” in corporate signup forms.
 §
 data.vegr.no («Magnus Hub») er Magnus’ private personlige datahub: GitHub `magnusthovsland/vegr`, lokal kildekode `/Users/mt-infinity/magnus-hub`, Node/Express + SQLite på port 3500 bak Cloudflare Access/Tunnel.
+§
+OpenAI Ads key: ~/.hermes/credentials/openai_ads_api_key.txt
