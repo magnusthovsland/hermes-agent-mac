@@ -1,10 +1,10 @@
 $ hermes --version 2>&1 || true
 exit_code=0
 
-Hermes Agent v0.20.0 (2026.8.3)
+Hermes Agent v0.21.0 (2026.8.31) · upstream f58fcc81
 Install directory: /Users/mt-infinity/.hermes/hermes-agent
 Install method: git
 Python: 3.11.15
 OpenAI SDK: 2.24.0
-Run 'hermes version' for update status.
+Update available: 82 commits behind — run 'hermes update'
 

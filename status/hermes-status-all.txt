@@ -10,8 +10,8 @@ exit_code=0
   Project:      /Users/mt-infinity/.hermes/hermes-agent
   Python:       3.11.15
   .env file:    ✓ exists
-  Model:        gpt-5.6-sol
-  Provider:     OpenAI Codex
+  Model:        gpt-6-astra
+  Provider:     ChatGPT or Codex Subscription
 
 ◆ API Keys
   OpenRouter    ✗ (not set)
@@ -28,6 +28,8 @@ exit_code=0
   DeepInfra     ✗ (not set)
   Firecrawl     ✗ (not set)
   Tavily        ✗ (not set)
+  Perplexity    ✗ (not set)
+  Keenable      ✗ (not set)
   Browser Use   ✗ (not set)
   Browserbase   ✗ (not set)
   FAL           ✗ (not set)
@@ -76,18 +78,41 @@ exit_code=0
   BlueBubbles   ✗ not configured
   QQBot         ✗ not configured
   Yuanbao       ✗ not configured
+  A2A           ✓ configured (plugin)
+  Buzz          ✗ not configured (plugin)
+  DingTalk      ✗ not configured (plugin)
+  Discord       ✓ configured (plugin)
+  Email         ✗ not configured (plugin)
+  Feishu / Lark  ✗ not configured (plugin)
+  Google Chat   ✗ not configured (plugin)
+  Home Assistant  ✓ configured (plugin)
+  IRC           ✗ not configured (plugin)
+  LINE          ✗ not configured (plugin)
+  Matrix        ✗ not configured (plugin)
+  Mattermost    ✓ configured (plugin)
+  ntfy          ✗ not configured (plugin)
+  iMessage via Photon  ✓ configured (plugin)
+  Raft          ✗ not configured (plugin)
+  SimpleX Chat  ✗ not configured (plugin)
+  Slack         ✓ configured (plugin)
+  SMS (Twilio)  ✗ not configured (plugin)
+  Microsoft Teams  ✓ configured (plugin)
+  Telegram      ✓ configured (plugin)
+  WeCom (Enterprise WeChat)  ✓ configured (plugin)
+  WeCom Callback (self-built apps)  ✓ configured (plugin)
+  WhatsApp      ✓ configured (plugin)
 
 ◆ Gateway Service
   Status:       ✓ running
   Manager:      launchd
-  PID(s):       68032
+  PID(s):       4147, 4141
 
 ◆ Scheduled Jobs
   Jobs:         2 active, 2 total
 
 ◆ Sessions
   Active:       1 session(s)
-  Last activity:       4h ago
+  Last activity:      16h ago
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics

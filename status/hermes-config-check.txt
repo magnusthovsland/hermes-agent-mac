@@ -4,7 +4,7 @@ exit_code=0
 
 📋 Configuration Status
 
-  Config version: 33 ✓
+  Config version: 40 ✓
 
   Required:
 
@@ -34,6 +34,8 @@ exit_code=0
     ○ ARCEE_BASE_URL
     ○ GMI_API_KEY
     ○ GMI_BASE_URL
+    ○ ACTUAL_API_KEY
+    ○ ACTUAL_BASE_URL
     ○ FIREWORKS_API_KEY
     ○ MINIMAX_API_KEY
     ○ MINIMAX_BASE_URL
@@ -45,6 +47,7 @@ exit_code=0
     ○ DASHSCOPE_BASE_URL
     ○ HERMES_QWEN_BASE_URL
     ○ OPENCODE_ZEN_API_KEY
+    ○ COMMANDCODE_API_KEY
     ○ OPENCODE_ZEN_BASE_URL
     ○ OPENCODE_GO_API_KEY
     ○ OPENCODE_GO_BASE_URL
@@ -69,13 +72,15 @@ exit_code=0
     ○ TOOL_GATEWAY_SCHEME
     ○ TOOL_GATEWAY_USER_TOKEN
     ○ TAVILY_API_KEY → web_search, web_extract
+    ○ PERPLEXITY_API_KEY → web_search, web_extract
+    ○ KEENABLE_API_KEY → web_search, web_extract
     ○ SEARXNG_URL → web_search
     ○ BRAVE_SEARCH_API_KEY → web_search
     ○ BROWSERBASE_API_KEY → browser_navigate, browser_click
     ○ BROWSERBASE_PROJECT_ID → browser_navigate, browser_click
     ○ BROWSER_USE_API_KEY → browser_navigate, browser_click
     ○ FIRECRAWL_BROWSER_TTL → browser_navigate, browser_click
-    ○ AGENT_BROWSER_ENGINE → browser_navigate, browser_snapshot
+    ○ AGENT_BROWSER_ENGINE → browser_exec, browser_navigate
     ○ CAMOFOX_URL → browser_navigate, browser_click
     ○ CAMOFOX_API_KEY → browser_navigate, browser_click
     ○ FAL_KEY → image_generate, video_generate
@@ -159,17 +164,36 @@ exit_code=0
     ○ HERMES_PREFILL_MESSAGES_FILE
     ○ HERMES_EPHEMERAL_SYSTEM_PROMPT
     ○ AI_GATEWAY_API_KEY
+    ○ DASHSCOPE_CN_BASE_URL
+    ○ ALIBABA_TOKEN_PLAN_API_KEY
+    ○ ALIBABA_TOKEN_PLAN_BASE_URL
+    ○ ALIBABA_TOKEN_PLAN_CN_API_KEY
+    ○ ALIBABA_TOKEN_PLAN_CN_BASE_URL
     ○ ALIBABA_CODING_PLAN_API_KEY
     ○ ALIBABA_CODING_PLAN_BASE_URL
+    ○ ALIBABA_CODING_PLAN_CN_API_KEY
+    ○ ALIBABA_CODING_PLAN_CN_BASE_URL
     ○ ANTHROPIC_API_KEY
     ○ ANTHROPIC_TOKEN
     ○ CLAUDE_CODE_OAUTH_TOKEN
+    ○ COMMANDCODE_BASE_URL
+    ○ COMMANDCODE_ANTHROPIC_BASE_URL
     ○ DEEPINFRA_API_KEY
     ○ DEEPINFRA_BASE_URL
     ○ KILOCODE_API_KEY
     ○ KIMI_CODING_API_KEY
+    ○ MODEL_API_KEY
+    ○ META_API_KEY
+    ○ META_MODEL_API_KEY
+    ○ META_BASE_URL
+    ○ NEBIUS_API_KEY
+    ○ NEBIUS_TOKEN_FACTORY_API_KEY
+    ○ NEBIUS_BASE_URL
     ○ NOVITA_API_KEY
     ○ NOVITA_BASE_URL
+    ○ RAMP_ROUTER_API_KEY
+    ○ ROUTER_API_KEY
+    ○ RAMP_ROUTER_BASE_URL
     ○ DINGTALK_CLIENT_ID
     ○ DINGTALK_CLIENT_SECRET
     ○ DINGTALK_WEBHOOK_URL
@@ -281,6 +305,7 @@ exit_code=0
     ○ PHOTON_SPECTRUM_HOST
     ○ PHOTON_ALLOWED_USERS
     ○ PHOTON_ALLOW_ALL_USERS
+    ○ PHOTON_READ_RECEIPTS
     ○ PHOTON_REQUIRE_MENTION
     ○ PHOTON_MENTION_PATTERNS
     ○ PHOTON_HOME_CHANNEL
@@ -299,6 +324,7 @@ exit_code=0
     ○ BUZZ_POLL_INTERVAL
     ○ BUZZ_CLI_PATH
     ○ BUZZ_CREDENTIALS_FILE
+    ○ BUZZ_REPLY_IN_THREAD
     ○ MATRIX_PASSWORD
     ○ MATRIX_ALLOW_ALL_USERS
     ○ MATRIX_HOME_CHANNEL

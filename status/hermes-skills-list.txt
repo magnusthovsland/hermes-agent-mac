@@ -12,26 +12,36 @@ exit_code=0
 │ hermes-gateway-operati… │ autonomous-ai-agents │ local   │ local   │ enabled │
 │ creative-visual-artifa… │ creative             │ local   │ local   │ enabled │
 │ data-science-workflows  │ data-science         │ local   │ local   │ enabled │
+│ email-inbox-triage      │ email                │ builtin │ builtin │ enabled │
 │ github-workflows        │ github               │ local   │ local   │ enabled │
 │ advertising-platform-o… │ marketing            │ local   │ local   │ enabled │
 │ media-content-workflows │ media                │ local   │ local   │ enabled │
+│ hosted-model-cost-eval… │ mlops                │ local   │ local   │ enabled │
 │ mlops-model-operations  │ mlops                │ local   │ local   │ enabled │
+│ box                     │ productivity         │ builtin │ builtin │ enabled │
 │ communication-platform… │ productivity         │ local   │ local   │ enabled │
 │ document-productivity-… │ productivity         │ local   │ local   │ enabled │
+│ document-to-action-ite… │ productivity         │ builtin │ builtin │ enabled │
 │ docx                    │ productivity         │ builtin │ builtin │ enabled │
+│ meeting-action-items    │ productivity         │ builtin │ builtin │ enabled │
 │ pdf                     │ productivity         │ builtin │ builtin │ enabled │
 │ petdex                  │ productivity         │ local   │ local   │ enabled │
+│ product-price-monitor   │ productivity         │ builtin │ builtin │ enabled │
 │ productivity-service-i… │ productivity         │ local   │ local   │ enabled │
+│ weekly-review-planning  │ productivity         │ builtin │ builtin │ enabled │
 │ xlsx                    │ productivity         │ builtin │ builtin │ enabled │
 │ godmode                 │ red-teaming          │ local   │ local   │ enabled │
+│ competitor-news-monitor │ research             │ builtin │ builtin │ enabled │
 │ grounded-citations      │ research             │ builtin │ builtin │ enabled │
 │ research-knowledge-work │ research             │ local   │ local   │ enabled │
 │ smart-home-automation   │ smart-home           │ local   │ local   │ enabled │
 │ frontend-web-delivery   │ software-development │ local   │ local   │ enabled │
+│ github                  │ software-development │ builtin │ builtin │ enabled │
 │ inspecting-hermes-desk… │ software-development │ builtin │ builtin │ enabled │
-│ plan                    │ software-development │ builtin │ builtin │ enabled │
+│ plan                    │ software-development │ local   │ local   │ enabled │
 │ software-development-w… │ software-development │ local   │ local   │ enabled │
+│ blocked-page-recovery   │ web                  │ builtin │ builtin │ enabled │
 └─────────────────────────┴──────────────────────┴─────────┴─────────┴─────────┘
-0 hub-installed, 8 builtin, 18 local — 26 enabled, 0 disabled
+0 hub-installed, 16 builtin, 20 local — 36 enabled, 0 disabled
 
 

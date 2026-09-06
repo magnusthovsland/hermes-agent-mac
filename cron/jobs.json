@@ -3,7 +3,7 @@
     {
       "id": "4af938c959d8",
       "name": "Magnus nattlig micro-app verdidrypp",
-      "prompt": "Du kj\u00f8rer som en nattlig autonom Hermes-jobb for Magnus Thovsland kl. 02:00 lokal tid. M\u00e5let er \u00e5 gi Magnus noe konkret og nyttig hver morgen: en liten micro-app, UI, beslutningsst\u00f8tte, analyseverkt\u00f8y, sjekkliste, kalkulator, prioriteringsverkt\u00f8y eller annet operativt system som sparer tid, \u00f8ker produktivitet eller bringer ham n\u00e6rmere personlige og profesjonelle m\u00e5l.\n\nKontekst:\n- Magnus er l\u00f8sningsarkitekt, systemdesigner og teknisk beslutningstaker i Infinity Drift under WRIGHT-konsernet.\n- Han bygger kritiske systemer for trafikkskole- og oppl\u00e6ringsmarkedet.\n- Hovedprodukter: Ovio, et ende-til-ende SaaS-driftssystem for trafikkskoler, og Teoria, en l\u00e6ringsplattform som skal gi faktisk forst\u00e5else, ikke bare pugging.\n- Vurder alltid driftbarhet, sikkerhet, skalerbarhet, \u00f8konomisk etterpr\u00f8vbarhet, edge cases og reell nytte.\n- Magnus foretrekker presise, strukturerte og teknisk korrekte leveranser uten markedsfluff.\n- Ikke send e-post, meldinger til andre, publiser noe eksternt, eller gj\u00f8r endringer i eksterne systemer uten eksplisitt godkjenning. Denne jobben skal kun produsere lokal artefakt og sende resultatet tilbake til Magnus.\n\nOppgave hver natt:\n1. Velg ett konkret tema som sannsynligvis gir Magnus verdi. Varier tema fra dag til dag. Eksempler:\n   - Ovio operasjonell beredskap, support, onboarding, \u00f8konomiavvik, integrasjonsrisiko, skole-lansering, beslutningslogg.\n   - Teoria pedagogisk kvalitet, sp\u00f8rsm\u00e5lspool-QA, uttrekksregler, SEO/caching, innholdsproduksjon, fagomr\u00e5de-utvidelse.\n   - Personlig produktivitet: prioriteringssystem, beslutningsmatrise, m\u00f8teforberedelse, ukentlig review, fokusplan, risiko-/nytte-triage.\n   - Infinity Drift: roadmap, kost/nytte, teknisk gjeld, observability, prosessforbedring, produktisering.\n2. Lag en liten, faktisk brukbar artefakt. Foretrukket format er en selvstendig HTML-micro-app med innebygd CSS/JS som kan \u00e5pnes lokalt i nettleser. Hvis HTML ikke passer, lag en Markdown-rapport, CSV-mal, JSON-skjema eller annen enkel fil.\n3. Artefakten skal v\u00e6re praktisk, ikke generisk. Den skal ha konkrete felter, sjekklister, scoring, beslutningslogikk eller output Magnus kan bruke samme dag.\n4. Lagre artefakten under `~/hermes-nightly-drops/YYYY-MM-DD/` med tydelig filnavn, f.eks. `ovio-risk-triage.html` eller `teoria-question-qa.html`.\n5. Verifiser at filen faktisk finnes og er ikke-tom. For HTML: s\u00f8rg for at den er selvstendig og ikke avhenger av CDN/nettverk.\n6. Svar p\u00e5 norsk til Magnus med:\n   - Tittel p\u00e5 dagens leveranse.\n   - Kort forklaring av hvorfor akkurat denne er nyttig.\n   - 3 konkrete m\u00e5ter \u00e5 bruke den p\u00e5 i dag.\n   - Filsti og `MEDIA:/absolutt/sti/til/fil` slik at artefakten leveres.\n   - Eventuelle antakelser eller begrensninger.\n\nKvalitetskrav:\n- V\u00e6r konkret og teknisk etterrettelig.\n- Skill mellom fakta, antakelser og anbefalinger.\n- P\u00e5pek minst \u00e9n svakhet/risiko eller edge case knyttet til dagens tema.\n- Ikke lever bare en id\u00e9 eller plan; produser en faktisk fil hver gang.\n- Overrask positivt: gj\u00f8r artefakten spisset, nyttig og litt bedre enn forventet.",
+      "prompt": "Du kjører som en nattlig autonom Hermes-jobb for Magnus Thovsland kl. 02:00 lokal tid. Målet er å gi Magnus noe konkret og nyttig hver morgen: en liten micro-app, UI, beslutningsstøtte, analyseverktøy, sjekkliste, kalkulator, prioriteringsverktøy eller annet operativt system som sparer tid, øker produktivitet eller bringer ham nærmere personlige og profesjonelle mål.\n\nKontekst:\n- Magnus er løsningsarkitekt, systemdesigner og teknisk beslutningstaker i Infinity Drift under WRIGHT-konsernet.\n- Han bygger kritiske systemer for trafikkskole- og opplæringsmarkedet.\n- Hovedprodukter: Ovio, et ende-til-ende SaaS-driftssystem for trafikkskoler, og Teoria, en læringsplattform som skal gi faktisk forståelse, ikke bare pugging.\n- Vurder alltid driftbarhet, sikkerhet, skalerbarhet, økonomisk etterprøvbarhet, edge cases og reell nytte.\n- Magnus foretrekker presise, strukturerte og teknisk korrekte leveranser uten markedsfluff.\n- Ikke send e-post, meldinger til andre, publiser noe eksternt, eller gjør endringer i eksterne systemer uten eksplisitt godkjenning. Denne jobben skal kun produsere lokal artefakt og sende resultatet tilbake til Magnus.\n\nOppgave hver natt:\n1. Velg ett konkret tema som sannsynligvis gir Magnus verdi. Varier tema fra dag til dag. Eksempler:\n   - Ovio operasjonell beredskap, support, onboarding, økonomiavvik, integrasjonsrisiko, skole-lansering, beslutningslogg.\n   - Teoria pedagogisk kvalitet, spørsmålspool-QA, uttrekksregler, SEO/caching, innholdsproduksjon, fagområde-utvidelse.\n   - Personlig produktivitet: prioriteringssystem, beslutningsmatrise, møteforberedelse, ukentlig review, fokusplan, risiko-/nytte-triage.\n   - Infinity Drift: roadmap, kost/nytte, teknisk gjeld, observability, prosessforbedring, produktisering.\n2. Lag en liten, faktisk brukbar artefakt. Foretrukket format er en selvstendig HTML-micro-app med innebygd CSS/JS som kan åpnes lokalt i nettleser. Hvis HTML ikke passer, lag en Markdown-rapport, CSV-mal, JSON-skjema eller annen enkel fil.\n3. Artefakten skal være praktisk, ikke generisk. Den skal ha konkrete felter, sjekklister, scoring, beslutningslogikk eller output Magnus kan bruke samme dag.\n4. Lagre artefakten under `~/hermes-nightly-drops/YYYY-MM-DD/` med tydelig filnavn, f.eks. `ovio-risk-triage.html` eller `teoria-question-qa.html`.\n5. Verifiser at filen faktisk finnes og er ikke-tom. For HTML: sørg for at den er selvstendig og ikke avhenger av CDN/nettverk.\n6. Svar på norsk til Magnus med:\n   - Tittel på dagens leveranse.\n   - Kort forklaring av hvorfor akkurat denne er nyttig.\n   - 3 konkrete måter å bruke den på i dag.\n   - Filsti og `MEDIA:/absolutt/sti/til/fil` slik at artefakten leveres.\n   - Eventuelle antakelser eller begrensninger.\n\nKvalitetskrav:\n- Vær konkret og teknisk etterrettelig.\n- Skill mellom fakta, antakelser og anbefalinger.\n- Påpek minst én svakhet/risiko eller edge case knyttet til dagens tema.\n- Ikke lever bare en idé eller plan; produser en faktisk fil hver gang.\n- Overrask positivt: gjør artefakten spisset, nyttig og litt bedre enn forventet.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 93
+        "completed": 94
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-09-06T02:00:00+02:00",
-      "last_run_at": "2026-09-05T02:05:45.135793+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [Errno 32] Broken pipe",
+      "next_run_at": "2026-09-07T02:00:00+02:00",
+      "last_run_at": "2026-09-06T02:06:04.956994+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -46,7 +46,14 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-06T02:00:00+02:00",
+        "dispatched_at": "2026-09-06T02:00:37.907307+02:00",
+        "lateness_seconds": 37.9,
+        "kind": "on_time"
+      },
+      "failure_streak": 0
     },
     {
       "id": "5cf752e90c20",
@@ -68,15 +75,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 91
+        "completed": 92
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-09-06T03:00:00+02:00",
-      "last_run_at": "2026-09-04T03:01:41.659527+02:00",
+      "next_run_at": "2026-09-07T03:00:00+02:00",
+      "last_run_at": "2026-09-05T03:01:02.961578+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -85,8 +92,17 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": {
+        "at": "2026-09-06T03:00:45.056795+02:00",
+        "by": "Magnus-sin-Mini:4147:60ac7c94f98c4aba9bbb847cc542b9d1"
+      },
+      "last_dispatch": {
+        "scheduled_at": "2026-09-06T03:00:00+02:00",
+        "dispatched_at": "2026-09-06T03:00:45.018933+02:00",
+        "lateness_seconds": 45.0,
+        "kind": "on_time"
+      }
     }
   ],
-  "updated_at": "2026-09-05T03:00:51.262468+02:00"
+  "updated_at": "2026-09-06T03:00:45.057438+02:00"
 }

@@ -1,0 +1,1 @@
+{"ts": "2026-09-06T00:06:04.476Z", "job_id": "4af938c959d8", "fire_id": "9f95f6ee6c9e48a9b8ad086d5e3dc080", "prompt_tokens": 67078, "completion_tokens": 6286, "total_tokens": 73364, "response_silent": false, "deliver_target": "origin", "model": "gpt-6-astra", "duration_ms": 325803, "error": null}

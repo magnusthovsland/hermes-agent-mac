@@ -16,8 +16,18 @@ exit_code=0
   ✓ Python 3.11.15
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+    → state.db: WAL journal mode (155.4 MB)
+    → cron/executions.db: WAL journal mode (52.0 KB)
+    → verification_evidence.db: WAL journal mode (44.0 KB)
+    → kanban.db: WAL journal mode (112.0 KB)
   ✓ Virtual environment active
-  ✓ Version files consistent (0.20.0)
+  ⚠ macOS TCC anchor missing (/Users/mt-infinity/.hermes/hermes-agent/venv/bin/python)
+    → One switch silences all macOS folder prompts: grant your terminal app Full Disk Access and Hermes will never trip per-folder dialogs (Desktop/Downloads/Documents/...) again. Open: System Settings → Privacy & Security → Full Disk Access — or run:
+      open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"
+    then enable your terminal (and Hermes.app if you use Desktop), and restart them once. With Hermes' stable signing identities the grant survives every update.
+  ✓ Version files consistent (0.21.0)
+  ✓ macOS TCC signing identity is stable (identifier-pinned DR; grants survive rebuilds — for the strongest anchor, see `hermes desktop --setup-tcc-identity`)
+    → If macOS still re-prompts for permissions (toggle shows ON): the stored grant is stale — run `tccutil reset ScreenCapture com.nousresearch.hermes` (repeat per affected service), toggle it ON in System Settings, then fully quit & relaunch Hermes once.
 
 ◆ SSL / CA Certificates
   ✓ SSL CA certificate bundle is valid
@@ -36,11 +46,14 @@ exit_code=0
   ✓ ~/.hermes/.env file exists
   ✓ API key or custom endpoint configured
   ✓ ~/.hermes/config.yaml exists
-  ✓ Config version up to date (v33)
+  ✓ Config version up to date (v40)
   ✓ No deprecated config keys or env vars
 
 ◆ xAI Model Retirement (May 15, 2026)
   ✓ No retired xAI models in config
+
+◆ Plugin import paths (removed Sep 14, 2026)
+  ✓ No enabled plugin imports paths removed on 2026-09-14
 
 ◆ Auth Providers
   ⚠ Nous Portal auth (not logged in)
@@ -60,7 +73,10 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2200 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (170 sessions)
+  ✓ ~/.hermes/state.db exists (174 sessions)
+    → state.db logical size 155.4 MB, 39,794 pages, 85 free, WAL 4.0 MB
+    → 7,799 messages, 174 sessions, journal_mode=wal
+    → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
   ✓ Venv entry point exists (venv/bin/hermes)
@@ -71,25 +87,25 @@ exit_code=0
   ✓ ripgrep (rg) (faster file search)
   ⚠ docker not found (optional)
   ✓ Node.js
-  ✓ agent-browser (Node.js) (browser automation)
+  ✓ agent-browser (resolves via npx on first use)
   ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 3 high, 0 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 4 high, 1 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 0 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
+  ⚠ web workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ⚠ ui-tui workspace deps (0 critical, 2 high, 0 moderate — build-tool advisory; clears via lockfile bump)
-    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
+  ✓ ui-tui workspace deps (no known vulnerabilities)
 
 ◆ API Connectivity
-  Running 30 connectivity checks in parallel…
+  Running 40 connectivity checks in parallel…
                                                                       
   ⚠ OpenRouter API (not configured)
 
 ◆ Tool Availability
-  ✓ browser
+  ✓ browser-use
   ✓ clarify
   ✓ code_execution
   ✓ cronjob
   ✓ delegation
+  ✓ desktop_ui
   ✓ file
   ✓ memory
   ✓ project
@@ -101,7 +117,10 @@ exit_code=0
   ✓ video
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
-  ⚠ bfl (system dependency not met)
+  ✓ web search (exa)
+  ✓ web extract (exa)
+  ⚠ a2a (system dependency not met)
+  ⚠ browser (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
   ⚠ computer_use (system dependency not met)
   ⚠ discord (missing DISCORD_BOT_TOKEN)
@@ -113,7 +132,6 @@ exit_code=0
   ⚠ image_gen (system dependency not met)
   ⚠ spotify (system dependency not met)
   ⚠ video_gen (system dependency not met)
-  ⚠ web (missing EXA_API_KEY, PARALLEL_API_KEY, TAVILY_API_KEY, FIRECRAWL_API_KEY, FIRECRAWL_API_URL, FIRECRAWL_GATEWAY_URL, TOOL_GATEWAY_DOMAIN, TOOL_GATEWAY_SCHEME, TOOL_GATEWAY_USER_TOKEN)
   ⚠ x_search (missing XAI_API_KEY)
 
 ◆ Skills Hub
@@ -125,12 +143,10 @@ exit_code=0
   ✓ Built-in memory active (no external provider configured — this is fine)
 
 ────────────────────────────────────────────────────────────
-  Found 4 issue(s) to address:
+  Found 2 issue(s) to address:
 
-  1. Browser tools (agent-browser) has 3 npm vulnerabilities
-  2. web workspace has 5 npm vulnerabilities
-  3. ui-tui workspace has 2 npm vulnerabilities
-  4. Run 'hermes setup' to configure missing API keys for full tool access
+  1. Browser tools (agent-browser) has 1 npm vulnerability
+  2. web workspace has 2 npm vulnerabilities
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 
