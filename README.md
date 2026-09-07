@@ -4,7 +4,7 @@ Sanitized backup of Magnus's local Hermes Agent setup on macOS.
 
 This repo represents the latest known safe snapshot in the root tree. Historical snapshots are handled by Git commits, not timestamped directories.
 
-Current snapshot UTC: `20260906T010045Z`
+Current snapshot UTC: `20260907T010030Z`
 
 Included:
 - sanitized Hermes config
