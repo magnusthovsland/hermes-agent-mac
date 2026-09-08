@@ -17,7 +17,7 @@ exit_code=0
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
     → state.db: WAL journal mode (155.4 MB)
-    → cron/executions.db: WAL journal mode (68.0 KB)
+    → cron/executions.db: WAL journal mode (72.0 KB)
     → verification_evidence.db: WAL journal mode (44.0 KB)
     → kanban.db: WAL journal mode (112.0 KB)
   ✓ Virtual environment active
@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2200 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (175 sessions)
-    → state.db logical size 155.4 MB, 39,794 pages, 73 free, WAL 4.0 MB
-    → 7,806 messages, 175 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (176 sessions)
+    → state.db logical size 155.4 MB, 39,794 pages, 52 free, WAL 4.0 MB
+    → 7,813 messages, 176 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
