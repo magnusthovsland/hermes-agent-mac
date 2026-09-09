@@ -106,6 +106,8 @@ When the user asks to “put it in QA” while also creating a PR for production
 3. Open the PR against the production branch, not QA.
 4. Verify the QA deployment/live URL independently before telling the user it is testable.
 
+For Wright-Web, verify frontend QA at `https://qa.wright.no/` after updating `qa`; Vercel's Git integration can deploy the frontend independently of GitHub Actions. The Vercel bot's PR comment identifies project `teoriportalqa/wright-web` and preview status even when a supplied PAT cannot read Checks/Deployments (403). Verify the actual QA behavior, not merely the preview status. For package ordering, compare rendered package slugs mapped to Sanity product IDs against `https://qa.ovio.no/api/public/office-packages/all?office_id=…` using `X-Tenant-Id: 1` and `X-System: wright-web-frontend`; map every CMS slug rather than assuming one document per externalId.
+
 Do not assume a branch named `qa` triggers deployment; inspect `.github/workflows/*`, deployment provider state, or the live QA URL. A workflow file named “deploy_to_qa” may still trigger on `main` or deploy only a subcomponent.
 
 ### PAT scope and GitHub API fallback pitfalls
