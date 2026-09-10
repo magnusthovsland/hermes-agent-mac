@@ -52,7 +52,7 @@ excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	4512481 bytes
+file	models_dev_cache.json	4532547 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
