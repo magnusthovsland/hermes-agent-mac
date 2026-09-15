@@ -448,13 +448,15 @@
     "created_at": "2026-06-26T23:02:44.455551+00:00",
     "created_by": null,
     "last_patched_at": "2026-08-04T10:15:14.982673+00:00",
-    "last_used_at": "2026-08-23T22:48:41.839135+00:00",
-    "last_viewed_at": "2026-08-23T22:48:41.837761+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-09-14T12:36:41.504759+00:00",
+    "last_viewed_at": "2026-09-14T12:36:41.503482+00:00",
     "patch_count": 12,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 12,
+    "view_count": 12
   },
   "productivity/notion": {
     "archived_at": null,
