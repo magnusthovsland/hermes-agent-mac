@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 103
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-09-16T02:00:00+02:00",
-      "last_run_at": "2026-09-15T02:08:31.299061+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Codex stream produced no SSE events for 12s after first byte (threshold: 12s)",
+      "next_run_at": "2026-09-17T02:00:00+02:00",
+      "last_run_at": "2026-09-16T02:08:48.240143+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -48,12 +48,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-15T02:00:00+02:00",
-        "dispatched_at": "2026-09-15T02:00:31.900063+02:00",
-        "lateness_seconds": 31.9,
+        "scheduled_at": "2026-09-16T02:00:00+02:00",
+        "dispatched_at": "2026-09-16T02:00:20.879735+02:00",
+        "lateness_seconds": 20.9,
         "kind": "on_time"
       },
-      "failure_streak": 2
+      "failure_streak": 0
     },
     {
       "id": "5cf752e90c20",
@@ -75,15 +75,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 101
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-09-16T03:00:00+02:00",
-      "last_run_at": "2026-09-14T03:01:11.069571+02:00",
+      "next_run_at": "2026-09-17T03:00:00+02:00",
+      "last_run_at": "2026-09-15T03:00:55.036915+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -93,17 +93,17 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-15T03:00:38.811444+02:00",
-        "by": "Magnus-sin-Mini:4147:bcb4588f7bdd4e56b1ed71378fd92300"
+        "at": "2026-09-16T03:00:27.977463+02:00",
+        "by": "Magnus-sin-Mini:4147:6d5419de6b734a49b9f2f6613d2d0997"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-15T03:00:00+02:00",
-        "dispatched_at": "2026-09-15T03:00:38.765254+02:00",
-        "lateness_seconds": 38.8,
+        "scheduled_at": "2026-09-16T03:00:00+02:00",
+        "dispatched_at": "2026-09-16T03:00:27.931694+02:00",
+        "lateness_seconds": 27.9,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-15T03:00:38.812122+02:00"
+  "updated_at": "2026-09-16T03:00:27.978021+02:00"
 }

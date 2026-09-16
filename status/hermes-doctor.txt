@@ -16,8 +16,8 @@ exit_code=0
   ✓ Python 3.11.15
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (158.4 MB)
-    → cron/executions.db: WAL journal mode (72.0 KB)
+    → state.db: WAL journal mode (160.0 MB)
+    → cron/executions.db: WAL journal mode (76.0 KB)
     → verification_evidence.db: WAL journal mode (44.0 KB)
     → kanban.db: WAL journal mode (112.0 KB)
   ✓ Virtual environment active
@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2200 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (185 sessions)
-    → state.db logical size 158.4 MB, 40,539 pages, 72 free, WAL 5.0 MB
-    → 8,020 messages, 185 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (186 sessions)
+    → state.db logical size 160.0 MB, 40,963 pages, 509 free, WAL 5.2 MB
+    → 8,035 messages, 186 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
@@ -117,8 +117,8 @@ exit_code=0
   ✓ video
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
-  ✓ web search (keenable)
-  ✓ web extract (keenable)
+  ✓ web search (firecrawl)
+  ✓ web extract (firecrawl)
   ⚠ a2a (system dependency not met)
   ⚠ browser (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
