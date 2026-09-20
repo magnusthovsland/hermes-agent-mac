@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 108
+        "completed": 107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-09-21T02:00:00+02:00",
-      "last_run_at": "2026-09-20T02:10:11.120059+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)",
+      "next_run_at": "2026-09-20T02:00:00+02:00",
+      "last_run_at": "2026-09-19T02:09:10.102582+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -48,12 +48,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-20T02:00:00+02:00",
-        "dispatched_at": "2026-09-20T02:00:36.246365+02:00",
-        "lateness_seconds": 36.2,
+        "scheduled_at": "2026-09-19T02:00:00+02:00",
+        "dispatched_at": "2026-09-19T02:00:45.340177+02:00",
+        "lateness_seconds": 45.3,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "5cf752e90c20",
@@ -82,7 +82,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-09-21T03:00:00+02:00",
+      "next_run_at": "2026-09-20T03:00:00+02:00",
       "last_run_at": "2026-09-19T03:01:08.834730+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -92,18 +92,15 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": {
-        "at": "2026-09-20T03:00:43.708653+02:00",
-        "by": "Magnus-sin-Mini:4147:d65acf746a354a5087217426c3698b46"
-      },
+      "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-20T03:00:00+02:00",
-        "dispatched_at": "2026-09-20T03:00:43.659136+02:00",
-        "lateness_seconds": 43.7,
+        "scheduled_at": "2026-09-19T03:00:00+02:00",
+        "dispatched_at": "2026-09-19T03:00:52.706408+02:00",
+        "lateness_seconds": 52.7,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-20T03:00:43.709404+02:00"
+  "updated_at": "2026-09-19T03:01:08.835648+02:00"
 }
