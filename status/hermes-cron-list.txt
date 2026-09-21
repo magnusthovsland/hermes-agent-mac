@@ -9,23 +9,23 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    108/365
-    Next run:  2026-09-21T02:00:00+02:00
+    Repeat:    109/365
+    Next run:  2026-09-22T02:00:00+02:00
     Deliver:   origin
-    Last run:  2026-09-20T02:10:11.120059+02:00  error: RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)
-    Dispatch:  on time (scheduled 2026-09-20T02:00:00+02:00)
-    Execution: failed  d0068215e5974b3f87db86a4c2b30ed3
+    Last run:  2026-09-21T02:08:28.152828+02:00  error: RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)  (2 failures in a row)
+    Dispatch:  on time (scheduled 2026-09-21T02:00:00+02:00)
+    Execution: failed  936c1d1df6ae4710a8da6e82f91a71d9
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    106/365
-    Next run:  2026-09-21T03:00:00+02:00
+    Repeat:    107/365
+    Next run:  2026-09-22T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-19T03:01:08.834730+02:00  ok
-    Dispatch:  on time (scheduled 2026-09-20T03:00:00+02:00)
-    Execution: running  33d52d3d6f04490f8919076e9a2465cf
+    Last run:  2026-09-20T03:01:02.206204+02:00  ok
+    Dispatch:  on time (scheduled 2026-09-21T03:00:00+02:00)
+    Execution: running  6ee955a12d394017b549a2473ad01cc7
 
 

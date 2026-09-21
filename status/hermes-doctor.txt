@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2200 chars)
   ✓ USER.md exists (1358 chars)
-  ✓ ~/.hermes/state.db exists (190 sessions)
-    → state.db logical size 160.0 MB, 40,963 pages, 336 free, WAL 5.2 MB
-    → 8,073 messages, 190 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (191 sessions)
+    → state.db logical size 160.0 MB, 40,963 pages, 325 free, WAL 5.2 MB
+    → 8,080 messages, 191 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
