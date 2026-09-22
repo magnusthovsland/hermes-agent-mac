@@ -4,13 +4,15 @@
     "created_at": "2026-09-04T20:26:25.819423+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-09-04T20:26:48.978994+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-09-21T13:22:10.458139+00:00",
+    "last_viewed_at": "2026-09-21T13:22:10.456237+00:00",
     "patch_count": 1,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "apple-ecosystem-automation": {
     "archived_at": null,
@@ -114,13 +116,15 @@
     "created_at": "2026-07-11T00:15:12.604672+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-08-30T16:30:11.762655+00:00",
-    "last_viewed_at": "2026-08-30T16:30:11.762091+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-09-21T13:35:31.909263+00:00",
+    "last_viewed_at": "2026-09-21T13:35:31.906273+00:00",
     "patch_count": 0,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "creative-visual-artifacts": {
     "archived_at": null,
@@ -238,14 +242,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-09-21T11:53:17.824366+00:00",
+    "last_viewed_at": "2026-09-21T11:53:17.823048+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "github-workflows": {
     "archived_at": null,
@@ -253,14 +257,14 @@
     "created_by": null,
     "last_patched_at": "2026-09-08T09:23:06.309583+00:00",
     "last_reused_patch_generation": 1,
-    "last_used_at": "2026-09-08T12:56:23.418476+00:00",
-    "last_viewed_at": "2026-09-08T12:56:23.416840+00:00",
+    "last_used_at": "2026-09-21T13:22:10.457000+00:00",
+    "last_viewed_at": "2026-09-21T13:22:10.455301+00:00",
     "patch_count": 6,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 15,
-    "view_count": 15
+    "use_count": 16,
+    "view_count": 16
   },
   "godmode": {
     "archived_at": null,
@@ -449,14 +453,14 @@
     "created_by": null,
     "last_patched_at": "2026-08-04T10:15:14.982673+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T12:36:41.504759+00:00",
-    "last_viewed_at": "2026-09-14T12:36:41.503482+00:00",
+    "last_used_at": "2026-09-21T13:42:59.259837+00:00",
+    "last_viewed_at": "2026-09-21T13:42:59.258946+00:00",
     "patch_count": 12,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 12,
-    "view_count": 12
+    "use_count": 17,
+    "view_count": 17
   },
   "productivity/notion": {
     "archived_at": null,
@@ -544,16 +548,16 @@
     "archived_at": null,
     "created_at": "2026-06-19T22:44:17.240348+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-22T10:41:44.071459+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-08T12:56:17.829077+00:00",
-    "last_viewed_at": "2026-09-08T12:56:17.827692+00:00",
-    "patch_count": 32,
-    "patch_generation": 0,
+    "last_patched_at": "2026-09-21T13:48:14.561580+00:00",
+    "last_reused_patch_generation": 6,
+    "last_used_at": "2026-09-21T14:12:54.234351+00:00",
+    "last_viewed_at": "2026-09-21T14:12:54.233100+00:00",
+    "patch_count": 38,
+    "patch_generation": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 48,
-    "view_count": 48
+    "use_count": 63,
+    "view_count": 63
   },
   "weekly-review-planning": {
     "archived_at": null,

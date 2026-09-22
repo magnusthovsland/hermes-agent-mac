@@ -33,6 +33,7 @@ Use this skill for class-level software work: understanding a codebase, proving 
 3. **Use the narrowest safe edit.** Avoid broad rewrites during debugging; refactor only after tests pass.
 4. **Verify at the right level.** Run the smallest relevant test first, then expand to the package/project checks.
 5. **Report durable evidence.** Include commands run and real pass/fail output in the final answer.
+6. **Bound isolated payment acceptance tests.** Preserve prior JUnit XML before rerunning; exercise real orchestration and persistence with external payment/analytics boundaries mocked under network denial. Assert capture rejection/timeout suppresses purchases, replay recovers rather than trusting a prematurely terminal row, overlapping callback/polling deduplicates, and stale callbacks cannot regress state. Label mock capture markers as non-bank evidence; record the tested concurrency interleaving rather than claiming exhaustive race coverage. Compare original and copied production-source hashes to the manifest and stop only the isolated database, verifying both its scoped process status and closed loopback port.
 
 ## Labeled playbooks
 
@@ -87,6 +88,14 @@ When a Sanity-managed footer/header link needs to point at a frontend route that
 ### Multi-tenant analytics and purchase attribution
 
 When a tenant-owned marketing site hands a user into a separate SaaS app for registration/payment, first distinguish GA4 reporting, GA4 source attribution, direct Google Ads conversion upload, and generic data-layer delivery. Do not automatically prescribe cross-domain GA4 for every tenant. A purchase event alone does not preserve organic/paid source; carry tenant-scoped GA4 identity/session context through a signed attribution handoff and emit an idempotent backend-confirmed purchase through a browser or Measurement Protocol adapter. Browser `gtag` requires a tenant Measurement ID but no API secret; server-side Measurement Protocol requires both. See `references/multi-tenant-purchase-attribution.md`.
+
+### Server-side conversion tracking audits
+
+For read-only audits spanning payment callbacks, PostHog identity, CMP consent, attribution, proxy IP and advertising delivery, use `references/server-conversion-tracking-audit.md`. Trace actual capture ordering and existing idempotency before making claims; distinguish repository evidence from deployed headers, SDK behavior and externally configured destinations.
+
+### Isolated attribution acceptance tests
+
+For tracking audits without safe staging, execute actual source functions in a network-denied local harness and assert desired acceptance behavior; never count tests that merely affirm a known defect as acceptance passes. Match the repository Node engine and direct lockfile dependency versions, verify official runtime checksums, record source hashes/commands/raw outcomes, and distinguish minimal dependency subsets from full frozen installs. On macOS, `sandbox-exec -p '(version 1)(allow default)(deny network*)'` can enforce denial beyond mocked fetch; verify it with a loopback-only socket probe expecting EPERM. Exercise the purchase caller as well as its tracking helper: a helper accepting optional event parameters does not prove that the real caller supplies stable transaction ID, value and currency. Label mocked auth/session/UI/effects explicitly and never equate function-level results with browser/CMP/payment/Ads E2E or deployed behavior.
 
 ### External ERP/API integration research
 

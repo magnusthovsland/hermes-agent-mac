@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 109
+        "completed": 110
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-09-22T02:00:00+02:00",
-      "last_run_at": "2026-09-21T02:08:28.152828+02:00",
+      "next_run_at": "2026-09-23T02:00:00+02:00",
+      "last_run_at": "2026-09-22T02:10:03.890978+02:00",
       "last_status": "error",
-      "last_error": "RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -48,12 +48,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-21T02:00:00+02:00",
-        "dispatched_at": "2026-09-21T02:00:28.016028+02:00",
-        "lateness_seconds": 28.0,
+        "scheduled_at": "2026-09-22T02:00:00+02:00",
+        "dispatched_at": "2026-09-22T02:00:29.371470+02:00",
+        "lateness_seconds": 29.4,
         "kind": "on_time"
       },
-      "failure_streak": 2
+      "failure_streak": 3
     },
     {
       "id": "5cf752e90c20",
@@ -75,15 +75,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 107
+        "completed": 108
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-09-22T03:00:00+02:00",
-      "last_run_at": "2026-09-20T03:01:02.206204+02:00",
+      "next_run_at": "2026-09-23T03:00:00+02:00",
+      "last_run_at": "2026-09-21T03:00:56.500411+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -93,17 +93,17 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-21T03:00:35.696832+02:00",
-        "by": "Magnus-sin-Mini:4147:d5369e2211534bf89d1a2ecd0635b575"
+        "at": "2026-09-22T03:00:37.863106+02:00",
+        "by": "Magnus-sin-Mini:4147:64869b8fb0a54412824fe0c65521a05a"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-21T03:00:00+02:00",
-        "dispatched_at": "2026-09-21T03:00:35.651666+02:00",
-        "lateness_seconds": 35.7,
+        "scheduled_at": "2026-09-22T03:00:00+02:00",
+        "dispatched_at": "2026-09-22T03:00:37.818445+02:00",
+        "lateness_seconds": 37.8,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-21T03:00:35.697352+02:00"
+  "updated_at": "2026-09-22T03:00:37.863656+02:00"
 }
