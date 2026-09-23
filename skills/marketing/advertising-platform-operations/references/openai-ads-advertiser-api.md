@@ -63,6 +63,16 @@ A destination on a different domain from `ad_account.url` can return `403: Accou
 
 The visible advertiser header comes from `ad_account.name`, not the campaign name. “On behalf of” or legal-verification details may not replace that display name. If brand visibility matters, verify account name, URL, and favicon in a preview.
 
+## Conversion attribution and identifier mapping
+
+Use https://developers.openai.com/ads/conversions-api for measurement payloads; do not assume the Advertiser API campaign schema also specifies conversion ingestion.
+
+- Verify literal field spelling: the OpenAI attribution field is `oppref`, not `oopref`; Google's click field is `gclid`. Explain corrections explicitly instead of silently treating misspellings as valid fields.
+- Capture available `oppref` under the applicable consent requirements and preserve its original string unchanged. Map it to `events[].oppref`; do not hash it. It supports click attribution and is not the event ID used for deduplication. The Pixel can capture it, but Conversions API ingestion does not collect it for the caller.
+- Keep browser reference separate: when permitted and available, forward the Pixel's `__obref` cookie unchanged to `events[].user.obref`. Do not confuse this browser identifier with event-level `oppref`.
+- Reuse a stable conversion identifier as API `id` and Pixel `event_id` with the same Pixel ID and matching event name; keep custom event names consistent too. Recheck current deduplication rules before implementation.
+- Keep Conversions API credentials server-side, whether the sender is the application's backend or a server-side integration. Verify any proposed PostHog/OpenAI adapter rather than assuming a native destination exists.
+
 ## Copy, images, and context hints
 
 - `creative.title`: 3–50 characters.
