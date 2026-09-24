@@ -39,6 +39,14 @@ Preferred repair order:
    - `openclaw gateway restart`
 3. Re-run the healthcheck. Do not stop at gateway/channel success; a model-auth failure can still block replies.
 
+## Repeating macOS updater jobs
+
+If the gateway repeatedly receives SIGTERM and an upgrade script reappears, inspect `launchctl list` and `launchctl print gui/$(id -u)/<exact-job-label>`. A submitted one-shot updater with `keepalive` will rerun even after exit 0; its `runs` counter proves the loop. Stop only that confirmed updater with `launchctl bootout gui/$(id -u)/<exact-job-label>`, verify it is absent, then restart the gateway. Do not merely keep restarting the gateway or wait indefinitely for a repeating updater.
+
+## Native Codex API key missing from OpenClaw auth
+
+`models status` can report synthetic Codex auth as usable while real turns fail before harness execution with `No API key found for provider openai`. Inspect credential metadata only: the agent's `codex-home/auth.json` may already contain a valid API key while OpenClaw SQLite has only unrelated provider profiles. Do not assume OAuth or force a new login. Validate the existing key against its intended provider without logging it (e.g. OpenAI GET /v1/models). Back up config and the SQLite store using SQLite backup, then restore that same existing key through `openclaw models auth paste-api-key --provider openai --profile-id <descriptive-id>`. This command accepts secret input over stdin; pass it using a subprocess input buffer, never argv, shell interpolation, or tool output. Capture/redact output defensively. Verify a real turn returns the configured model and `agentHarnessId: codex`; test sibling agents to verify main-profile inheritance rather than copying keys needlessly. A successful gateway/channel probe or synthetic-auth status alone is not proof of model access.
+
 ## Auth migration and `doctor --fix` pitfall
 
 During legacy `openai-codex/*` to `openai/*` migrations, the config/session routes may be repaired while the per-agent auth store no longer contains a usable OpenAI profile. `models status` can look partially healthy because a profile exists in one layer, while `Runtime auth` still reports missing.

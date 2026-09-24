@@ -105,6 +105,10 @@ When researching a business-system API integration, distinguish **the business a
 
 When an agent gateway is reachable but chat replies fail, debug in layers: process/HTTP health, channel transport, then model runtime/auth with a tiny `openclaw agent` healthcheck. Do not declare success from `channels status` alone. After `doctor --fix` or updates, watch for legacy `openai-codex/*` → `openai/*` migration problems where routes are repaired but per-agent OpenAI OAuth profiles are missing from `openclaw-agent.sqlite`. Use `references/openclaw-gateway-runtime-auth-troubleshooting.md` for the exact triage, repair, backup, and verification sequence.
 
+### SMS provider migration audits
+
+For read-only SMS integration inventories and provider replacement assessments, use `references/sms-provider-migration-audit.md`. It covers call-site counting, effective webhook paths, tenant/office number routing, DLR/idempotency, QA safety, redaction and line-reference verification.
+
 ### Python debugging
 
 Use `pdb` for local interactive stepping and `debugpy` when a long-running process or test needs DAP-style attach. See `references/packages/python-debugpy/` for command recipes.

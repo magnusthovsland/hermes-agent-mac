@@ -41,7 +41,7 @@ exit_code=0
   Nous Portal   ✗ not logged in (run: hermes portal)
   OpenAI Codex  ✓ logged in
     Auth file:  /Users/mt-infinity/.hermes/auth.json
-    Refreshed:  2026-09-14 02:00:45 CEST
+    Refreshed:  2026-09-24 02:00:36 CEST
   Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
     Auth file:  /Users/mt-infinity/.qwen/oauth_creds.json
     Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
@@ -112,7 +112,7 @@ exit_code=0
 
 ◆ Sessions
   Active:       1 session(s)
-  Last activity:      17h ago
+  Last activity:      11h ago
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
