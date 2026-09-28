@@ -33,7 +33,7 @@ file	gateway-starts.log	36 bytes
 file	gateway.lock	227 bytes
 file	gateway.pid	227 bytes
 file	gateway.sock	0 bytes
-file	gateway_state.json	604 bytes
+file	gateway_state.json	650 bytes
 excluded	google_client_secret.json
 file	google_drive_hermes_folder.json	307 bytes
 excluded	google_token.json
@@ -52,7 +52,7 @@ excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	4924683 bytes
+file	models_dev_cache.json	4921801 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
