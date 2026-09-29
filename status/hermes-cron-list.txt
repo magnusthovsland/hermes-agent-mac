@@ -9,23 +9,23 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    116/365
-    Next run:  2026-09-29T02:00:00+02:00
+    Repeat:    117/365
+    Next run:  2026-09-30T02:00:00+02:00
     Deliver:   origin
-    Last run:  2026-09-28T02:08:16.520221+02:00  error: RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)  (3 failures in a row)
-    Dispatch:  on time (scheduled 2026-09-28T02:00:00+02:00)
-    Execution: failed  8dc669174a014361a2d3fdee6d82e206
+    Last run:  2026-09-29T02:07:05.354685+02:00  error: RuntimeError: Codex stream produced no SSE events for 12s after first byte (threshold: 12s)  (4 failures in a row)
+    Dispatch:  on time (scheduled 2026-09-29T02:00:00+02:00)
+    Execution: failed  5b60d4cb74e84d4d8ae2bbb0759cab90
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    114/365
-    Next run:  2026-09-29T03:00:00+02:00
+    Repeat:    115/365
+    Next run:  2026-09-30T03:00:00+02:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-27T03:00:37.326102+02:00  ok
-    Dispatch:  on time (scheduled 2026-09-28T03:00:00+02:00)
-    Execution: running  898d792e57ef45dbbf79b09fda222740
+    Last run:  2026-09-28T03:00:44.928954+02:00  ok
+    Dispatch:  on time (scheduled 2026-09-29T03:00:00+02:00)
+    Execution: running  102b3ff9fd5f4a7fbba195baa8d6f176
 
 

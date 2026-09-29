@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2200 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (212 sessions)
-    → state.db logical size 180.4 MB, 46,187 pages, 286 free, WAL 6.0 MB
-    → 9,330 messages, 212 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (213 sessions)
+    → state.db logical size 180.4 MB, 46,187 pages, 265 free, WAL 6.0 MB
+    → 9,337 messages, 213 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
@@ -90,9 +90,9 @@ exit_code=0
   ✓ agent-browser (resolves via npx on first use)
   ✓ Playwright Chromium (browser engine)
   ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 1 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 1 high, 5 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ web workspace deps (0 critical, 1 high, 6 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ✓ ui-tui workspace deps (2 moderate vulnerabilities)
+  ✓ ui-tui workspace deps (4 moderate vulnerabilities)
 
 ◆ API Connectivity
   Running 40 connectivity checks in parallel…
@@ -117,8 +117,8 @@ exit_code=0
   ✓ video
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
-  ✓ web search (exa)
-  ✓ web extract (exa)
+  ✓ web search (firecrawl)
+  ✓ web extract (firecrawl)
   ⚠ a2a (system dependency not met)
   ⚠ browser (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
@@ -146,7 +146,7 @@ exit_code=0
   Found 2 issue(s) to address:
 
   1. Browser tools (agent-browser) has 2 npm vulnerabilities
-  2. web workspace has 6 npm vulnerabilities
+  2. web workspace has 7 npm vulnerabilities
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 

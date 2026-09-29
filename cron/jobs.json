@@ -20,17 +20,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 116
+        "completed": 117
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-09-29T02:00:00+02:00",
-      "last_run_at": "2026-09-28T02:08:16.520221+02:00",
+      "next_run_at": "2026-09-30T02:00:00+02:00",
+      "last_run_at": "2026-09-29T02:07:05.354685+02:00",
       "last_status": "error",
-      "last_error": "RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)",
+      "last_error": "RuntimeError: Codex stream produced no SSE events for 12s after first byte (threshold: 12s)",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -48,12 +48,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-28T02:00:00+02:00",
-        "dispatched_at": "2026-09-28T02:00:15.062959+02:00",
-        "lateness_seconds": 15.1,
+        "scheduled_at": "2026-09-29T02:00:00+02:00",
+        "dispatched_at": "2026-09-29T02:00:23.002729+02:00",
+        "lateness_seconds": 23.0,
         "kind": "on_time"
       },
-      "failure_streak": 3
+      "failure_streak": 4
     },
     {
       "id": "5cf752e90c20",
@@ -75,15 +75,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 114
+        "completed": 115
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-09-29T03:00:00+02:00",
-      "last_run_at": "2026-09-27T03:00:37.326102+02:00",
+      "next_run_at": "2026-09-30T03:00:00+02:00",
+      "last_run_at": "2026-09-28T03:00:44.928954+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -93,17 +93,17 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-28T03:00:22.749331+02:00",
-        "by": "Magnus-sin-Mini:4147:333c706f2e3340569990eeacf6fd70ca"
+        "at": "2026-09-29T03:00:31.354999+02:00",
+        "by": "Magnus-sin-Mini:4147:44b9726d2e3546e28313a77a26a1cb61"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-28T03:00:00+02:00",
-        "dispatched_at": "2026-09-28T03:00:22.705659+02:00",
-        "lateness_seconds": 22.7,
+        "scheduled_at": "2026-09-29T03:00:00+02:00",
+        "dispatched_at": "2026-09-29T03:00:31.313571+02:00",
+        "lateness_seconds": 31.3,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-28T03:00:22.750004+02:00"
+  "updated_at": "2026-09-29T03:00:31.356263+02:00"
 }
