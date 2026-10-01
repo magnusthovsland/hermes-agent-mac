@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "20260930T010040Z",
+  "snapshot_utc": "20261001T010045Z",
   "layout": "root-current-state; Git history is the snapshot history",
   "source_hermes_home": "/Users/mt-infinity/.hermes",
   "included": {
@@ -55,6 +55,14 @@
       [
         ".usage.json.lock",
         "lock/cache"
+      ],
+      [
+        "research/grounded-citations/scripts/__pycache__",
+        "ignored_dir"
+      ],
+      [
+        "research/grounded-citations/scripts/__pycache__/_hermes_home.cpython-311.pyc",
+        "ignored_dir"
       ]
     ],
     "memories": [
