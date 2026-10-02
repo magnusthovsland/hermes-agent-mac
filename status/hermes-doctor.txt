@@ -16,7 +16,7 @@ exit_code=0
   ✓ Python 3.11.15
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (188.3 MB)
+    → state.db: WAL journal mode (189.0 MB)
     → cron/executions.db: WAL journal mode (96.0 KB)
     → verification_evidence.db: WAL journal mode (52.0 KB)
     → kanban.db: WAL journal mode (112.0 KB)
@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (221 sessions)
-    → state.db logical size 188.3 MB, 48,193 pages, 184 free, WAL 6.0 MB
-    → 9,714 messages, 221 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (222 sessions)
+    → state.db logical size 189.0 MB, 48,373 pages, 287 free, WAL 6.0 MB
+    → 9,730 messages, 222 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
@@ -89,7 +89,7 @@ exit_code=0
   ✓ Node.js
   ✓ agent-browser (resolves via npx on first use)
   ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 2 high, 1 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
+  ⚠ Browser tools (agent-browser) deps (0 critical, 3 high, 1 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
   ⚠ web workspace deps (0 critical, 4 high, 6 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
   ⚠ ui-tui workspace deps (0 critical, 1 high, 3 moderate — build-tool advisory; clears via lockfile bump)
@@ -146,7 +146,7 @@ exit_code=0
 ────────────────────────────────────────────────────────────
   Found 3 issue(s) to address:
 
-  1. Browser tools (agent-browser) has 3 npm vulnerabilities
+  1. Browser tools (agent-browser) has 4 npm vulnerabilities
   2. web workspace has 10 npm vulnerabilities
   3. ui-tui workspace has 4 npm vulnerabilities
 
