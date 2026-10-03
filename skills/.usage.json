@@ -187,13 +187,15 @@
     "created_at": "2026-08-08T01:04:17.586694+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-10-02T09:02:28.787313+00:00",
+    "last_viewed_at": "2026-10-02T09:02:28.785990+00:00",
     "patch_count": 0,
+    "patch_generation": 0,
     "pinned": false,
     "state": "stale",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "email-inbox-triage": {
     "archived_at": null,
@@ -457,14 +459,14 @@
     "created_by": null,
     "last_patched_at": "2026-08-04T10:15:14.982673+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-30T18:54:57.915578+00:00",
-    "last_viewed_at": "2026-09-30T18:54:57.913501+00:00",
+    "last_used_at": "2026-10-02T09:04:43.120545+00:00",
+    "last_viewed_at": "2026-10-02T09:04:43.119697+00:00",
     "patch_count": 12,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 22,
-    "view_count": 22
+    "use_count": 24,
+    "view_count": 24
   },
   "productivity/notion": {
     "archived_at": null,
@@ -554,14 +556,14 @@
     "created_by": null,
     "last_patched_at": "2026-09-30T19:08:44.615280+00:00",
     "last_reused_patch_generation": 12,
-    "last_used_at": "2026-09-30T22:32:57.386814+00:00",
-    "last_viewed_at": "2026-09-30T22:32:57.384959+00:00",
+    "last_used_at": "2026-10-02T08:35:19.782669+00:00",
+    "last_viewed_at": "2026-10-02T08:35:19.781801+00:00",
     "patch_count": 44,
     "patch_generation": 12,
     "pinned": false,
     "state": "active",
-    "use_count": 90,
-    "view_count": 90
+    "use_count": 92,
+    "view_count": 92
   },
   "weekly-review-planning": {
     "archived_at": null,
