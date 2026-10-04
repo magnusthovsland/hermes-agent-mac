@@ -20,15 +20,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 122
+        "completed": 121
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-10-05T02:00:00+02:00",
-      "last_run_at": "2026-10-04T02:07:49.676387+02:00",
+      "next_run_at": "2026-10-04T02:00:00+02:00",
+      "last_run_at": "2026-10-03T02:06:20.864051+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -48,9 +48,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T02:00:00+02:00",
-        "dispatched_at": "2026-10-04T02:00:06.326652+02:00",
-        "lateness_seconds": 6.3,
+        "scheduled_at": "2026-10-03T02:00:00+02:00",
+        "dispatched_at": "2026-10-03T02:00:15.131035+02:00",
+        "lateness_seconds": 15.1,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -82,7 +82,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-10-05T03:00:00+02:00",
+      "next_run_at": "2026-10-04T03:00:00+02:00",
       "last_run_at": "2026-10-03T03:00:43.566547+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -92,18 +92,15 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": {
-        "at": "2026-10-04T03:00:14.296597+02:00",
-        "by": "Magnus-sin-Mini:4147:bdc0c98d689141058ae7b84660b5111f"
-      },
+      "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T03:00:00+02:00",
-        "dispatched_at": "2026-10-04T03:00:14.256614+02:00",
-        "lateness_seconds": 14.3,
+        "scheduled_at": "2026-10-03T03:00:00+02:00",
+        "dispatched_at": "2026-10-03T03:00:21.911510+02:00",
+        "lateness_seconds": 21.9,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-10-04T03:00:14.297209+02:00"
+  "updated_at": "2026-10-03T03:00:43.567443+02:00"
 }
