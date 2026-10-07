@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (227 sessions)
-    → state.db logical size 190.1 MB, 48,667 pages, 181 free, WAL 6.0 MB
-    → 9,809 messages, 227 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (228 sessions)
+    → state.db logical size 190.1 MB, 48,667 pages, 143 free, WAL 6.0 MB
+    → 9,821 messages, 228 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
@@ -90,9 +90,9 @@ exit_code=0
   ✓ agent-browser (resolves via npx on first use)
   ✓ Playwright Chromium (browser engine)
   ⚠ Browser tools (agent-browser) deps (0 critical, 3 high, 1 moderate — run: cd /Users/mt-infinity/.hermes/hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 4 high, 6 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ web workspace deps (0 critical, 5 high, 6 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
-  ⚠ ui-tui workspace deps (0 critical, 1 high, 3 moderate — build-tool advisory; clears via lockfile bump)
+  ⚠ ui-tui workspace deps (0 critical, 2 high, 3 moderate — build-tool advisory; clears via lockfile bump)
     →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
 
 ◆ API Connectivity
@@ -147,8 +147,8 @@ exit_code=0
   Found 3 issue(s) to address:
 
   1. Browser tools (agent-browser) has 4 npm vulnerabilities
-  2. web workspace has 10 npm vulnerabilities
-  3. ui-tui workspace has 4 npm vulnerabilities
+  2. web workspace has 11 npm vulnerabilities
+  3. ui-tui workspace has 5 npm vulnerabilities
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 
