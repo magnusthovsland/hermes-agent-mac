@@ -73,9 +73,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (229 sessions)
-    → state.db logical size 190.1 MB, 48,667 pages, 71 free, WAL 6.0 MB
-    → 9,832 messages, 229 sessions, journal_mode=wal
+  ✓ ~/.hermes/state.db exists (230 sessions)
+    → state.db logical size 190.1 MB, 48,667 pages, 23 free, WAL 6.0 MB
+    → 9,846 messages, 230 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ Command Installation
@@ -118,8 +118,8 @@ exit_code=0
   ✓ video
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
-  ✓ web search (firecrawl)
-  ✓ web extract (firecrawl)
+  ✓ web search (exa)
+  ✓ web extract (exa)
   ⚠ a2a (system dependency not met)
   ⚠ browser (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
