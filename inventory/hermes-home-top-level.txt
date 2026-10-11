@@ -45,15 +45,13 @@ excluded	image_cache
 file	install_id	33 bytes
 dir	kanban/
 excluded	kanban.db
-file	kanban.db-shm	32768 bytes
-file	kanban.db-wal	0 bytes
 file	kanban.db.dispatch.lock	0 bytes
 file	kanban.db.init.lock	0 bytes
 excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	5381018 bytes
+file	models_dev_cache.json	5377846 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

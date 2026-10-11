@@ -314,7 +314,7 @@
     "view_count": 27
   },
   "hermes-gateway-operations": {
-    "archived_at": null,
+    "archived_at": "2026-10-10T04:21:20.293803+00:00",
     "created_at": "2026-07-10T11:12:45.497988+00:00",
     "created_by": "agent",
     "last_patched_at": null,
@@ -322,7 +322,7 @@
     "last_viewed_at": null,
     "patch_count": 0,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 0,
     "view_count": 0
   },
@@ -337,7 +337,7 @@
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 0,
     "view_count": 0
   },
