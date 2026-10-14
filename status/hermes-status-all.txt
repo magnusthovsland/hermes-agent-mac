@@ -39,9 +39,9 @@ exit_code=0
 
 ◆ Auth Providers
   Nous Portal   ✗ not logged in (run: hermes portal)
-  OpenAI Codex  ✓ logged in
+  OpenAI Codex  ✗ not logged in (run: hermes model)
     Auth file:  /Users/mt-infinity/.hermes/auth.json
-    Refreshed:  2026-10-04 02:00:06 CEST
+    Error:      Codex auth is missing access_token. Run `hermes auth` to re-authenticate.
   Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
     Auth file:  /Users/mt-infinity/.qwen/oauth_creds.json
     Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
