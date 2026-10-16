@@ -117,8 +117,8 @@ exit_code=0
   ✓ todo
   ✓ tts
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
-  ✓ web search (exa)
-  ✓ web extract (exa)
+  ✓ web search (parallel)
+  ✓ web extract (parallel)
   ⚠ a2a (system dependency not met)
   ⚠ browser (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
