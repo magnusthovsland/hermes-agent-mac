@@ -74,11 +74,7 @@ terminal:
   home_mode: auto
   shell_init_files: []
   auto_source_bashrc: true
-  docker_image: nikolaik/python-nodejs:python3.11-nodejs20
   docker_forward_env: []
-  singularity_image: docker://nikolaik/python-nodejs:python3.11-nodejs20
-  modal_image: nikolaik/python-nodejs:python3.11-nodejs20
-  daytona_image: nikolaik/python-nodejs:python3.11-nodejs20
   container_cpu: 1
   container_memory: 5120
   container_disk: 51200
@@ -398,8 +394,8 @@ curator:
   enabled: true
   interval_hours: 168
   min_idle_hours: 2
-  stale_after_days: 30
-  archive_after_days: 90
+  stale_after_days: 14
+  archive_after_days: 30
   prune_builtins: true
   backup:
     enabled: true
@@ -476,10 +472,6 @@ hooks_auto_accept: false
 security:
   allow_private_urls: false
   redact_secrets: '[REDACTED]'
-  tirith_enabled: true
-  tirith_path: tirith
-  tirith_timeout: 5
-  tirith_fail_open: true
   website_blocklist:
     enabled: false
     domains: []
@@ -563,7 +555,7 @@ secrets: '[REDACTED]'
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
-_config_version: 40
+_config_version: 51
 session_reset: '[REDACTED]'
 group_sessions_per_user: '[REDACTED]'
 platform_toolsets:
@@ -572,6 +564,7 @@ platform_toolsets:
   - clarify
   - code_execution
   - computer_use
+  - connections
   - cronjob
   - delegation
   - file
@@ -611,3 +604,8 @@ known_plugin_toolsets:
 unauthorized_dm_behavior: '[REDACTED]'
 plugins:
   enabled: []
+telemetry:
+  shared_metrics:
+    enabled: false
+    send: false
+    offer_version: 2

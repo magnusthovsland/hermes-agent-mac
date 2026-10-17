@@ -16,14 +16,14 @@ Built-in toolsets (cli):
   ✗ disabled  stt  🎙️ Speech-to-Text
   ✓ enabled  skills  📚 Skills
   ✓ enabled  todo  📋 Task Planning
+  ✗ disabled  kanban  📌 Kanban
   ✓ enabled  memory  💾 Memory
   ✗ disabled  context_engine  🧩 Context Engine
   ✓ enabled  session_search  🔎 Session Search
+  ✓ enabled  connections  🔌 Connections
   ✓ enabled  clarify  ❓ Clarifying Questions
   ✓ enabled  delegation  👥 Task Delegation
   ✓ enabled  cronjob  ⏰ Cron Jobs
-  ✗ disabled  homeassistant  🏠 Home Assistant
-  ✗ disabled  spotify  🎵 Spotify
   ✗ disabled  yuanbao  🤖 Yuanbao
   ✓ enabled  computer_use  🖱️  Computer Use (macOS/Windows/Linux)
 

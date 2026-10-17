@@ -3,7 +3,7 @@
   "last_run_at": "2026-10-10T04:21:19.956031+00:00",
   "last_run_duration_seconds": 0.404156,
   "last_run_summary": "auto: 1 marked stale, 1 archived; llm: skipped (consolidation off)",
-  "last_run_summary_shown_at": "2026-09-05T02:13:48.252979+00:00",
+  "last_run_summary_shown_at": "2026-10-10T04:21:19.956031+00:00",
   "paused": false,
   "run_count": 18
 }

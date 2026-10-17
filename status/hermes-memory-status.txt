@@ -12,12 +12,6 @@ Memory status
 
   Installed plugins:
     • byterover  (API key / local)
-    • hindsight  (API key / local)
-    • holographic  (local)
-    • honcho  (API key / local)
-    • mem0  (API key / local)
-    • openviking  (API key / local)
     • retaindb  (API key / local)
-    • supermemory  (requires API key)
 
 
