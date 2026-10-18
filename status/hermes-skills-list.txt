@@ -15,7 +15,6 @@ exit_code=0
 │ github-workflows  │ github           │ local   │ local   │ enabled           │
 │ advertising-plat… │ marketing        │ local   │ local   │ enabled           │
 │ media-content-wo… │ media            │ local   │ local   │ enabled           │
-│ hosted-model-cos… │ mlops            │ local   │ local   │ enabled           │
 │ mlops-model-oper… │ mlops            │ local   │ local   │ enabled           │
 │ box               │ productivity     │ builtin │ builtin │ enabled           │
 │ communication-pl… │ productivity     │ local   │ local   │ enabled           │
@@ -46,6 +45,6 @@ exit_code=0
 │ software-develop… │ software-develo… │ local   │ local   │ enabled           │
 │ blocked-page-rec… │ web              │ builtin │ builtin │ enabled           │
 └───────────────────┴──────────────────┴─────────┴─────────┴───────────────────┘
-0 hub-installed, 16 builtin, 19 local — 35 enabled, 0 disabled
+0 hub-installed, 16 builtin, 18 local — 34 enabled, 0 disabled
 
 

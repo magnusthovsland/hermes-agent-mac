@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "20261017T010041Z",
+  "snapshot_utc": "20261018T010041Z",
   "layout": "root-current-state; Git history is the snapshot history",
   "source_hermes_home": "/Users/mt-infinity/.hermes",
   "included": {
@@ -48,6 +48,10 @@
       [
         ".curator_backups/2026-10-10T04-21-19Z/skills.tar.gz",
         "too_large:3338398"
+      ],
+      [
+        ".locks/ledger.lock",
+        "lock/cache"
       ],
       [
         ".usage.json.lock",
