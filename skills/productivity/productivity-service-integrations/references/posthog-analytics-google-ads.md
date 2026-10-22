@@ -9,6 +9,7 @@ Use this reference when the user asks the agent to inspect PostHog analytics, ev
 - Persist local credentials under `~/.hermes/credentials/` with `chmod 600`; never commit or echo full keys.
 - Personal API keys usually start with `phx_`; project/capture keys usually start with `phc_`.
 - PostHog private API host must match region, e.g. `https://eu.posthog.com` for EU.
+- Resolve project-scoped access through `/api/personal_api_keys/@current/` → `scoped_teams` → `/api/projects/:id/`; a 403 from the global project list is not proof of invalid credentials. See `website-posthog-identity-audit.md` for the baseline event/person/session checks before attribution analysis.
 
 Example local credential shape:
 

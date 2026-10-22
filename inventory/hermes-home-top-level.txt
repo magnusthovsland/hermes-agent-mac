@@ -11,7 +11,7 @@ file	.install_id.lock	0 bytes
 file	.install_method	4 bytes
 file	.npm_lock_hash_4aad7688c4a3	64 bytes
 file	.restart_last_processed.json	83 bytes
-file	.skills_prompt_snapshot.json	30414 bytes
+file	.skills_prompt_snapshot.json	29737 bytes
 file	SOUL.md	667 bytes
 excluded	audio_cache
 excluded	auth.json
@@ -55,13 +55,14 @@ excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	5882096 bytes
+file	models_dev_cache.json	6086444 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
 file	openai_ads_teoria_state.json	661 bytes
 dir	pairing/
 excluded	pastes
+dir	pending/
 dir	pending_messages/
 dir	plans/
 dir	platforms/
@@ -85,11 +86,12 @@ dir	state-snapshots/
 excluded	state.db
 excluded	state.db-shm
 excluded	state.db-wal
-file	telegram_update_receipts_8936032736.json	49 bytes
+file	telegram_update_receipts_8936032736.json	693 bytes
 dir	telemetry/
 dir	tools/
 dir	tui-pending-inputs/
 file	tui-theme-boot.json	1115 bytes
+dir	vault/
 file	verification_evidence.db	53248 bytes
 file	web-ui-build-stamp.json	137 bytes
 dir	workspace/

@@ -57,6 +57,16 @@ Critical rules:
 - Validate destination mappings against actual events with HogQL counts, including event filters, property filters, resolved `gclid`/`gbraid`/`wbraid`, conversion value, currency, and order ID.
 - Backend events with `$process_person_profile = false` may not inherit `person.properties.gclid`; verify whether click IDs are present directly on the conversion event before concluding Google Ads is undercounting.
 
+For website visitor/People discrepancies and on-site funnels, follow `references/website-posthog-identity-audit.md`: verify received events, identity continuity and consent independently before recommending changes.
+
+Analytics scope and delivery rules for Magnus:
+- Keep Wright and Ovio in separate PostHog setups. Wright's funnel ends at departure for Ovio; do not expand a Wright audit into cross-system identity stitching unless explicitly requested.
+- Sequence the work: establish the consent baseline, then reliable on-site events, searchable profiles, visitor/session continuity and drop-off; keep ad-platform attribution as a separate phase. When asked to compare with Teoria, deliver a concrete comparison of current source and published behavior before proposing changes. Use Teoria as a reference, not a blanket specification: authenticated profile linking does not implement Wright's consented anonymous-profile requirement, and a shared CMP vendor does not imply equivalent integration.
+- Inspect publicly served CMP configuration and runtime consent signals before declaring a comparison blocked by missing dashboard access. Label what is verified from production, what is only present in repository code, and what still needs CMP/GTM access. Separate Google Consent Mode from PostHog consent; do not recommend enabling every CMP option or copying a direct Google-tag implementation into a GTM-managed site.
+- Treat Magnus's requirement to search a visitor ID and open its chronological event history as an explicit person-profile deliverable, not a misunderstanding of visitor totals. For Wright, implement searchable pseudonymous profiles for analysis-consenting visitors; keep no-consent measurement a separate assessment. Validate one profile and stable identity through navigation and reload in QA before proposing production rollout. Do not promise cross-device recognition or equate Wright visitor IDs with Ovio customer IDs.
+- Audit read-only first. Before requesting write access, name the exact change and whether it needs repository, consent-manager, PostHog project, insight or dashboard rights; do not request broad administration pre-emptively.
+- Lead findings with measured evidence, separating confirmed behavior, suspected causes and unverified consent/runtime behavior. Distinguish events, visitor IDs, sessions and person profiles; do not label ID counts as people or unordered event totals as funnel conversion rates.
+
 ### Notion
 
 Use Notion for pages, databases, markdown import/export, dashboards, file uploads, and Workers. Share the target page/database with the integration before assuming the token can see it. Use `ntn` when available for concise operations and HTTP fallback for portability.

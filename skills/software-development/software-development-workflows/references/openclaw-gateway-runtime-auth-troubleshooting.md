@@ -97,6 +97,12 @@ When a user requires both a new model and stable-only software, verify those con
 3. If stable lacks support but the installed beta has it, do not downgrade or upgrade automatically: explain that stable-only and model support conflict and ask which outcome to prioritize.
 4. If the user chooses model support, keep the existing compatible build and change only the model configuration. If they choose stable, warn that model support will be lost before switching channels.
 
+### CLI Node mismatch and runtime model recovery
+
+If `openclaw` aborts with a missing Homebrew `libsimdjson` dylib, inspect the LaunchAgent's Node executable before reinstalling anything. The shell may select broken Node 22 while the gateway runs healthy Node 24; scope CLI commands to the gateway's working Node directory via PATH. Do not change global Node links just to run diagnostics.
+
+When a model is listed but a real turn fails with `Unknown model` under the Codex runtime, try one gateway restart, then a non-delivered `openclaw agent --model <known-working-model>` healthcheck. If that succeeds and the requested model still fails, back up config and restore only the affected agent's explicit model to the verified working one. Run another healthcheck without `--model` to prove effective configuration, probe channels, and report the model downgrade explicitly rather than claiming the original model is repaired. Inspect recent sessions for explicit model overrides before asking the user to test the existing chat.
+
 ### Catalog support is not runtime support
 
 A model appearing in `openclaw models list`, provider docs, or plugin capability code proves only that OpenClaw recognizes the identifier. The bundled Codex app-server can still reject the request with `The '<model>' model requires a newer version of Codex`.

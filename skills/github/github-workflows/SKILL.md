@@ -45,6 +45,8 @@ Use `gh auth status` as the preferred readiness check. If not available:
 
 Never print secrets. Report tokens as SET/not set, and avoid copying credential files into artifacts.
 
+Validate a newly supplied token directly against the intended repository without first replacing global CLI authentication; stale keyring credentials do not establish that the new token fails. If the owner/repo is uncertain, discover accessible repositories and then read the exact target. Treat screenshots and API `permissions` booleans as evidence of configured access/account role, not proof of all fine-grained token write scopes. Report only the capability actually exercised; a successful repository read does not verify branch writes or PR creation. Do not make external test writes solely to prove permissions. Keep temporary credentials separate from standing credentials and recommend revocation after the authorized work.
+
 ## Repository Management
 Use for clone/create/fork/remotes/settings/releases/secrets.
 ```bash
