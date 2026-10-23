@@ -76,9 +76,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (245 sessions)
-    → state.db logical size 197.9 MB, 50,662 pages, 201 free, WAL 11.4 MB
-    → 10,275 messages, 245 sessions, journal_mode=wal, 2 process(es) holding the DB open (the host gateway (PID 51808) serving profiles default)
+  ✓ ~/.hermes/state.db exists (246 sessions)
+    → state.db logical size 197.9 MB, 50,662 pages, 111 free, WAL 11.4 MB
+    → 10,293 messages, 246 sessions, journal_mode=wal, 2 process(es) holding the DB open (the host gateway (PID 51808) serving profiles default)
     → FTS tables: messages_fts, messages_fts_trigram
     → WAL file is 11 MB (normal for active sessions)
   ✓ ~/.hermes/cron/ store is writable
@@ -131,7 +131,7 @@ exit_code=0
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
   ✓ web search (openai-native)
-  ✓ web extract (parallel)
+  ✓ web extract (firecrawl)
   ⚠ a2a (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
   ⚠ discord (missing DISCORD_BOT_TOKEN)
