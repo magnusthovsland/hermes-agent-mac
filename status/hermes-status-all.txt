@@ -101,8 +101,8 @@ exit_code=0
   Jobs:         2 active, 2 total
 
 ◆ Sessions
-  Active:       2 session(s)
-  Last activity:    yesterday
+  Active:       3 session(s)
+  Last activity:       2h ago
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics

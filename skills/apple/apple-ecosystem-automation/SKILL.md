@@ -82,6 +82,19 @@ computer_use(action="click", element=7)
 ```
 This is for UI workflows where a CLI/API is unavailable. It should not steal the user’s cursor, keyboard focus, or Space. Re-capture after every state-changing action.
 
+### Native Chrome login hand-off and DOM inspection
+
+Use when a user signs into a web service on the agent's Mac and the task needs that native browser session rather than a separate automation profile.
+
+1. Establish that the user is at the host Mac before asking them to interact with a window. An automation tab may be headless or in another profile; never claim it is visible in the user's browser merely because navigation succeeded.
+2. If a visible page is requested, open the exact service URL with `open 'https://service.example/'`. Let the user complete login. Do not extract credentials or transfer browser cookies to another profile.
+3. Discover only the task's tabs using AppleScript: iterate Chrome windows/tabs and return window ID, tab ID, title and URL only when the URL matches the service host. Avoid dumping unrelated browsing history. Rediscover after login, tab closure or a stale-ID error; IDs are ephemeral.
+4. Read the selected page through `osascript -e 'tell application "Google Chrome" to execute tab id TAB_ID of window id WINDOW_ID javascript "document.body.innerText"'`. Use read-only DOM queries to inspect links/container IDs and verify the actual account scope. A login redirect or page title alone is not proof of access.
+5. If Chrome explicitly refuses JavaScript through AppleScript, ask the user to enable **Vis → Utvikler → Tillat JavaScript fra Apple Events** (**View → Developer → Allow JavaScript from Apple Events**) in the macOS menu bar while Chrome is active, not the three-dot browser menu. Do not toggle this setting silently. Explain that it can be disabled after the work.
+6. For navigation, obtain the destination from the inspected page, navigate only the task tab, then reread after rendering. If the page still says loading, perform a bounded follow-up read before concluding it is empty or inaccessible. Do not repeatedly reopen windows or ask the user to sign in again when only the selected tab changed.
+
+Keep authenticated page content within the task scope and redact unnecessary personal information. Distinguish confirmed read access from edit/publication rights; do not use a successful login as authorization for external writes.
+
 ## Safety and Verification
 - Verify prerequisites before assuming a CLI exists.
 - For write/send actions, verify the destination (folder/list/contact/device) and read back when possible.

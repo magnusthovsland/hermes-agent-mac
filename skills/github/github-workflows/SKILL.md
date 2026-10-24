@@ -110,7 +110,15 @@ When the user asks to “put it in QA” while also creating a PR for production
 
 For Wright-Web, verify frontend QA at `https://qa.wright.no/` after updating `qa`; Vercel's Git integration can deploy the frontend independently of GitHub Actions. The Vercel bot's PR comment identifies project `teoriportalqa/wright-web` and preview status even when a supplied PAT cannot read Checks/Deployments (403). Verify the actual QA behavior, not merely the preview status. For package ordering, compare rendered package slugs mapped to Sanity product IDs against `https://qa.ovio.no/api/public/office-packages/all?office_id=…` using `X-Tenant-Id: 1` and `X-System: wright-web-frontend`; map every CMS slug rather than assuming one document per externalId.
 
-Do not assume a branch named `qa` triggers deployment; inspect `.github/workflows/*`, deployment provider state, or the live QA URL. A workflow file named “deploy_to_qa” may still trigger on `main` or deploy only a subcomponent.
+Do not assume a branch named `qa` exists or triggers deployment; verify the exact remote ref, inspect `.github/workflows/*`, and check deployment-provider configuration. A workflow file named “deploy_to_qa” may still trigger on `main` or deploy only a subcomponent.
+
+### Missing branch versus surviving deployment
+
+1. Confirm the exact owner/repository and case-sensitive branch name. If a branch lookup returns 404, first establish repository access; then check `GET /repos/{owner}/{repo}/git/ref/heads/{branch}`, paginate the branch list, and independently run authenticated `git ls-remote --heads <remote>`. On a disputed result, repeat uncached reads rather than relying on the earlier list. Keep credentials out of command arguments and output.
+2. Distinguish a Git ref, a GitHub deployment environment, and a Vercel deployment. A deployment marked Ready/Active or labeled with a branch proves deployment history, not that the source ref currently exists. Read screenshots according to the page type; an environment's deployment list is not the repository branch selector.
+3. Report the observed scope precisely: 'the exact ref is absent from the authenticated API and remote Git listing.' Do not assert who deleted it, when it disappeared, or that it was deleted after merging without audit evidence. A surviving site does not contradict an absent branch.
+4. Before proposing restoration, match the active deployment's full source SHA with repository commit/PR metadata. Do not silently recreate a missing QA branch from today's production head; the last deployed QA source may differ. Inspect workflows for all branch-creation side effects, including CMS deployment as well as frontend deployment.
+5. Obtain explicit approval for the restoration baseline and resulting deploys, then read back the restored ref and verify the actual deployment separately. If the user only asked to inspect an image or verify branch existence, do not restore or resume implementation.
 
 ### PAT scope and GitHub API fallback pitfalls
 Fine-grained GitHub PATs can have `contents:write` but only `pull_requests:read`. In that state, branch/commit writes may succeed while `POST /pulls` fails with `403 Resource not accessible by personal access token`. Ask for/update `Pull requests: Read and write` before retrying PR creation.
