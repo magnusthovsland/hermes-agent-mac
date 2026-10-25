@@ -102,23 +102,40 @@ Important permission split for fine-grained PATs:
 
 Monitor CI:
 ### QA-direct + prod-PR release pattern
-When the user asks to “put it in QA” while also creating a PR for production review, treat these as two separate tracks unless they explicitly say otherwise:
-1. Apply/push the tested change directly to the QA branch/environment for validation.
-2. Create a separate branch from the production base (usually `main`) with the same change.
-3. Open the PR against the production branch, not QA.
-4. Verify the QA deployment/live URL independently before telling the user it is testable.
+For this user's Wright-Web work, write tested changes directly to `qa`; the release PR is **from `qa` to `main`**. Do not silently substitute a feature branch, draft PR into QA, or Vercel Preview for a requested QA delivery. Production release still requires its own authorization.
+
+1. Read the current remote QA head, deployment mapping and effective branch rules before choosing the delivery path.
+2. Apply the scoped tested change directly to QA when permitted, without force. If rules contradict the requested direct-write workflow, report the exact conflict before creating an alternative PR or preview deployment; obtain agreement on the alternative or an authorized rules change.
+3. Verify the updated QA ref and the actual QA-site deployment, not only a feature-branch build or Vercel Preview status.
+4. When production release is requested, open the release PR with head `qa` and base `main`; do not create a separate production feature branch by default.
 
 For Wright-Web, verify frontend QA at `https://qa.wright.no/` after updating `qa`; Vercel's Git integration can deploy the frontend independently of GitHub Actions. The Vercel bot's PR comment identifies project `teoriportalqa/wright-web` and preview status even when a supplied PAT cannot read Checks/Deployments (403). Verify the actual QA behavior, not merely the preview status. For package ordering, compare rendered package slugs mapped to Sanity product IDs against `https://qa.ovio.no/api/public/office-packages/all?office_id=…` using `X-Tenant-Id: 1` and `X-System: wright-web-frontend`; map every CMS slug rather than assuming one document per externalId.
 
 Do not assume a branch named `qa` exists or triggers deployment; verify the exact remote ref, inspect `.github/workflows/*`, and check deployment-provider configuration. A workflow file named “deploy_to_qa” may still trigger on `main` or deploy only a subcomponent.
 
+### Branch rules and reviewer identity preflight
+
+- Query `GET /repos/{owner}/{repo}/rules/branches/{branch}` for effective rules, including repository/organization rulesets, before interpreting `protected: true`. Inspect `type: pull_request` and its approval parameters; the protected flag alone does not prove that direct writes are forbidden.
+- Read classic protection with `GET /repos/{owner}/{repo}/branches/{branch}/protection` when accessible. A 403 on this endpoint is not proof of a rule or of all rule-read access being unavailable; the effective-rules endpoint may still succeed. Report what was actually verified.
+- Do not route through Git Data API, disable protection, or force-push to evade a known rule. If the intended direct-QA workflow conflicts with active rules, request a scoped correction while preserving production review requirements; do not assume the rules are permanently configured this way.
+- Before asking the user to approve a PR, compare `GET /user` with the PR's `user.login`. A PR created with the user's token is authored by that user, who cannot provide its required self-approval. Explain that another eligible reviewer is needed rather than repeatedly asking the author to approve.
+- Read back `merged` and the destination branch ref after a merge attempt. A non-null `merge_commit_sha` on an open PR can describe a test merge and does not prove deployment or a completed merge.
+
 ### Missing branch versus surviving deployment
 
 1. Confirm the exact owner/repository and case-sensitive branch name. If a branch lookup returns 404, first establish repository access; then check `GET /repos/{owner}/{repo}/git/ref/heads/{branch}`, paginate the branch list, and independently run authenticated `git ls-remote --heads <remote>`. On a disputed result, repeat uncached reads rather than relying on the earlier list. Keep credentials out of command arguments and output.
 2. Distinguish a Git ref, a GitHub deployment environment, and a Vercel deployment. A deployment marked Ready/Active or labeled with a branch proves deployment history, not that the source ref currently exists. Read screenshots according to the page type; an environment's deployment list is not the repository branch selector.
-3. Report the observed scope precisely: 'the exact ref is absent from the authenticated API and remote Git listing.' Do not assert who deleted it, when it disappeared, or that it was deleted after merging without audit evidence. A surviving site does not contradict an absent branch.
+3. Report the observed scope precisely: 'the exact ref is absent from the authenticated API and remote Git listing.' To establish deletion timing, read the release PR's `GET /repos/{owner}/{repo}/issues/{number}/timeline` for `head_ref_deleted`/`head_ref_restored` and corroborate with repository `events` entries of type `DeleteEvent` whose payload names the exact branch. Paginate when needed; missing events do not prove no deletion because event history is bounded. Convert UTC timestamps to the user's timezone with a tool. Describe the actor as the account recorded by GitHub; this alone does not distinguish a manual click from automatic branch deletion after merge. A surviving site does not contradict an absent branch.
 4. Before proposing restoration, match the active deployment's full source SHA with repository commit/PR metadata. Do not silently recreate a missing QA branch from today's production head; the last deployed QA source may differ. Inspect workflows for all branch-creation side effects, including CMS deployment as well as frontend deployment.
 5. Obtain explicit approval for the restoration baseline and resulting deploys, then read back the restored ref and verify the actual deployment separately. If the user only asked to inspect an image or verify branch existence, do not restore or resume implementation.
+
+### Disputed branch equality and safe QA synchronization
+
+1. Resolve both remote heads afresh through GitHub API and `git ls-remote --heads https://github.com/OWNER/REPO.git refs/heads/qa refs/heads/main`. Verify repository `full_name`, fork status, and case-sensitive branch names. Explain that `ls-remote` queries the server, not local tracking refs; provide the exact reproducible command when a developer disputes the finding.
+2. Pin the returned SHAs and compare `GET /repos/{owner}/{repo}/compare/{qa_sha}...{main_sha}`. State the direction explicitly: `ahead_by` counts commits main has beyond QA in this request. Compare commit tree SHAs as well: different commit IDs can have identical source trees after a merge. For diverged histories, use the trees or a fetched two-endpoint `git diff <qa_sha> <main_sha>` to establish tip-content differences; a merge-base comparison alone is insufficient. Do not treat a truncated API file list as the full changed-file count.
+3. Compare the pre-merge QA head from the release PR separately from the currently restored QA head. This distinguishes 'QA matched main at release' from 'the current QA ref matches main.' A commit's timestamp dates the commit, not creation of the restored branch.
+4. Report a short evidence block: exact repository, remote SHAs, tree equality, direction/count of history differences, and representative file differences. Provide the GitHub compare page when useful. Distinguish authenticated API evidence from an actually inspected web page; do not claim visual confirmation without reading it. Report observed divergence without guessing whether the developer intended it.
+5. When synchronization is authorized and QA is an ancestor of main, prefer a non-force fast-forward over deleting and recreating QA. Inspect branch protection and deployment side effects first; if rules require a PR but the user requested direct QA writes, explain the mismatch and agree on the path rather than silently creating a PR. Do not bypass protection. Re-read both heads immediately before writing and stop if they changed. Verify the resulting ref and deployment separately. For a capability-only question or 'do not do it', explain this route without making changes.
 
 ### PAT scope and GitHub API fallback pitfalls
 Fine-grained GitHub PATs can have `contents:write` but only `pull_requests:read`. In that state, branch/commit writes may succeed while `POST /pulls` fails with `403 Resource not accessible by personal access token`. Ask for/update `Pull requests: Read and write` before retrying PR creation.

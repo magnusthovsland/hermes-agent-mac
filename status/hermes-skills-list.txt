@@ -34,7 +34,6 @@ exit_code=0
 │ research-knowled… │ research         │ local   │ local   │ enabled           │
 │ smart-home-autom… │ smart-home       │ local   │ local   │ enabled           │
 │ frontend-web-del… │ software-develo… │ local   │ local   │ enabled           │
-│ github            │ software-develo… │ builtin │ builtin │ enabled           │
 │ inspecting-herme… │ software-develo… │ builtin │ builtin │ enabled           │
 │ plan              │ software-develo… │ local   │ local   │ enabled           │
 │                   │                  │         │         │ slash command     │
@@ -45,6 +44,6 @@ exit_code=0
 │ software-develop… │ software-develo… │ local   │ local   │ enabled           │
 │ blocked-page-rec… │ web              │ builtin │ builtin │ enabled           │
 └───────────────────┴──────────────────┴─────────┴─────────┴───────────────────┘
-0 hub-installed, 16 builtin, 18 local — 34 enabled, 0 disabled
+0 hub-installed, 15 builtin, 18 local — 33 enabled, 0 disabled
 
 

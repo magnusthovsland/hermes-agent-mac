@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20261017-044312",
-  "last_run_at": "2026-10-17T04:43:12.905988+00:00",
-  "last_run_duration_seconds": 0.202403,
-  "last_run_summary": "auto: 7 marked stale, 1 archived; llm: skipped (consolidation off)",
+  "last_report_path": "/Users/mt-infinity/.hermes/logs/curator/20261024-050508",
+  "last_run_at": "2026-10-24T05:05:08.916799+00:00",
+  "last_run_duration_seconds": 0.2567,
+  "last_run_summary": "auto: 1 archived, 2 reactivated; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-10-10T04:21:19.956031+00:00",
   "paused": false,
-  "run_count": 19
+  "run_count": 20
 }

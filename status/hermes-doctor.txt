@@ -16,7 +16,7 @@ exit_code=0
   ✓ Python 3.14.7
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (206.1 MB)
+    → state.db: WAL journal mode (210.5 MB)
     → cron/executions.db: WAL journal mode (120.0 KB)
     → projects.db: WAL journal mode (44.0 KB)
     → verification_evidence.db: WAL journal mode (52.0 KB)
@@ -76,9 +76,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (249 sessions)
-    → state.db logical size 206.1 MB, 52,757 pages, 64 free, WAL 11.4 MB
-    → 10,876 messages, 249 sessions, journal_mode=wal, 2 process(es) holding the DB open (the host gateway (PID 51808) serving profiles default)
+  ✓ ~/.hermes/state.db exists (250 sessions)
+    → state.db logical size 210.5 MB, 53,888 pages, 510 free, WAL 11.4 MB
+    → 11,103 messages, 250 sessions, journal_mode=wal, 2 process(es) holding the DB open (the host gateway (PID 51808) serving profiles default)
     → FTS tables: messages_fts, messages_fts_trigram
     → WAL file is 11 MB (normal for active sessions)
   ✓ ~/.hermes/cron/ store is writable
@@ -96,7 +96,7 @@ exit_code=0
   ✓ Playwright Chromium (browser engine)
   ⚠ Root npm package deps (0 critical, 1 high, 0 moderate — fix is an upstream lockfile bump — a local manual fix does not persist (the next `hermes update` reinstalls from the committed lockfile))
     →   ^ runtime dependency tree; report/pin the fix in package-lock.json — see #116774
-  ⚠ web workspace deps (0 critical, 2 high, 3 moderate — fix is an upstream lockfile bump — a local manual fix does not persist (the next `hermes update` reinstalls from the committed lockfile))
+  ⚠ web workspace deps (0 critical, 2 high, 4 moderate — fix is an upstream lockfile bump — a local manual fix does not persist (the next `hermes update` reinstalls from the committed lockfile))
     →   ^ workspace audit includes runtime and build dependencies; if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
   ⚠ ui-tui workspace deps (0 critical, 2 high, 3 moderate — fix is an upstream lockfile bump — a local manual fix does not persist (the next `hermes update` reinstalls from the committed lockfile))
     →   ^ workspace audit includes runtime and build dependencies; if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
@@ -132,7 +132,7 @@ exit_code=0
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
   ✓ web search (openai-native)
-  ✓ web extract (firecrawl)
+  ✓ web extract (parallel)
   ⚠ a2a (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
   ⚠ discord (missing DISCORD_BOT_TOKEN)
@@ -161,7 +161,7 @@ exit_code=0
   1. Run 'hermes setup' to configure missing API keys for full tool access
   2. session_reset.mode: both is no longer applied: gateway conversations reset only on /new or /reset. To keep idle/daily resets, run `hermes plugins install hermes-session-reset-policy`.
   3. Root npm package has 1 npm vulnerability; wait for an upstream lockfile fix, then update your installation (Docker: pull a rebuilt image; recreating the same image restores the same dependencies)
-  4. web workspace has 5 npm vulnerabilities; wait for an upstream lockfile fix, then update your installation (Docker: pull a rebuilt image; recreating the same image restores the same dependencies)
+  4. web workspace has 6 npm vulnerabilities; wait for an upstream lockfile fix, then update your installation (Docker: pull a rebuilt image; recreating the same image restores the same dependencies)
   5. ui-tui workspace has 5 npm vulnerabilities; wait for an upstream lockfile fix, then update your installation (Docker: pull a rebuilt image; recreating the same image restores the same dependencies)
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.

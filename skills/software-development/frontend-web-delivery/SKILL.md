@@ -19,6 +19,7 @@ Use this class-level workflow for extending and publishing public-facing fronten
 2. **Choose the smallest architecture change**
    - Preserve a lightweight one-page site when only a few subroutes are needed.
    - Extract shared UI instead of duplicating homepage markup.
+   - Before reusing a leaf component outside its original parent, inspect CSS ancestor selectors. If styles depend on a collection wrapper, move the component's own styles to its local class without changing design values; keep collection layout separate. Verify primary and secondary variants plus the new use with computed styles at desktop/mobile widths. For isolated checks, render actual components with clearly labeled synthetic fixtures, remove temporary harness files before committing, and do not present fixture verification as deployed-site acceptance.
    - Add a full router or SSR only when route count, navigation behavior, or server rendering actually requires it.
 3. **Design for semantics, consistency, and responsive use**
    - Maintain one `h1` per page and correct nested heading levels.
