@@ -30,10 +30,11 @@ dir	cron/
 dir	desktop/
 file	desktop-build-stamp.json	160 bytes
 dir	gateway/
-file	gateway-starts.log	54 bytes
-file	gateway.lock	228 bytes
+file	gateway-starts.log	72 bytes
+file	gateway.lock	226 bytes
+file	gateway.pid	226 bytes
 file	gateway.sock	0 bytes
-file	gateway_state.json	792 bytes
+file	gateway_state.json	788 bytes
 excluded	google_client_secret.json
 file	google_drive_hermes_folder.json	307 bytes
 excluded	google_token.json
@@ -54,7 +55,7 @@ excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	5920809 bytes
+file	models_dev_cache.json	5937183 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes

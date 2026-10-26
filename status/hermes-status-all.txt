@@ -95,14 +95,14 @@ exit_code=0
 ◆ Gateway Service
   Status:       ✓ running
   Manager:      launchd
-  PID(s):       51808, 51794
+  PID(s):       731, 702
 
 ◆ Scheduled Jobs
   Jobs:         2 active, 2 total
 
 ◆ Sessions
   Active:       3 session(s)
-  Last activity:       8h ago
+  Last activity:    yesterday
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
