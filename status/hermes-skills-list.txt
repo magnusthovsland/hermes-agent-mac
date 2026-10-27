@@ -5,6 +5,7 @@ exit_code=0
 ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
 ┃ Name              ┃ Category         ┃ Source  ┃ Trust   ┃ Status            ┃
 ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ consent-gated-br… │                  │ local   │ local   │ enabled           │
 │ apple-ecosystem-… │ apple            │ local   │ local   │ enabled           │
 │ autonomous-codin… │ autonomous-ai-a… │ local   │ local   │ enabled           │
 │ computer-use      │ autonomous-ai-a… │ builtin │ builtin │ enabled           │
@@ -44,6 +45,6 @@ exit_code=0
 │ software-develop… │ software-develo… │ local   │ local   │ enabled           │
 │ blocked-page-rec… │ web              │ builtin │ builtin │ enabled           │
 └───────────────────┴──────────────────┴─────────┴─────────┴───────────────────┘
-0 hub-installed, 15 builtin, 18 local — 33 enabled, 0 disabled
+0 hub-installed, 15 builtin, 19 local — 34 enabled, 0 disabled
 
 

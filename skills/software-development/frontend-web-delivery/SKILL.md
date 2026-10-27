@@ -42,6 +42,15 @@ Use this class-level workflow for extending and publishing public-facing fronten
    - Confirm known routes return 200, unknown routes return the expected status, raw HTML metadata is route-correct, and the homepage has not regressed.
    - Detect deployment completion using the emitted asset hash or route HTML rather than waiting blindly.
 
+## Checkout-summary payment indicators
+
+1. Separate login methods from payment methods before designing. Preserve the existing continuation buttons and handlers; a payment badge is informational, not a new login/payment action.
+2. Use only confirmed available methods. A future-provider Figma example supplies visual inspiration, not proof that every depicted method is currently offered. Prefer a generic card symbol until supported card-network brands are confirmed.
+3. For Wright's approved visual direction, retain the green summary panel and place a restrained, non-clickable payment row below the two login buttons, separated by a subtle rule. Use the heading `Betalingsmåter` and clarification `Du velger betalingsmåte senere.` Apply the same shared component to package and standalone-course summaries. The approved mockup uses Kort and Vipps; recheck availability before changing this set.
+4. Produce actual desktop and narrow-mobile mockups, render and inspect both, and verify text/logo legibility and horizontal overflow. Use real approved brand assets for implementation, not a screenshot crop as a production logo.
+5. For QA-only React Router presentation changes, read the existing root loader environment with `useRouteLoaderData` (type-only loader import) instead of reading `window` during render. This keeps SSR and hydration consistent without duplicating flags in sibling routes. Exercise QA, PROD, LOCAL and missing environment in SSR tests; use synthetic route data with the real shared component/CSS and real vendor web component for browser layout and captured-submit checks.
+6. Report mockup approval, component implementation, PR creation and deployment separately. Keep this presentation-only change independent of event or attribution refactors when the user requests small PRs; protect existing callbacks and login-submit parameters in regression tests.
+
 ## Common pitfalls
 
 - A route that works in Vite preview can still 404 on the hosting platform.

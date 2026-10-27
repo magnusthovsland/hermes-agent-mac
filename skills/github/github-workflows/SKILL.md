@@ -47,6 +47,17 @@ Never print secrets. Report tokens as SET/not set, and avoid copying credential 
 
 Validate a newly supplied token directly against the intended repository without first replacing global CLI authentication; stale keyring credentials do not establish that the new token fails. If the owner/repo is uncertain, discover accessible repositories and then read the exact target. Treat screenshots and API `permissions` booleans as evidence of configured access/account role, not proof of all fine-grained token write scopes. Report only the capability actually exercised; a successful repository read does not verify branch writes or PR creation. Do not make external test writes solely to prove permissions. Keep temporary credentials separate from standing credentials and recommend revocation after the authorized work.
 
+### Wright commit identity for Vercel
+
+For authorized Wright-Web commits, use Magnus' GitHub-linked author identity; do not use an unlinked local agent identity, because Vercel checks account association independently of the build. Disclose agent implementation in the PR rather than suggesting the human manually wrote it.
+
+1. Verify `GET /user` and an existing commit linked to that login before choosing an email. Known account: `magnusthovsland`; linked author name `magnusthovsland`, noreply email `98465006+magnusthovsland@users.noreply.github.com`.
+2. Set identity per command or repository, never globally. For a normal new commit, `git -c user.name=magnusthovsland -c user.email=98465006+magnusthovsland@users.noreply.github.com commit ...` sets both author and committer; inspect both fields if inherited environment variables or explicit author flags could override them.
+3. When an earlier head was blocked for unlinked authorship, prefer the next authorized substantive correction as a normal linked-author commit and non-force push. Do not rewrite approved history merely to repair an old author field; the new head can trigger a fresh deployment while preserving the earlier record.
+4. Read back the exact new commit's `author.login` and `committer.login`, the branch ref and the PR head. If an immediate PR read still shows the previous head, perform a bounded uncached reread and compare the exact ref/commit before retrying any write; propagation lag is not proof that the push failed.
+5. Verify deployment and CI for the new head, not an old author-error comment. When Checks access is unavailable, combine `actions/runs?head_sha=<sha>` with the Vercel bot's latest deployment status and commit metadata; preserve any remaining verification gap. Refresh reviews and mergeability after the push rather than assuming approval either persisted or was dismissed.
+6. Keep build success, Vercel Preview readiness and actual QA deployment as distinct evidence. Do not merge without authorization or claim actual QA delivery from a feature preview.
+
 ## Repository Management
 Use for clone/create/fork/remotes/settings/releases/secrets.
 ```bash
@@ -81,6 +92,17 @@ git push -u origin HEAD
 gh pr create --fill
 ```
 
+### Multi-PR delivery ownership
+
+Magnus expects the agent to carry agreed work through to real PRs, not leave an approved specification or tested local work described as a delivery.
+
+1. Before parallel implementation, maintain a durable delivery ledger: one row per agreed outcome with acceptance criteria, authorization, worktree/branch, dependencies, unresolved decisions and verified remote PR handle. Keep design agreed, locally implemented, tested, PR created, merged and deployed as distinct states.
+2. When scope is split or expanded, map every original requirement to a destination. Moving interaction logging into a broader event PR must not silently drop attribution, consent-policy or cross-domain work. Give unresolved portions an explicit owner/blocker instead of calling the remaining subset complete.
+3. Respect the user's requested small PR boundaries. Keep independent UI changes, semantic event changes, in-project attribution and cross-domain handoff separate when agreed; share existing utilities without bundling unrelated work merely because it touches the same component. Check merge compatibility when parallel branches edit shared components.
+4. Once implementation and PR creation are authorized, finish tests, commit with the expected identity, push, create the PR and read back its base/head/files before reporting it created. Do not stop at local passing tests unless a concrete blocker requires a user decision. An independent blocked workstream should not silently freeze all other authorized PRs.
+5. For status questions, inspect both local changes and remote PRs, including closed/merged records. Lead with the actual delivery state and identify any approved-but-unimplemented scope. Count only verified PR handles as created PRs; a branch or mockup is not one.
+6. At handoff, reconcile the ledger with all agreed outcomes and report each as delivered, awaiting review, blocked or not started. Keep production activation separate from QA merge: an environment-gated feature may remain inactive in PROD even after the branch is promoted.
+
 ### Fine-grained PAT and REST fallback
 When a user provides or points to a GitHub fine-grained PAT, verify exact capability before assuming `git push`/PR creation will work:
 ```bash
@@ -102,10 +124,10 @@ Important permission split for fine-grained PATs:
 
 Monitor CI:
 ### QA-direct + prod-PR release pattern
-For this user's Wright-Web work, write tested changes directly to `qa`; the release PR is **from `qa` to `main`**. Do not silently substitute a feature branch, draft PR into QA, or Vercel Preview for a requested QA delivery. Production release still requires its own authorization.
+For this user's Wright-Web work, QA is the validation destination and the production release PR is **from `qa` to `main`**. Prefer direct QA writes only when current rules permit them. The user accepts PR review into QA when required by protection: preserve those rules and wait for an eligible reviewer rather than proposing to weaken them. Do not present a feature branch or Vercel Preview as a completed QA delivery. Production release still requires its own authorization.
 
 1. Read the current remote QA head, deployment mapping and effective branch rules before choosing the delivery path.
-2. Apply the scoped tested change directly to QA when permitted, without force. If rules contradict the requested direct-write workflow, report the exact conflict before creating an alternative PR or preview deployment; obtain agreement on the alternative or an authorized rules change.
+2. Apply the scoped tested change directly to QA when permitted, without force. When QA requires review, use a PR with base `qa`, explain that the feature-branch preview is only intermediate, and wait for the required approval. Preserve protection; do not change rules to expedite delivery.
 3. Verify the updated QA ref and the actual QA-site deployment, not only a feature-branch build or Vercel Preview status.
 4. When production release is requested, open the release PR with head `qa` and base `main`; do not create a separate production feature branch by default.
 
@@ -117,9 +139,11 @@ Do not assume a branch named `qa` exists or triggers deployment; verify the exac
 
 - Query `GET /repos/{owner}/{repo}/rules/branches/{branch}` for effective rules, including repository/organization rulesets, before interpreting `protected: true`. Inspect `type: pull_request` and its approval parameters; the protected flag alone does not prove that direct writes are forbidden.
 - Read classic protection with `GET /repos/{owner}/{repo}/branches/{branch}/protection` when accessible. A 403 on this endpoint is not proof of a rule or of all rule-read access being unavailable; the effective-rules endpoint may still succeed. Report what was actually verified.
-- Do not route through Git Data API, disable protection, or force-push to evade a known rule. If the intended direct-QA workflow conflicts with active rules, request a scoped correction while preserving production review requirements; do not assume the rules are permanently configured this way.
+- Do not route through Git Data API, disable protection, or force-push to evade a known rule. For this user's accepted QA review workflow, preserve active approval requirements and wait for an eligible reviewer. Propose changing rule scope only when the user explicitly asks to change the policy, not merely because direct writes or a merge are blocked.
 - Before asking the user to approve a PR, compare `GET /user` with the PR's `user.login`. A PR created with the user's token is authored by that user, who cannot provide its required self-approval. Explain that another eligible reviewer is needed rather than repeatedly asking the author to approve.
-- Read back `merged` and the destination branch ref after a merge attempt. A non-null `merge_commit_sha` on an open PR can describe a test merge and does not prove deployment or a completed merge.
+- Check eligible approval, not merely an `APPROVED` review entry. Read current reviews and mergeability; a repository may require approval from a reviewer with Write access. If an authorized normal merge is rejected, quote the exact rule violation without asserting the reviewer's permissions unless verified. Refresh after another approval rather than assuming the earlier blocker persists.
+- Treat a user's 'approved, not merged' correction as a status distinction, not authorization to merge. Confirm the requested action before proceeding when that correction changes the scope.
+- Before an authorized merge, re-read the PR base/head and destination ref. If QA moved, inspect its intervening changes. Pin the approved head SHA in the merge request; do not bypass rules. Read back `merged` and the destination branch ref after the attempt. A non-null `merge_commit_sha` on an open PR can describe a test merge and does not prove deployment or a completed merge.
 
 ### Missing branch versus surviving deployment
 
@@ -189,6 +213,14 @@ Review by severity:
 - Looks good: explicitly state what was checked.
 
 When posting review comments, quote exact file/line and verify the comment appears.
+
+### Updating an older reviewed feature
+
+1. Read PR state/base/head, issue comments, reviews, inline comments, and paginated review threads. Separate changing a PR's target branch from merging its code; inspect current target source to determine whether the feature is actually present.
+2. Locate the existing component named by the reviewer and interpret the requested responsibility before editing. For a compound component, reuse its appropriate leaf rather than passing unrelated data through the compound API. Preserve unrelated improvements.
+3. Update the existing feature branch with the agreed current base without rewriting others' history. Keep authentication available for every command on a partial clone, including `merge`, `diff`, and `worktree add`: these can lazily fetch missing blobs even after clone succeeds. Use per-process credential configuration rather than embedding tokens in remote URLs.
+4. Reproduce the requested behavior in a failing regression test, implement the smallest correction, and test actual rendering plus relevant shared-style variants. Compare typecheck failures against the same unmodified base before labeling them existing.
+5. Push only the scoped changes and verify the remote head, PR base and final changed-file list. A merge of a stale branch with current QA may produce a large local merge summary; the final PR diff against QA must still contain only the intended feature changes. Leave reviewer threads unresolved for the reviewer unless explicitly asked to resolve them.
 
 ## Verification Checklist
 - [ ] Auth method is known and secrets are not exposed.

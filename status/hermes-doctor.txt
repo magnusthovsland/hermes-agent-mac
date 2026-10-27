@@ -16,8 +16,8 @@ exit_code=0
   ✓ Python 3.14.7
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (210.6 MB)
-    → cron/executions.db: WAL journal mode (120.0 KB)
+    → state.db: WAL journal mode (240.9 MB)
+    → cron/executions.db: WAL journal mode (128.0 KB)
     → projects.db: WAL journal mode (44.0 KB)
     → verification_evidence.db: WAL journal mode (52.0 KB)
     → kanban.db: WAL journal mode (112.0 KB)
@@ -70,15 +70,15 @@ exit_code=0
   ✓ ~/.hermes/logs/ exists
   ✓ ~/.hermes/skills/ exists
   ✓ ~/.hermes/memories/ exists
-  ✓ ~/.hermes/cache/scratch/ is the scratch dir (TMPDIR; 0 B, entries pruned after 24h idle)
+  ✓ ~/.hermes/cache/scratch/ is the scratch dir (TMPDIR; 99.5 MB, entries pruned after 24h idle)
     → TMPDIR=/var/folders/4n/s6vj44xn1kqb0719mr_y9dd00000gn/T/ is set by you or the OS, so Hermes leaves it alone
   ✓ ~/.hermes/SOUL.md exists (persona configured)
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (251 sessions)
-    → state.db logical size 210.6 MB, 53,921 pages, 422 free, WAL 11.4 MB
-    → 11,129 messages, 251 sessions, journal_mode=wal, 1 process(es) holding the DB open (the host gateway (PID 731) serving profiles default)
+  ✓ ~/.hermes/state.db exists (271 sessions)
+    → state.db logical size 240.9 MB, 61,676 pages, 421 free, WAL 11.4 MB
+    → 12,984 messages, 271 sessions, journal_mode=wal, 1 process(es) holding the DB open (the host gateway (PID 731) serving profiles default)
     → FTS tables: messages_fts, messages_fts_trigram
     → WAL file is 11 MB (normal for active sessions)
   ✓ ~/.hermes/cron/ store is writable
