@@ -56,7 +56,7 @@ excluded	logs
 dir	lsp/
 dir	memories/
 file	models_dev_cache.etag	36 bytes
-file	models_dev_cache.json	5953079 bytes
+file	models_dev_cache.json	5927351 bytes
 excluded	node
 dir	notion/
 file	ollama_cloud_models_cache.json	685 bytes
@@ -87,7 +87,7 @@ dir	state-snapshots/
 excluded	state.db
 excluded	state.db-shm
 excluded	state.db-wal
-file	telegram_update_receipts_8936032736.json	918 bytes
+file	telegram_update_receipts_8936032736.json	465 bytes
 dir	telemetry/
 dir	tools/
 dir	tui-pending-inputs/

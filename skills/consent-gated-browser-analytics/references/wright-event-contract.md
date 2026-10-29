@@ -14,7 +14,7 @@ Apply these user-approved design conventions when working on Wright analytics. T
 2. `Avdeling valgt`: specific office selection from directory, map or selector; office_id, office_name, office_slug, placement. Cover the actual directory links as well as package selectors; no event for automatic preselection.
 3. `Førerkortklasse valgt`: license_class, license_name, transmission where relevant, placement and known office. Direct license choice in navigation should not additionally emit Navigasjon klikket for the same action.
 4. `Pakke åpnet`: product_id (package product), product_name, product_type=package, known office and placement.
-5. `Kursdetaljer åpnet`: office_product_id, course_name, office and placement; only when opening/expanding details, not as an alias for reservation.
+5. `Kursdetaljer åpnet`: office_product_id, course_name, office and placement; mapped to `Se alle datoer` inside the office-page course card, not an alias for reservation or selecting a date. The existing card renders that control when the same course group contains more than three occurrences; three dates are initially shown. Emit on expansion, not collapse. Verify current render conditions and responsive visibility before testing. The clearer name `Flere kursdatoer vist` is a proposal, not an approved rename.
 6. `Prisliste åpnet`: only the expandable text/list on the office page; office_id/name/slug and applicable license filter. Emit closed-to-open, not closing; placement unnecessary while this remains the only location.
 7. `Klikk: kjøp pakke`: package product_id/name, product_type=package, office and placement. Not completed purchase.
 8. `Klikk: reserver kursplass`: product_type=course, office_product_id, course_name, office and course_id only if a concrete occurrence is selected.
@@ -22,6 +22,16 @@ Apply these user-approved design conventions when working on Wright analytics. T
 10. `Klikk: fortsett fra oppsummering`: one shared final action for both summary pages; login_method=vipps|phone distinguishes Fortsett med Vipps from Fortsett med telefonnummer. Do not collect phone numbers or login data.
 
 All relevant actions include route as pathname. Avoid arbitrary full URL/query/input payloads. Add attribution centrally rather than independently to every button.
+
+## Course-flow acceptance
+
+Trace these distinct steps in order:
+1. Office-page `Reserver kursplass` → `Klikk: reserver kursplass`.
+2. Arrival at `/trafikkskole/<office>/kurs?opId=<office-product>` → `$pageview` with `page_type=course_selection`, whether one or several occurrences are listed.
+3. Click a concrete occurrence → `Kursdato valgt` with the selected course identity.
+4. Arrival at its summary → `$pageview` with `page_type=summary`.
+
+The office-card `Se alle datoer` expansion is optional and outside this reservation sequence. Do not confuse occurrences within one course group with different course groups (`Se alle kurs`) or days within one occurrence (`Se flere kursdager`). For an expansion test, request at least four occurrences in the same QA office/course group and verify the button is visible at the tested viewport. A production screenshot establishes the control's appearance, not QA data availability. Keep that one case explicitly unverified live until suitable QA data is available.
 
 ## Summary-page payloads
 - Package without selected occurrence: product_type=package, package product_id/name, office_id/name/slug, login_method. course_selection=later only for an explicit defer choice; not_applicable when course selection does not apply. Omit unknown course IDs.
