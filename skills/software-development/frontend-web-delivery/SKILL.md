@@ -53,6 +53,8 @@ Use this class-level workflow for extending and publishing public-facing fronten
 
 ## Common pitfalls
 
+- For Wright local read-only runtime comparisons, derive public Sanity settings from baseline `window.env` and inspect `wrightApi.ts` before setting `WRIGHT_API_URL`: it concatenates `/public/...`, so the base must have no trailing slash. A double-slash API URL can cause a false 500/empty office picker. Correct the harness and rerun before attributing failure to the PR. Use actual rendered office/course/package links, not filesystem route filenames (`/trafikkskole`, not `/avdeling`). Block browser non-GET requests, login handoffs and analytics; stop before summary continuation submissions. If the preview is protected, clearly label local built-app comparison as different evidence and record build provenance limitations.
+
 - A route that works in Vite preview can still 404 on the hosting platform.
 - Runtime `document.title` updates do not help non-JavaScript social crawlers.
 - A sticky navigation card may look complete in a full-page capture while its final links are outside the actual viewport.

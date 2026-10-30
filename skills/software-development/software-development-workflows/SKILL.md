@@ -93,6 +93,12 @@ For browser-facing apps, use a structured dogfood pass: define scope, explore pr
 
 For read-only Lighthouse investigations on React Router/Vite/Vercel marketing pages, measure production at least twice, identify the actual LCP node before accepting the hypothesis, inspect emitted head order and headers, separate app code from proxied analytics, and compare production against source without assuming they match. **Never label a local Lighthouse CLI run as PageSpeed Insights:** report hosted PSI, local CLI, and field/RUM results separately, capture the CLI environment, and use hosted PSI as the governing lab baseline when the business question concerns Google's hosted result. Lead the report with a compact in-chat conclusion before the detailed evidence. See `references/react-router-lighthouse-landing-page-audit.md` for the React Router audit workflow and `references/web-performance-lab-audits.md` for PSI-vs-CLI measurement discipline, production/source discrepancies, Astro/islands migration evaluation, and score-prediction rules.
 
+### Safe dependency maintenance
+
+Keep maintenance separate from open feature implementation, but test their combined code with the actual upgraded dependencies before recommending merge order. Refresh and rerun the feature's checks after the target changes; an old green build is not compatibility evidence. Add regression tests alongside typecheck in CI, preserve exact approved test exceptions, and report remaining audit findings and deferred majors without implying security clearance. Implementation approval does not authorize merge or deployment.
+
+Use `references/dependency-maintenance.md` for the ordered frozen-install, type-diagnostic, compatible-update, combined-feature verification and browser-plugin smoke workflow.
+
 ### Frontend framework upgrade regressions
 
 When a frontend regression appears after a framework/dependency upgrade, verify both the live output and the underlying data before blaming the CMS. For React Router v8 specifically, route `meta()` functions must use `loaderData` instead of the deprecated v7 `data` argument; stale `({ data })` usage can silently remove server-rendered `<title>`, meta description, Open Graph, and Twitter tags even when CMS SEO fields still exist. See `references/react-router-v8-route-meta.md` for the reproduction and fix pattern.
@@ -138,6 +144,10 @@ For read-only SMS integration inventories and provider replacement assessments, 
 ### Python debugging
 
 Use `pdb` for local interactive stepping and `debugpy` when a long-running process or test needs DAP-style attach. See `references/packages/python-debugpy/` for command recipes.
+
+### CommonJS SDK type/export mismatches
+
+When a CommonJS SDK's root declarations model a singleton but runtime also exposes constructors, do not silence named-import errors with `any` or switch to shared singleton state merely to pass TypeScript. Inspect the installed entry point, class implementation and declarations. If untyped class subpaths are necessary, add narrow ambient constructor declarations reusing the SDK's public instance types; test constructor identity against the root runtime export and verify isolated configuration without sending requests. Keep a regression test because deep entry points can change on SDK upgrades. For behavior parity, execute the actual application send function against both pinned source revisions with the installed SDK and intercept Axios at its adapter boundary, after SendGrid serialization and Axios transforms; enforce OS network denial and use only synthetic credentials. Assert EU URL, serialized recipients/from/content, success return, HTTP error conversion, original transport-error identity and rejected-recipient zero-call behavior. When observing MailService.setClient, account for its constructor creating a temporary default client before the application installs its EU client; distinguish final clients instead of assuming one setClient call per instance. Require comparison observations to exist before deep equality, so two undefined results cannot falsely pass parity. Label comparisons sharing the candidate dependency tree as source parity rather than old-lockfile runtime parity. For nullable CMS arrays consumed with `.map`, normalize missing data at the adapter boundary and retain generated element types instead of widening to `any[]`.
 
 ### Node debugging
 
