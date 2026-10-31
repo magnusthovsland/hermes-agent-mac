@@ -42,6 +42,15 @@ Use this class-level workflow for extending and publishing public-facing fronten
    - Confirm known routes return 200, unknown routes return the expected status, raw HTML metadata is route-correct, and the homepage has not regressed.
    - Detect deployment completion using the emitted asset hash or route HTML rather than waiting blindly.
 
+## Technical metadata and summary-heading fixes
+
+1. Separate HTML defects from intentional SEO policy before proposing a patch. Inspect the shared metadata helper, route-level canonical construction and robots directives; a course or package URL deliberately canonicalized to its office page is not automatically an error. Magnus requires these deliberate targets to remain unchanged unless he explicitly approves a policy change.
+2. For a technical canonical repair, preserve the destination pathname and meaningful query parameters. Correct the rendered element and, where confirmed wrong, the public origin without replacing every route with a self-canonical or stripping queries globally. Reuse the existing public-origin configuration; do not infer the intended public domain from an internal deployment hostname or an untrusted forwarded header.
+3. Test the actual installed router's metadata rendering in raw SSR HTML as well as the hydrated DOM. Assert a single `link[rel="canonical"]`, no `meta[rel="canonical"]`, the intended destination and unchanged robots directives; descriptor-shaped unit assertions alone can miss the wrong emitted tag.
+4. Treat Wright's specific-course/package summary as a transaction page, not an SEO landing page. Keep `noindex, nofollow` and its intentional canonical target. Use `Oppsummering` as its only H1 and the course/package name as a subordinate heading; inspect existing markup first and do not alter a sibling summary that already has the correct hierarchy.
+5. Preserve visible wording, classes, layout, continuation handlers and payment information when changing heading tags. Check tag-dependent CSS and mobile/desktop appearance; describe this as semantic HTML cleanup, not a critical SEO or checkout failure.
+6. Keep the resulting PR small and separate from CMP reload behavior, tracking, dependency upgrades and indexing-policy changes. When Magnus requests a proposal first, enumerate the technical changes and preserved behavior, then wait for approval before editing code.
+
 ## Checkout-summary payment indicators
 
 1. Separate login methods from payment methods before designing. Preserve the existing continuation buttons and handlers; a payment badge is informational, not a new login/payment action.
