@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "20261031T020058Z",
+  "snapshot_utc": "20261101T020058Z",
   "layout": "root-current-state; Git history is the snapshot history",
   "source_hermes_home": "/Users/mt-infinity/.hermes",
   "included": {
@@ -29,6 +29,14 @@
   },
   "skipped": {
     "skills": [
+      [
+        ".archive/grounded-citations/scripts/__pycache__",
+        "ignored_dir"
+      ],
+      [
+        ".archive/grounded-citations/scripts/__pycache__/_hermes_home.cpython-311.pyc",
+        "ignored_dir"
+      ],
       [
         ".curator_backups/2026-09-12T02-57-05Z/skills.tar.gz",
         "too_large:3323906"
@@ -80,14 +88,6 @@
       [
         ".usage.json.lock",
         "lock/cache"
-      ],
-      [
-        "research/grounded-citations/scripts/__pycache__",
-        "ignored_dir"
-      ],
-      [
-        "research/grounded-citations/scripts/__pycache__/_hermes_home.cpython-311.pyc",
-        "ignored_dir"
       ]
     ],
     "memories": [
