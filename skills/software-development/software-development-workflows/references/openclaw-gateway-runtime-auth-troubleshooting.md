@@ -133,6 +133,20 @@ The 2026.9.33 CLI `--session-sqlite restore` has no per-file selector and restor
 
 After restoring and correcting proven headers, `recover` may report `sqlite_entry_missing`: use `doctor --session-sqlite import --session-sqlite-all-agents --json` to actually import absent historical sessions. Verify EACH imported event against its preserved original (allow only the intended header-ID correction), every original checksum, aggregate counts, database `quick_check`, and empty `update status` migration warnings. Start the gateway and run non-delivered checks for each affected agent. A successful repair command alone is insufficient. If Python SQLite cannot read WAL state, use Node's `node:sqlite` backup API; never use immutable snapshots while WAL exists.
 
+## Memory search regression after backend migration
+
+Use this diagnostic sequence when the user says search worked before an upgrade, including when chat OAuth still works. This is a root-cause investigation, not a validated automatic repair recipe.
+
+1. Read `openclaw memory status --help`, then reproduce with `openclaw memory status --deep --agent main`. Record the installed version, effective backend/provider and exact failure without exposing credentials. Preserve working chat authentication.
+2. Compare only relevant fields from current `~/.openclaw/openclaw.json`, adjacent backups and dated backups: `memory.backend`, `memory.qmd`, `memory.search`, legacy `agents.defaults.memorySearch`, and version metadata. Do not dump whole configuration files containing secrets. Bracket the change using before/after backup contents; modification timestamps alone do not prove who changed it.
+3. Inspect the installed package's migration documentation and implementation. If old settings select QMD but current settings omit them, check whether that version deliberately retires QMD and removes its settings. Do not blindly restore retired keys or assert that OAuth stopped working: the actual change may be a different search engine selecting a different embedding path.
+4. Inspect index metadata read-only, not memory contents. Discover tables using `sqlite_master` and `PRAGMA table_info`. Older indexes may have `meta`/`embedding_cache`; migrated agent databases may have `memory_index_meta`/`memory_embedding_cache`. Group cache rows by provider/model and min/max `updated_at` to distinguish old migrated vectors from recent successful embedding calls. Never treat cache presence as proof that today's provider is usable. Inspect retained agent QMD indexes separately and preserve them.
+5. Check canonical memory files and extra-path configuration independently of indexes. A missing provider or derived index does not prove the memories were deleted; conversely, retained files do not prove recall is operational. Keep each assertion scoped to what was inspected.
+6. Verify any proposed upgrade against the exact candidate's auth/embedding support and the account's capability before claiming it fixes the issue. Do not generalize OAuth embedding support across releases from one installed-version error or an unverified newer-doc claim.
+7. Before applying a repair, back up configuration and databases and obtain approval for any new billing mode or remote recipient of memory text. After an authorized repair, require both a successful deep probe and an actual `openclaw memory search` query against known retained content, using that version's help for arguments. Do not mark the problem fixed from provider status alone.
+
+Report the evidenced transition in plain language, for example old search backend → migration → current failing provider selection. Separate this finding from still-unverified repair options. Do not recommend an API key merely because the error requests one when the user's intended mode is subscription OAuth.
+
 ## Reporting standard
 
 Final report should distinguish:

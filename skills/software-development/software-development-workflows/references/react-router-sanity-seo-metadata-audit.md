@@ -46,6 +46,15 @@ Also update `matches[*].data` references to `matches[*].loaderData`.
   - sample `_type,title,slug,seoTitle,seoDescription`
 - Inspect git history for dependency bumps around React Router/Remix and CMS packages separately. A Sanity upgrade may be temporally related but not causal if CMS fields/data remain intact.
 
+## Technical canonical and public-origin repairs
+
+1. Separate malformed markup, incorrect public origin and intentional canonical destination policy. Preserve deliberate office-page targets, URL query/hash and existing robots directives. Transaction-specific summaries remain non-indexable; a heading repair does not make them SEO landing pages.
+2. Reproduce the descriptor failure through the installed router's actual `Meta`, not a homemade descriptor serializer. In isolated SSR, use `UNSAFE_FrameworkContext` with routeModules metadata alongside a static router and synthetic loaders. Assert exactly one `link[rel=canonical]` and no `meta[rel=canonical]`; check installed descriptor types for `tagName: 'link'` support.
+3. Keep server configuration imports out of client-side metadata code. Reuse the existing public-origin rule through a pure resolver and retain a Config-backed server wrapper. Pass route `matches` explicitly into the shared metadata helper; read root `loaderData.env` with narrow unknown guards. Do not mutate loader/business URLs to repair only canonical and `og:url`.
+4. Test every affected route's intentional destination and robots policy. Exercise PROD, QA and unknown/local environments; retain path/query/hash exactly while correcting only the selected public origin. Count mechanical call-site edits separately from new logic when explaining PR scope.
+5. Hydrate and navigate with real router metadata in a minimal browser fixture. For Vite library fixtures, explicitly define `process.env.NODE_ENV` so output does not reference a missing browser `process`. Label synthetic loaders rather than claiming full-app E2E.
+6. For summary headings, render the actual component and styles at mobile/desktop widths. Verify sole H1, subordinate course heading, unchanged typography/margins, no overflow and unchanged continuation controls.
+
 ## Reporting pattern
 
 State clearly:
