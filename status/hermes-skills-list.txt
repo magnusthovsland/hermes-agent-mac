@@ -21,7 +21,6 @@ exit_code=0
 │ communication-pl… │ productivity     │ local   │ local   │ enabled           │
 │ document-product… │ productivity     │ local   │ local   │ enabled           │
 │ document-to-acti… │ productivity     │ builtin │ builtin │ enabled           │
-│ docx              │ productivity     │ builtin │ builtin │ enabled           │
 │ meeting-action-i… │ productivity     │ builtin │ builtin │ enabled           │
 │ petdex            │ productivity     │ local   │ local   │ enabled           │
 │ product-price-mo… │ productivity     │ builtin │ builtin │ enabled           │
@@ -43,6 +42,6 @@ exit_code=0
 │ software-develop… │ software-develo… │ local   │ local   │ enabled           │
 │ blocked-page-rec… │ web              │ builtin │ builtin │ enabled           │
 └───────────────────┴──────────────────┴─────────┴─────────┴───────────────────┘
-0 hub-installed, 13 builtin, 19 local — 32 enabled, 0 disabled
+0 hub-installed, 12 builtin, 19 local — 31 enabled, 0 disabled
 
 

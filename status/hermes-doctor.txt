@@ -16,7 +16,7 @@ exit_code=0
   ✓ Python 3.14.7
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (277.8 MB)
+    → state.db: WAL journal mode (278.5 MB)
     → cron/executions.db: WAL journal mode (136.0 KB)
     → projects.db: WAL journal mode (44.0 KB)
     → verification_evidence.db: WAL journal mode (52.0 KB)
@@ -76,9 +76,9 @@ exit_code=0
   ✓ ~/.hermes/memories/ directory exists
   ✓ MEMORY.md exists (2199 chars)
   ✓ USER.md exists (1363 chars)
-  ✓ ~/.hermes/state.db exists (313 sessions)
-    → state.db logical size 277.8 MB, 71,128 pages, 10 free, WAL 11.4 MB
-    → 15,300 messages, 313 sessions, journal_mode=wal, 1 process(es) holding the DB open (the host gateway (PID 731) serving profiles default)
+  ✓ ~/.hermes/state.db exists (314 sessions)
+    → state.db logical size 278.5 MB, 71,304 pages, 96 free, WAL 11.4 MB
+    → 15,323 messages, 314 sessions, journal_mode=wal, 1 process(es) holding the DB open (the host gateway (PID 731) serving profiles default)
     → FTS tables: messages_fts, messages_fts_trigram
     → WAL file is 11 MB (normal for active sessions)
   ✓ ~/.hermes/cron/ store is writable
@@ -132,7 +132,7 @@ exit_code=0
   ✓ vision
   ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
   ✓ web search (openai-native)
-  ✓ web extract (keenable)
+  ✓ web extract (exa)
   ⚠ a2a (system dependency not met)
   ⚠ browser-cdp (system dependency not met)
   ⚠ discord (missing DISCORD_BOT_TOKEN)
