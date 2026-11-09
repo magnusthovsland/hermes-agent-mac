@@ -20,15 +20,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": 365,
-        "completed": 157
+        "completed": 158
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T00:46:04.959471+02:00",
-      "next_run_at": "2026-11-09T02:00:00+01:00",
-      "last_run_at": "2026-11-08T02:03:41.251853+01:00",
+      "next_run_at": "2026-11-10T02:00:00+01:00",
+      "last_run_at": "2026-11-09T02:02:21.510640+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -48,14 +48,14 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-08T02:00:00+01:00",
-        "dispatched_at": "2026-11-08T02:00:59.805066+01:00",
-        "lateness_seconds": 59.8,
+        "scheduled_at": "2026-11-09T02:00:00+01:00",
+        "dispatched_at": "2026-11-09T02:00:00.087235+01:00",
+        "lateness_seconds": 0.1,
         "kind": "on_time"
       },
       "failure_streak": 0,
       "canonical_completions": [
-        "faf2ab5197a747379b5b31e9a159e1d3"
+        "1f77044980044359bbcceaed0e54f76c"
       ]
     },
     {
@@ -78,15 +78,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 155
+        "completed": 156
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:29:46.917860+02:00",
-      "next_run_at": "2026-11-09T03:00:00+01:00",
-      "last_run_at": "2026-11-07T03:02:02.249756+01:00",
+      "next_run_at": "2026-11-10T03:00:00+01:00",
+      "last_run_at": "2026-11-08T03:02:30.800165+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -96,17 +96,17 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-08T03:00:59.849170+01:00",
-        "by": "Magnus-sin-Mini:731:5bfcd41686db4a9c92d122c5e63cd698"
+        "at": "2026-11-09T03:00:00.191825+01:00",
+        "by": "Magnus-sin-Mini:731:17b473a284d04200aa397fb1c3694f95"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-08T03:00:00+01:00",
-        "dispatched_at": "2026-11-08T03:00:59.806920+01:00",
-        "lateness_seconds": 59.8,
+        "scheduled_at": "2026-11-09T03:00:00+01:00",
+        "dispatched_at": "2026-11-09T03:00:00.157617+01:00",
+        "lateness_seconds": 0.2,
         "kind": "on_time"
       },
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-11-08T03:00:59.849769+01:00"
+  "updated_at": "2026-11-09T03:00:00.192173+01:00"
 }
