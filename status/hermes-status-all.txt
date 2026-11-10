@@ -102,7 +102,7 @@ exit_code=0
 
 ◆ Sessions
   Active:       3 session(s)
-  Last activity:       6d ago
+  Last activity:   2026-11-02
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
