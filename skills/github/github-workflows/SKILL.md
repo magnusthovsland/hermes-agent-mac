@@ -140,6 +140,14 @@ For Wright-Web, verify frontend QA at `https://qa.wright.no/` after updating `qa
 
 Do not assume a branch named `qa` exists or triggers deployment; verify the exact remote ref, inspect `.github/workflows/*`, and check deployment-provider configuration. A workflow file named “deploy_to_qa” may still trigger on `main` or deploy only a subcomponent.
 
+### Isolating feature Preview from QA
+
+1. When Magnus asks to test a feature independently of a suspect QA branch, inspect current `main`, QA and PR-head SHAs and their diffs first. Do not automatically apply Wright-Web's QA-to-main release pattern to another repository. Keep a narrowly scoped feature-to-main PR when QA contains unrelated changes that are not approved for production.
+2. Before retrying deployment after someone reports a fix, locate the actual fix commit and verify whether the deployment's source branch contains it. A fix merged into `main` or QA does not update an existing feature branch; redeploying the old feature SHA would repeat its old configuration.
+3. For an authorized main-into-feature update, fetch with an explicit refspec (`git fetch origin refs/heads/main:refs/remotes/origin/main`), verify a clean worktree and matching remote feature head, then merge the inspected main SHA with `git merge --no-ff --no-commit <main-sha>`. Inspect the staged diff, run relevant tests/build/checks, commit with the expected identity and push normally. The explicit refspec also works with single-branch clones, where a bare fetch can populate only FETCH_HEAD.
+4. Read back the remote feature ref and PR head; verify the PR diff against current main still contains only the feature. Leave QA and production refs unchanged for this isolation test, and do not mark ready or merge merely because the user authorized a branch refresh.
+5. Track the new preview deployment through Building to Ready/Error with a bounded wait. If direct deployment/check access is unavailable, read the Vercel bot comment through `issues/<pr>/comments`, record its new deployment ID and update time, and separately inspect `actions/runs?head_sha=<sha>`. Do not mistake a previous Ready comment for the new build's result. Report Preview readiness separately from application smoke-test completion; success on the feature branch does not alone prove QA source code is defective because environment settings can differ.
+
 ### Branch rules and reviewer identity preflight
 
 - Query `GET /repos/{owner}/{repo}/rules/branches/{branch}` for effective rules, including repository/organization rulesets, before interpreting `protected: true`. Inspect `type: pull_request` and its approval parameters; the protected flag alone does not prove that direct writes are forbidden.
