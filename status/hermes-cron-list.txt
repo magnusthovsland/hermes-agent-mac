@@ -9,23 +9,23 @@ exit_code=0
   4af938c959d8 [active]
     Name:      Magnus nattlig micro-app verdidrypp
     Schedule:  0 2 * * *
-    Repeat:    174/365
-    Next run:  2026-11-26T02:00:00+01:00
+    Repeat:    175/365
+    Next run:  2026-11-27T02:00:00+01:00
     Deliver:   origin
-    Last run:  2026-11-25T02:02:40.986574+01:00  ok
-    Dispatch:  on time (scheduled 2026-11-25T02:00:00+01:00)
-    Execution: completed  b5bc43b20e4e41db829151d8260d53af
+    Last run:  2026-11-26T02:03:13.335813+01:00  ok
+    Dispatch:  on time (scheduled 2026-11-26T02:00:00+01:00)
+    Execution: completed  06d9b7de0cb344ee8613d9d463a0181f
 
   5cf752e90c20 [active]
     Name:      Nattlig Hermes config/skills/memory backup til GitHub
     Schedule:  0 3 * * *
-    Repeat:    172/365
-    Next run:  2026-11-26T03:00:00+01:00
+    Repeat:    173/365
+    Next run:  2026-11-27T03:00:00+01:00
     Deliver:   local
     Script:    hermes_config_backup.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-11-24T03:01:09.407364+01:00  ok
-    Dispatch:  on time (scheduled 2026-11-25T03:00:00+01:00)
-    Execution: running  172e8de7bfd04ab18165acdd7669ceec
+    Last run:  2026-11-25T03:00:54.371201+01:00  ok
+    Dispatch:  on time (scheduled 2026-11-26T03:00:00+01:00)
+    Execution: running  3c2662525ddc4417bf6d7321beeaa847
 
 
